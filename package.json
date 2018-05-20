@@ -1,0 +1,12 @@
+{
+  "name": "vue-pack",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  }
+}
