@@ -44,7 +44,8 @@ export default function createBaseConfig(options: BaseOptions): Configuration {
 			}
 		},
 		plugins,
-		devtool: sourceMap ? 'source-map' : false
+		devtool: sourceMap ? 'source-map' : false,
+		stats: 'none'
 	};
 
 	return config;
