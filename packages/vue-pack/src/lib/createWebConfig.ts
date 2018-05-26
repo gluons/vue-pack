@@ -1,24 +1,22 @@
-import { Configuration } from 'webpack';
-import merge from 'webpack-merge';
-
 import WebOptions from '../interfaces/WebOptions';
 import createBaseConfig from './createBaseConfig';
 
-export default function createWebConfig(options: WebOptions): Configuration {
+export default function createWebConfig(options: WebOptions): any {
 	const { libraryName, minimize } = options;
 
-	const baseConfig = createBaseConfig(options);
-	const webConfig: Configuration = merge(baseConfig, {
-		output: {
-			filename: minimize ? '[name].web.min.js' : '[name].web.js',
-			library: libraryName,
-			libraryTarget: 'window',
-			libraryExport: 'default'
-		},
-		externals: {
-			vue: 'Vue'
-		}
-	});
+	const config = createBaseConfig(options);
 
-	return webConfig;
+	config
+		.output
+			.filename(minimize ? '[name].web.min.js' : '[name].web.js')
+			.library(libraryName)
+			.libraryTarget('window')
+			.libraryExport('default')
+			.end()
+		.externals({
+			vue: 'Vue'
+		})
+	;
+
+	return config;
 }

@@ -1,26 +1,23 @@
-import { Configuration } from 'webpack';
-import merge from 'webpack-merge';
 import nodeExternals from 'webpack-node-externals';
 
 import BaseOptions from '../interfaces/BaseOptions';
 import CommonOptions from '../interfaces/CommonOptions';
 import createBaseConfig from './createBaseConfig';
 
-export default function createCJSConfig(options: CommonOptions): Configuration {
+export default function createCJSConfig(options: CommonOptions): any {
 	const baseOptions: BaseOptions = Object.assign({ minimize: false }, options);
 
-	const baseConfig = createBaseConfig(baseOptions);
-	const commonJSConfig: Configuration = merge(baseConfig, {
-		output: {
-			filename: '[name].cjs.js',
-			libraryTarget: 'commonjs2',
-			libraryExport: 'default'
-		},
-		externals: [
-			nodeExternals()
-		],
-		target: 'node'
-	});
+	const config = createBaseConfig(baseOptions);
 
-	return commonJSConfig;
+	config
+		.output
+			.filename('[name].cjs.js')
+			.libraryTarget('commonjs2')
+			.libraryExport('default')
+			.end()
+		.externals([nodeExternals()])
+		.target('node')
+	;
+
+	return config;
 }

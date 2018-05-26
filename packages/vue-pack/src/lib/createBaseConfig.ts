@@ -1,10 +1,10 @@
-import { Configuration } from 'webpack';
+import Config from 'webpack-chain';
 
 import BaseOptions from '../interfaces/BaseOptions';
-import createWebpackModule from './createWebpackModule';
-import createWebpackPlugins from './createWebpackPlugins';
+import infuseWebpackModule from './infuseWebpackModule';
+import infuseWebpackPlugins from './infuseWebpackPlugins';
 
-export default function createBaseConfig(options: BaseOptions): Configuration {
+export default function createBaseConfig(options: BaseOptions): any {
 	const {
 		entry,
 		fileName,
@@ -15,24 +15,24 @@ export default function createBaseConfig(options: BaseOptions): Configuration {
 
 	const cssFileName = minimize ? `${fileName}.min.css` : `${fileName}.css`;
 
-	const module = createWebpackModule(minimize, sourceMap);
-	const plugins = createWebpackPlugins(cssFileName);
+	const config = new Config(); // webpack-chain Config
 
-	const config: Configuration = {
-		mode: 'production',
-		entry: {
-			[fileName]: entry
-		},
-		output: {
-			path: outPath
-		},
-		module,
-		resolve: {
-			extensions: ['.vue', '.ts', '.js', '.json']
-		},
-		optimization: {
-			minimize,
-			splitChunks: {
+	config
+		.mode('production')
+		.entry(fileName)
+			.add(entry)
+			.end()
+		.output
+			.path(outPath)
+			.end()
+		.resolve
+			.extensions
+				.merge(['.vue', '.ts', '.js', '.json'])
+				.end()
+			.end()
+		.optimization
+			.minimize(minimize)
+			.splitChunks({
 				cacheGroups: {
 					styles: {
 						name: 'styles',
@@ -41,12 +41,14 @@ export default function createBaseConfig(options: BaseOptions): Configuration {
 						enforce: true
 					}
 				}
-			}
-		},
-		plugins,
-		devtool: sourceMap ? 'source-map' : false,
-		stats: 'none'
-	};
+			})
+			.end()
+		.devtool(sourceMap ? 'source-map' : false)
+		.stats('none')
+	;
+
+	infuseWebpackModule(config, minimize, sourceMap);
+	infuseWebpackPlugins(config, cssFileName);
 
 	return config;
 }

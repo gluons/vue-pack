@@ -1,3 +1,4 @@
+import AggregateError from 'aggregate-error';
 import clearTerminal from 'cross-clear';
 import webpack, { Stats } from 'webpack';
 
@@ -17,10 +18,14 @@ export default function bundle(options: Options): Promise<Stats> {
 
 	return new Promise((resolve, reject) => {
 		compiler.run((err, stats) => {
+			clearTerminal();
+
 			if (err) {
 				reject(err);
+			} else if (stats.hasErrors()) {
+				let info = stats.toJson();
+				reject(new AggregateError(info.errors));
 			} else {
-				clearTerminal();
 				resolve(stats);
 			}
 		});

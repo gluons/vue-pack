@@ -1,25 +1,18 @@
 import nvl from 'nvl';
 import { resolve } from 'path';
 import { Configuration } from 'webpack';
-import merge from 'webpack-merge';
-import WebpackBar from 'webpackbar';
 
 import Options from './interfaces/Options';
 import createCJSConfig from './lib/createCJSConfig';
 import createESMConfig from './lib/createESMConfig';
 import createWebConfig from './lib/createWebConfig';
+import infuseWebpackBar from './utils/infuseWebpackBar';
 
-const BarNames: string[] = [
-	'CommonJS',
-	'ES Module',
-	'Web Unminified',
-	'Web Minified'
-];
-const BarColors: string[] = [
-	'green',
-	'magenta',
-	'cyan',
-	'yellow'
+const barOptions = [
+	{ name: 'CommonJS', color: 'green' },
+	{ name: 'ES Module', color: 'magenta' },
+	{ name: 'Web Unminified', color: 'cyan' },
+	{ name: 'Web Minified', color: 'yellow' }
 ];
 
 export default function createConfigs(options: Options): Configuration[] {
@@ -31,16 +24,15 @@ export default function createConfigs(options: Options): Configuration[] {
 	const webUnminConfig = createWebConfig(Object.assign({ minimize: false }, options));
 	const webMinConfig = createWebConfig(Object.assign({ minimize: true }, options));
 
-	return [
+	const configs = [
 		commonJSConfig,
 		esModuleConfig,
 		webUnminConfig,
 		webMinConfig
-	]
-		.map((config, i) => merge(config, {
-			plugins: [new WebpackBar({
-				name: BarNames[i],
-				color: BarColors[i]
-			})]
-		}));
+	];
+	configs.forEach((config, i) => {
+		infuseWebpackBar(config, barOptions[i]);
+	});
+
+	return configs.map(config => config.toConfig() as Configuration);
 }
