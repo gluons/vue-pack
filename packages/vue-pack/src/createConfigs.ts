@@ -1,11 +1,10 @@
-import nvl from 'nvl';
-import { resolve } from 'path';
-import { Configuration } from 'webpack';
+import { Configuration as WebpackConfiguration } from 'webpack';
 
-import Options from './interfaces/Options';
+import Configuration, { toCommonOptions, toWebOptions } from './interfaces/Configuration';
 import createCJSConfig from './lib/createCJSConfig';
 import createESMConfig from './lib/createESMConfig';
 import createWebConfig from './lib/createWebConfig';
+import fulfilConfig from './lib/fulfilConfig';
 import infuseWebpackBar from './utils/infuseWebpackBar';
 
 const barOptions = [
@@ -15,24 +14,31 @@ const barOptions = [
 	{ name: 'Web Minified', color: 'yellow' }
 ];
 
-export default function createConfigs(options: Options): Configuration[] {
-	options.outPath = nvl(options.outPath, resolve(process.cwd(), './dist'));
-	options.sourceMap = nvl(options.sourceMap, true);
+/**
+ * Create webpack's all configurations. (CommonJS, ES module, Unminified Web, Minified Web)
+ *
+ * @export
+ * @param {Configuration} config `vue-pack`'s configuration
+ * @returns {WebpackConfiguration[]}
+ */
+export default function createConfigs(config: Configuration): WebpackConfiguration[] {
+	config = fulfilConfig(config);
 
-	const commonJSConfig = createCJSConfig(options);
-	const esModuleConfig = createESMConfig(options);
-	const webUnminConfig = createWebConfig(Object.assign({ minimize: false }, options));
-	const webMinConfig = createWebConfig(Object.assign({ minimize: true }, options));
+	const commonJSConfig = createCJSConfig(toCommonOptions(config));
+	const esModuleConfig = createESMConfig(toCommonOptions(config));
+	const webUnminConfig = createWebConfig(toWebOptions(config, false));
+	const webMinConfig = createWebConfig(toWebOptions(config, true));
 
+	// All `webpack-chain` config instances
 	const configs = [
 		commonJSConfig,
 		esModuleConfig,
 		webUnminConfig,
 		webMinConfig
 	];
-	configs.forEach((config, i) => {
-		infuseWebpackBar(config, barOptions[i]);
+	configs.forEach((c, i) => {
+		infuseWebpackBar(c, barOptions[i]);
 	});
 
-	return configs.map(config => config.toConfig() as Configuration);
+	return configs.map(c => c.toConfig() as WebpackConfiguration);
 }
