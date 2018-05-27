@@ -1,14 +1,15 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
+		"module": "es2015",
 		"moduleResolution": "node",
 		"target": "es5",
 		"lib": [
+			"dom",
 			"es2015"
 		],
 		"esModuleInterop": true,
-		"outDir": "dist",
-		"declaration": true,
+		"strict": true,
+		"experimentalDecorators": true,
 		"noUnusedLocals": true
 	},
 	"include": [

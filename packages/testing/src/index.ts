@@ -1,5 +1,4 @@
-/// <reference path='./sfc.d.ts' />
-import Vue, { PluginFunction } from 'vue';
+import Vue from 'vue';
 
 import Hello from './components/Hello.vue';
 
@@ -17,7 +16,7 @@ if ((typeof window !== 'undefined') && window.Vue) {
 }
 
 export default {
-	install: install as PluginFunction<Vue>,
+	install,
 	components: {
 		Hello
 	}
