@@ -1,0 +1,46 @@
+{
+  "name": "@gluons/vue-pack-cli",
+  "version": "0.0.1",
+  "description": "A CLI tool for vue-pack.",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "library",
+    "bundler",
+    "packager",
+    "webpack",
+    "vue-pack",
+    "cli"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-pack/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-pack",
+  "dependencies": {
+    "@gluons/vue-pack": "^0.0.1",
+    "joycon": "^1.0.3",
+    "joycon-yaml-loader": "^1.0.0",
+    "js-yaml": "^3.11.0",
+    "lodash.merge": "^4.6.1",
+    "lodash.pick": "^4.4.0",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "8",
+    "@types/yargs": "^11.0.0",
+    "tslint": "^5.10.0",
+    "tslint-config-gluons": "^1.0.5",
+    "typescript": "^2.8.3"
+  }
+}
