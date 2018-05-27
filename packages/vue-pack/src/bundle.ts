@@ -1,5 +1,4 @@
 import AggregateError from 'aggregate-error';
-import clearTerminal from 'cross-clear';
 import webpack, { Stats } from 'webpack';
 
 import createConfigs from './createConfigs';
@@ -14,12 +13,8 @@ export default function bundle(config: Configuration): Promise<Stats> {
 	const webpackConfigs = createConfigs(config);
 	const compiler = webpack(webpackConfigs);
 
-	clearTerminal();
-
 	return new Promise((resolve, reject) => {
 		compiler.run((err, stats) => {
-			clearTerminal();
-
 			if (err) {
 				reject(err);
 			} else if (stats.hasErrors()) {

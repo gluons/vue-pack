@@ -1243,10 +1243,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-clear@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/cross-clear/-/cross-clear-1.0.0.tgz#da339b07b11c9775310d0a5f6f27c32437857d48"
-
 cross-spawn@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-3.0.1.tgz#1256037ecb9f0c5f79e3d6ef135e30770184b982"
