@@ -2,7 +2,13 @@
   "name": "@gluons/vue-pack",
   "version": "0.0.1",
   "description": "Bundle Vue.js library via webpack.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/bundle.js",
+  "typings": "./dist/bundle.d.ts",
+  "files": [
+    "dist",
+    "postcss.config.js"
+  ],
   "scripts": {
     "prebuild": "rimraf dist/*",
     "build": "tsc -p .",
