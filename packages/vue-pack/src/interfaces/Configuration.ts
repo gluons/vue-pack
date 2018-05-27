@@ -21,9 +21,13 @@ export default interface Configuration {
 	 */
 	fileName: string;
 	/**
-	 * Output path
+	 * Output directory
 	 */
-	outPath?: string;
+	outDir?: string;
+	/**
+	 * Clean output directory before bundling
+	 */
+	cleanOutDir?: boolean;
 	/**
 	 * Enable source map?
 	 */
@@ -41,7 +45,7 @@ export function toCommonOptions(config: Configuration): CommonOptions {
 	const commonOptions: CommonOptions = {
 		entry: config.entry,
 		fileName: config.fileName,
-		outPath: config.outPath,
+		outDir: config.outDir,
 		sourceMap: config.sourceMap
 	};
 

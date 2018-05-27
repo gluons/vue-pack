@@ -1,8 +1,11 @@
-import AggregateError from 'aggregate-error';
-import webpack, { Stats } from 'webpack';
+import del from 'del';
+import { join } from 'path';
+import { Stats } from 'webpack';
 
+import build from './build';
 import createConfigs from './createConfigs';
 import Configuration from './interfaces/Configuration';
+import fulfilConfig from './lib/fulfilConfig';
 import displayError from './utils/displayError';
 import displaySuccess from './utils/displaySuccess';
 
@@ -16,20 +19,13 @@ export { displaySuccess, displayError };
  * @param {Configuration} config Configuration
  * @returns {Promise<Stats>} Promise of `webpack`'s stats
  */
-export default function bundle(config: Configuration): Promise<Stats> {
-	const webpackConfigs = createConfigs(config);
-	const compiler = webpack(webpackConfigs);
+export default async function bundle(config: Configuration): Promise<Stats> {
+	config = fulfilConfig(config);
 
-	return new Promise((resolve, reject) => {
-		compiler.run((err, stats) => {
-			if (err) {
-				reject(err);
-			} else if (stats.hasErrors()) {
-				let info = stats.toJson();
-				reject(new AggregateError(info.errors));
-			} else {
-				resolve(stats);
-			}
-		});
-	});
+	// tslint:disable-next-line: no-unused-expression
+	config.cleanOutDir && await del(join(config.outDir, '*'));
+
+	const webpackConfigs = createConfigs(config);
+
+	return await build(webpackConfigs);
 }

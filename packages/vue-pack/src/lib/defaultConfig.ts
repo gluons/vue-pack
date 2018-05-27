@@ -5,5 +5,6 @@ import { resolve } from 'path';
  */
 export default {
 	outPath: resolve(process.cwd(), './dist'),
+	cleanOutDir: true,
 	sourceMap: true
 };

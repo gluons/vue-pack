@@ -15,7 +15,7 @@ export default function createBaseConfig(options: BaseOptions): any {
 	const {
 		entry,
 		fileName,
-		outPath,
+		outDir,
 		minimize,
 		sourceMap
 	} = options;
@@ -30,7 +30,7 @@ export default function createBaseConfig(options: BaseOptions): any {
 			.add(entry)
 			.end()
 		.output
-			.path(outPath)
+			.path(outDir)
 			.end()
 		.resolve
 			.extensions

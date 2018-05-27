@@ -14,9 +14,9 @@ export default interface CommonOptions {
 	 */
 	fileName: string;
 	/**
-	 * Output path
+	 * Output directory
 	 */
-	outPath: string;
+	outDir: string;
 	/**
 	 * Enable source map?
 	 */
