@@ -24,7 +24,8 @@
     "library",
     "bundler",
     "packager",
-    "webpack"
+    "webpack",
+    "vue-pack"
   ],
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "MIT",
