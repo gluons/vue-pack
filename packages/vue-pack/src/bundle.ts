@@ -10,7 +10,7 @@ import displayError from './utils/displayError';
 import displaySuccess from './utils/displaySuccess';
 
 export { Configuration, Stats };
-export { displaySuccess, displayError };
+export { displaySuccess, displayError, fulfilConfig };
 
 /**
  * Start bundle library.
