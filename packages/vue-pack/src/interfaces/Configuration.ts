@@ -8,10 +8,25 @@ import WebOptions from './WebOptions';
  * @interface Configuration
  */
 export default interface Configuration {
+	/**
+	 * Bundle's entry
+	 */
 	entry: string;
+	/**
+	 * Library name
+	 */
 	libraryName: string;
+	/**
+	 * Output file name (without extension)
+	 */
 	fileName: string;
+	/**
+	 * Output path
+	 */
 	outPath?: string;
+	/**
+	 * Enable source map?
+	 */
 	sourceMap?: boolean;
 }
 

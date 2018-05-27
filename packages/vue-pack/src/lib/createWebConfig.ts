@@ -1,6 +1,13 @@
 import WebOptions from '../interfaces/WebOptions';
 import createBaseConfig from './createBaseConfig';
 
+/**
+ * Create web config via `webpack-chain`'s config instance.
+ *
+ * @export
+ * @param {WebOptions} options Options
+ * @returns {any} `webpack-chain`'s config instance
+ */
 export default function createWebConfig(options: WebOptions): any {
 	const { libraryName, minimize } = options;
 

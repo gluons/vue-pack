@@ -9,6 +9,13 @@ import displaySuccess from './utils/displaySuccess';
 export { Configuration, Stats };
 export { displaySuccess, displayError };
 
+/**
+ * Start bundle library.
+ *
+ * @export
+ * @param {Configuration} config Configuration
+ * @returns {Promise<Stats>} Promise of `webpack`'s stats
+ */
 export default function bundle(config: Configuration): Promise<Stats> {
 	const webpackConfigs = createConfigs(config);
 	const compiler = webpack(webpackConfigs);

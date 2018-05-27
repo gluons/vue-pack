@@ -4,6 +4,13 @@ import BaseOptions from '../interfaces/BaseOptions';
 import infuseWebpackModule from './infuseWebpackModule';
 import infuseWebpackPlugins from './infuseWebpackPlugins';
 
+/**
+ * Create base config via `webpack-chain`'s config instance.
+ *
+ * @export
+ * @param {BaseOptions} options Options
+ * @returns {any} `webpack-chain`'s config instance
+ */
 export default function createBaseConfig(options: BaseOptions): any {
 	const {
 		entry,

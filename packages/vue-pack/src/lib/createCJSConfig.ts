@@ -4,6 +4,13 @@ import BaseOptions from '../interfaces/BaseOptions';
 import CommonOptions from '../interfaces/CommonOptions';
 import createBaseConfig from './createBaseConfig';
 
+/**
+ * Create Common JS config via `webpack-chain`'s config instance.
+ *
+ * @export
+ * @param {CommonOptions} options Options
+ * @returns {any} `webpack-chain`'s config instance
+ */
 export default function createCJSConfig(options: CommonOptions): any {
 	const baseOptions: BaseOptions = Object.assign({ minimize: false }, options);
 

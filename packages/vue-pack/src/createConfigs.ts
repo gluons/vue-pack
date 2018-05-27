@@ -15,7 +15,7 @@ const barOptions = [
 ];
 
 /**
- * Create webpack's all configurations. (CommonJS, ES module, Unminified Web, Minified Web)
+ * Create all webpack's configurations. (CommonJS, ES module, Unminified Web, Minified Web)
  *
  * @export
  * @param {Configuration} config `vue-pack`'s configuration
