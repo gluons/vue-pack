@@ -4,10 +4,10 @@ import { Stats } from 'webpack';
 
 import build from './build';
 import createConfigs from './createConfigs';
-import fulfilConfig from './lib/fulfilConfig';
 import Configuration from './types/Configuration';
 import displayError from './utils/displayError';
 import displaySuccess from './utils/displaySuccess';
+import fulfilConfig from './utils/fulfilConfig';
 import validateConfig from './utils/validateConfig';
 
 export { Configuration, Stats };

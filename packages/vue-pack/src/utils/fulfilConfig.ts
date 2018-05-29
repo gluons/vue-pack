@@ -1,8 +1,7 @@
-import slugify from '@sindresorhus/slugify';
 import nvl from 'nvl';
 
+import defaultConfig from '../lib/defaultConfig';
 import Configuration from '../types/Configuration';
-import defaultConfig from './defaultConfig';
 
 /**
  * Fulfil missing config value with default config.
@@ -13,11 +12,14 @@ import defaultConfig from './defaultConfig';
  */
 export default function fulfilConfig(config: Configuration): Configuration {
 	Object.keys(defaultConfig).forEach(configName => {
-		config[configName] = nvl(config[configName], defaultConfig[configName]);
-	});
+		let defaultConfigValue = defaultConfig[configName];
 
-	// Create file name from library name.
-	config.fileName = nvl(config.fileName, slugify(config.libraryName));
+		if (typeof defaultConfigValue === 'function') {
+			config[configName] = nvl(config[configName], defaultConfigValue(config));
+		} else {
+			config[configName] = nvl(config[configName], defaultConfigValue);
+		}
+	});
 
 	return config;
 }
