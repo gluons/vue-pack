@@ -1,4 +1,5 @@
 import CommonOptions from './CommonOptions';
+import Plugin from './Plugin';
 import WebOptions from './WebOptions';
 
 /**
@@ -32,6 +33,10 @@ export default interface Configuration {
 	 * Enable source map?
 	 */
 	sourceMap?: boolean;
+	/**
+	 * Plugins
+	 */
+	plugins?: Plugin[];
 }
 
 /**

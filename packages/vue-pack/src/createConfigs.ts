@@ -1,9 +1,11 @@
 import { Configuration as WebpackConfiguration } from 'webpack';
 
 import Configuration, { toCommonOptions, toWebOptions } from './interfaces/Configuration';
+import { PluginConfigGroup } from './interfaces/Plugin';
 import createCJSConfig from './lib/createCJSConfig';
 import createESMConfig from './lib/createESMConfig';
 import createWebConfig from './lib/createWebConfig';
+import executePlugins from './utils/executePlugins';
 import infuseWebpackBar from './utils/infuseWebpackBar';
 
 const barOptions = [
@@ -26,16 +28,27 @@ export default function createConfigs(config: Configuration): WebpackConfigurati
 	const webUnminConfig = createWebConfig(toWebOptions(config, false));
 	const webMinConfig = createWebConfig(toWebOptions(config, true));
 
-	// All `webpack-chain` config instances
-	const configs = [
+	/**
+	 * All `webpack-chain` config instances
+	 */
+	const allConfigs = [
 		commonJSConfig,
 		esModuleConfig,
 		webUnminConfig,
 		webMinConfig
 	];
-	configs.forEach((c, i) => {
+	allConfigs.forEach((c, i) => {
 		infuseWebpackBar(c, barOptions[i]);
 	});
 
-	return configs.map(c => c.toConfig() as WebpackConfiguration);
+	// Execute plugins
+	const webpackConfigGroup: PluginConfigGroup = {
+		commonJSConfig,
+		esModuleConfig,
+		webUnminConfig,
+		webMinConfig
+	};
+	executePlugins(webpackConfigGroup, config);
+
+	return allConfigs.map(c => c.toConfig() as WebpackConfiguration);
 }
