@@ -1,10 +1,10 @@
 import { Configuration as WebpackConfiguration } from 'webpack';
 
-import Configuration, { toCommonOptions, toWebOptions } from './interfaces/Configuration';
-import { PluginConfigGroup } from './interfaces/Plugin';
 import createCJSConfig from './lib/createCJSConfig';
 import createESMConfig from './lib/createESMConfig';
 import createWebConfig from './lib/createWebConfig';
+import Configuration, { toCommonOptions, toWebOptions } from './types/Configuration';
+import { PluginConfigGroup } from './types/Plugin';
 import executePlugins from './utils/executePlugins';
 import infuseWebpackBar from './utils/infuseWebpackBar';
 

@@ -1,7 +1,7 @@
 import slugify from '@sindresorhus/slugify';
 import nvl from 'nvl';
 
-import Configuration from '../interfaces/Configuration';
+import Configuration from '../types/Configuration';
 import defaultConfig from './defaultConfig';
 
 /**

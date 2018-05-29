@@ -1,5 +1,5 @@
-import Configuration from '../interfaces/Configuration';
-import Plugin, { PluginConfigGroup, PluginContext } from '../interfaces/Plugin';
+import Configuration from '../types/Configuration';
+import Plugin, { PluginConfigGroup, PluginContext } from '../types/Plugin';
 
 /**
  * Execute plugins.

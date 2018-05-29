@@ -4,8 +4,8 @@ import { Stats } from 'webpack';
 
 import build from './build';
 import createConfigs from './createConfigs';
-import Configuration from './interfaces/Configuration';
 import fulfilConfig from './lib/fulfilConfig';
+import Configuration from './types/Configuration';
 import displayError from './utils/displayError';
 import displaySuccess from './utils/displaySuccess';
 

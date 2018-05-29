@@ -1,7 +1,7 @@
 import nodeExternals from 'webpack-node-externals';
 
-import BaseOptions from '../interfaces/BaseOptions';
-import CommonOptions from '../interfaces/CommonOptions';
+import BaseOptions from '../types/BaseOptions';
+import CommonOptions from '../types/CommonOptions';
 import createBaseConfig from './createBaseConfig';
 
 /**

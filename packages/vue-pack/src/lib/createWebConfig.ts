@@ -1,4 +1,4 @@
-import WebOptions from '../interfaces/WebOptions';
+import WebOptions from '../types/WebOptions';
 import createBaseConfig from './createBaseConfig';
 
 /**

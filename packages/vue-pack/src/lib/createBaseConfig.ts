@@ -1,6 +1,6 @@
 import Config from 'webpack-chain';
 
-import BaseOptions from '../interfaces/BaseOptions';
+import BaseOptions from '../types/BaseOptions';
 import infuseWebpackModule from './infuseWebpackModule';
 import infuseWebpackPlugins from './infuseWebpackPlugins';
 
