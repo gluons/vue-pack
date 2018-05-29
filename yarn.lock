@@ -9,6 +9,10 @@
     escape-string-regexp "^1.0.5"
     lodash.deburr "^4.1.0"
 
+"@types/aggregate-error@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/aggregate-error/-/aggregate-error-1.0.0.tgz#7f811586f42802b1d84223536545263af931d89e"
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.2.tgz#63dc3e5e7f6367e1819d2bba5213783cd926c5d5"
@@ -36,6 +40,28 @@
     "@types/events" "*"
     "@types/minimatch" "*"
     "@types/node" "*"
+
+"@types/lodash.isnil@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@types/lodash.isnil/-/lodash.isnil-4.0.3.tgz#77ea17dfed615cef3f573e2b0ca835ff51157e2e"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.omitby@^4.6.3":
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/@types/lodash.omitby/-/lodash.omitby-4.6.3.tgz#7cbd0a3de8f870ec1d89baa084178b6a67f6c286"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.pick@^4.4.3":
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/@types/lodash.pick/-/lodash.pick-4.4.3.tgz#2d979a8e2a553a26b9aa46a1d6d0bf7d07507bb4"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.109"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.109.tgz#b1c4442239730bf35cabaf493c772b18c045886d"
 
 "@types/minimatch@*":
   version "3.0.3"
@@ -2840,17 +2866,21 @@ lodash.deburr@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/lodash.deburr/-/lodash.deburr-4.1.0.tgz#ddb1bbb3ef07458c0177ba07de14422cb033ff9b"
 
+lodash.isnil@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/lodash.isnil/-/lodash.isnil-4.0.0.tgz#49e28cd559013458c814c5479d3c663a21bfaa6c"
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
-lodash.merge@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
-
 lodash.mergewith@^4.6.0:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
+
+lodash.omitby@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.omitby/-/lodash.omitby-4.6.0.tgz#5c15ff4754ad555016b53c041311e8f079204791"
 
 lodash.pick@^4.4.0:
   version "4.4.0"

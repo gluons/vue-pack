@@ -4,12 +4,12 @@
   "description": "vue-pack testing.",
   "private": true,
   "scripts": {
-    "build": "node ./scripts/build.js"
+    "build": "vue-pack"
   },
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@gluons/vue-pack": "^0.0.1",
+    "@gluons/vue-pack-cli": "^0.0.1",
     "@types/node": "8",
     "tslint": "^5.10.0",
     "tslint-config-gluons": "^1.0.5",
