@@ -57,11 +57,5 @@ try {
 			displayError(err);
 		});
 } catch (err) {
-	if (typeof err[Symbol.iterator] === 'function') {
-		for (const eachErr of err) {
-			displayError(eachErr);
-		}
-	} else {
-		displayError(err);
-	}
+	displayError(err);
 }
