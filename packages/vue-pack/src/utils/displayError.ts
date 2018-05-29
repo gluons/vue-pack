@@ -1,4 +1,4 @@
-import { fatal } from 'signale';
+import { error as signaleError } from 'signale';
 
 /**
  * Display error.
@@ -7,5 +7,5 @@ import { fatal } from 'signale';
  * @param {Error} error An error.
  */
 export default function displayError(error: Error): void {
-	fatal(error);
+	signaleError(error);
 }
