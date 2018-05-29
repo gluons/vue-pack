@@ -1,3 +1,4 @@
+import AggregateError from 'aggregate-error';
 import del from 'del';
 import { join } from 'path';
 import { Stats } from 'webpack';
@@ -11,7 +12,13 @@ import fulfilConfig from './utils/fulfilConfig';
 import validateConfig from './utils/validateConfig';
 
 export { Configuration, Stats };
-export { displaySuccess, displayError, fulfilConfig, validateConfig };
+export {
+	AggregateError,
+	displaySuccess,
+	displayError,
+	fulfilConfig,
+	validateConfig
+};
 
 /**
  * Start bundle library.
