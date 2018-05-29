@@ -4,7 +4,8 @@
   "description": "vue-pack testing.",
   "private": true,
   "scripts": {
-    "build": "vue-pack"
+    "build": "vue-pack",
+    "lint": "tslint -p ."
   },
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "MIT",
