@@ -42,16 +42,26 @@ const argv: Argv = yargs
 
 let config: Configuration;
 
-if (argv.config) {
-	config = loadConfig(argv.config as string);
-} else {
-	config = loadConfig(argv);
-}
+try {
+	if (argv.config) {
+		config = loadConfig(argv.config as string);
+	} else {
+		config = loadConfig(argv);
+	}
 
-bundle(config)
-	.then(() => {
-		displaySuccess();
-	})
-	.catch(err => {
+	bundle(config)
+		.then(() => {
+			displaySuccess();
+		})
+		.catch(err => {
+			displayError(err);
+		});
+} catch (err) {
+	if (typeof err[Symbol.iterator] === 'function') {
+		for (const eachErr of err) {
+			displayError(eachErr);
+		}
+	} else {
 		displayError(err);
-	});
+	}
+}

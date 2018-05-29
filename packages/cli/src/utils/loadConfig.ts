@@ -1,4 +1,4 @@
-import { Configuration, fulfilConfig } from '@gluons/vue-pack';
+import { Configuration, fulfilConfig, validateConfig } from '@gluons/vue-pack';
 import JoyCon from 'joycon';
 import JoyConYAMLLoader from 'joycon-yaml-loader';
 import merge from 'lodash.merge';
@@ -44,6 +44,7 @@ export default function loadConfig(cliConfigOrConfigPath?: Argv | string): Confi
 		config = cliConfig ? merge({}, data, cliConfig) : data;
 	}
 
+	validateConfig(config);
 	config = fulfilConfig(config);
 
 	return config;
