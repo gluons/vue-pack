@@ -6,6 +6,7 @@ import { Stats } from 'webpack';
 import build from './build';
 import createConfigs from './createConfigs';
 import Configuration from './types/Configuration';
+import Plugin from './types/Plugin';
 import displayError from './utils/displayError';
 import displaySuccess from './utils/displaySuccess';
 import fulfilConfig from './utils/fulfilConfig';
@@ -19,6 +20,8 @@ export {
 	fulfilConfig,
 	validateConfig
 };
+export * from './types/Plugin';
+export { Plugin };
 
 /**
  * Start bundle library.
