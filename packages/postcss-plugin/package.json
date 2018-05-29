@@ -4,6 +4,9 @@
   "description": "A vue-pack plugin to allow using your own PostCSS config.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prebuild": "rimraf dist/*",
     "build": "tsc -p .",
