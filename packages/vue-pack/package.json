@@ -11,6 +11,9 @@
   "engines": {
     "node": ">=6"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prebuild": "rimraf dist/*",
     "build": "tsc -p .",
