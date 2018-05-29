@@ -8,6 +8,7 @@ import fulfilConfig from './lib/fulfilConfig';
 import Configuration from './types/Configuration';
 import displayError from './utils/displayError';
 import displaySuccess from './utils/displaySuccess';
+import validateConfig from './utils/validateConfig';
 
 export { Configuration, Stats };
 export { displaySuccess, displayError, fulfilConfig };
@@ -20,6 +21,7 @@ export { displaySuccess, displayError, fulfilConfig };
  * @returns {Promise<Stats>} Promise of `webpack`'s stats
  */
 export default async function bundle(config: Configuration): Promise<Stats> {
+	validateConfig(config);
 	config = fulfilConfig(config);
 
 	// tslint:disable-next-line: no-unused-expression
