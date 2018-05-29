@@ -11,7 +11,7 @@ import fulfilConfig from './utils/fulfilConfig';
 import validateConfig from './utils/validateConfig';
 
 export { Configuration, Stats };
-export { displaySuccess, displayError, fulfilConfig };
+export { displaySuccess, displayError, fulfilConfig, validateConfig };
 
 /**
  * Start bundle library.
