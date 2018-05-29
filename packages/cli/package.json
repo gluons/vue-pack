@@ -2,9 +2,12 @@
   "name": "@gluons/vue-pack-cli",
   "version": "0.0.1",
   "description": "A CLI tool for vue-pack.",
+  "bin": "./dist/cli.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p .",
-    "watch": "tsc -p . -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +30,9 @@
     "url": "https://github.com/gluons/vue-pack/issues"
   },
   "homepage": "https://github.com/gluons/vue-pack",
+  "peerDependencies": {
+    "vue": "2"
+  },
   "dependencies": {
     "@gluons/vue-pack": "^0.0.1",
     "joycon": "^1.0.3",

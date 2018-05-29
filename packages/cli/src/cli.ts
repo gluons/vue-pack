@@ -1,4 +1,6 @@
-import { Configuration } from '@gluons/vue-pack';
+#!/usr/bin/env node
+
+import bundle, { Configuration, displayError, displaySuccess } from '@gluons/vue-pack';
 import yargs = require('yargs');
 
 import loadConfig, { Argv } from './utils/loadConfig';
@@ -46,4 +48,10 @@ if (argv.config) {
 	config = loadConfig(argv);
 }
 
-console.log(config);
+bundle(config)
+	.then(() => {
+		displaySuccess();
+	})
+	.catch(err => {
+		displayError(err);
+	});
