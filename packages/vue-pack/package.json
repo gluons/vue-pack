@@ -8,6 +8,9 @@
     "dist",
     "postcss.config.js"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "prebuild": "rimraf dist/*",
     "build": "tsc -p .",
