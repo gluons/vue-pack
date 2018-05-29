@@ -1,5 +1,5 @@
 {
-  "name": "@gluons/testing",
+  "name": "testing",
   "version": "0.0.1",
   "description": "vue-pack testing.",
   "private": true,

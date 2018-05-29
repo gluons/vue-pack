@@ -1,7 +1,10 @@
 {
   "name": "vue-pack",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/@gluons/*",
+    "packages/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gluons/vue-pack.git"
