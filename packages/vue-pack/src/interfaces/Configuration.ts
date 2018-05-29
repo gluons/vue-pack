@@ -19,7 +19,7 @@ export default interface Configuration {
 	/**
 	 * Output file name (without extension)
 	 */
-	fileName: string;
+	fileName?: string;
 	/**
 	 * Output directory
 	 */
