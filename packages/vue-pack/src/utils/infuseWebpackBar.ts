@@ -8,8 +8,12 @@ import WebpackBar from 'webpackbar';
  * @param {{ name: string, color: string }} options Options
  */
 export default function infuseWebpackBar(config: any, options: { name: string, color: string }): void {
+	const barOptions = Object.assign({}, options, {
+		profile: true
+	});
+
 	config
 		.plugin('webpackbar')
-			.use(WebpackBar, [options])
+			.use(WebpackBar, [barOptions])
 	;
 }
