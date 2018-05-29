@@ -10,7 +10,9 @@
   "license": "MIT",
   "devDependencies": {
     "@gluons/vue-pack-cli": "^0.0.1",
+    "@gluons/vue-pack-postcss-plugin": "^0.0.1",
     "@types/node": "6",
+    "postcss-brand-colors": "^2.0.0",
     "tslint": "^5.10.0",
     "tslint-config-gluons": "^1.0.5",
     "typescript": "^2.8.3",

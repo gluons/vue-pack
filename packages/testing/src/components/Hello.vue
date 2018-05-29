@@ -18,7 +18,7 @@ export default class Hello extends Vue {
 <style lang="scss">
 #hello {
 	span {
-		color: purple;
+		color: vue-js-2-color;
 	}
 }
 </style>
