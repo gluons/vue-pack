@@ -2,7 +2,9 @@
   "name": "@gluons/vue-pack-cli",
   "version": "0.0.1",
   "description": "A CLI tool for vue-pack.",
-  "bin": "./dist/cli.js",
+  "bin": {
+    "vue-pack": "./dist/cli.js"
+  },
   "files": [
     "dist"
   ],
