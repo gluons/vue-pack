@@ -1,14 +1,14 @@
-import Vue from 'vue';
+import Vue, { VueConstructor } from 'vue';
 
 import Hello from './components/Hello.vue';
 
-function install(vue: typeof Vue) {
+function install(vue: VueConstructor<Vue>) {
 	vue.component('Hello', Hello);
 }
 
 declare global {
 	interface Window {
-		Vue: typeof Vue;
+		Vue: VueConstructor<Vue>;
 	}
 }
 if ((typeof window !== 'undefined') && window.Vue) {

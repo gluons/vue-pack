@@ -10,7 +10,9 @@
 		"esModuleInterop": true,
 		"strict": true,
 		"experimentalDecorators": true,
-		"noUnusedLocals": true
+		"noUnusedLocals": true,
+		"declaration": true,
+		"declarationDir": "."
 	},
 	"include": [
 		"src"
