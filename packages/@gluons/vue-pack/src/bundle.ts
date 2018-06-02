@@ -19,9 +19,7 @@ export {
 	AggregateError,
 	displaySuccess,
 	displayError,
-	loadConfig,
-	fulfilConfig,
-	validateConfig
+	loadConfig
 };
 export * from './types/Plugin';
 export { Plugin };
