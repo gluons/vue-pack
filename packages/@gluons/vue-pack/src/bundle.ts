@@ -1,5 +1,6 @@
 import AggregateError from 'aggregate-error';
 import del from 'del';
+import nvl from 'nvl';
 import { join } from 'path';
 import { Stats } from 'webpack';
 
@@ -10,6 +11,7 @@ import Plugin from './types/Plugin';
 import displayError from './utils/displayError';
 import displaySuccess from './utils/displaySuccess';
 import fulfilConfig from './utils/fulfilConfig';
+import loadConfig from './utils/loadConfig';
 import validateConfig from './utils/validateConfig';
 
 export { Configuration, Stats };
@@ -17,6 +19,7 @@ export {
 	AggregateError,
 	displaySuccess,
 	displayError,
+	loadConfig,
 	fulfilConfig,
 	validateConfig
 };
@@ -30,7 +33,10 @@ export { Plugin };
  * @param {Configuration} config Configuration
  * @returns {Promise<Stats>} Promise of `webpack`'s stats
  */
-export default async function bundle(config: Configuration): Promise<Stats> {
+export default async function bundle(config?: Configuration): Promise<Stats> {
+	// If no config given, try to load config from config file.
+	config = nvl(config, loadConfig());
+
 	validateConfig(config);
 	config = fulfilConfig(config);
 
