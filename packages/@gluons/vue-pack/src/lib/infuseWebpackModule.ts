@@ -25,7 +25,12 @@ export default async function infuseWebpackModule(
 		.test(/\.ts$/)
 		.use('ts')
 			.loader('ts-loader')
-			.options({ appendTsSuffixTo: [/\.vue$/] })
+			.options({
+				compilerOptions: {
+					sourceMap: true
+				},
+				appendTsSuffixTo: [/\.vue$/]
+			})
 	;
 
 	// CSS
