@@ -53,6 +53,7 @@
     "css-loader": "^0.28.11",
     "del": "^3.0.0",
     "joycon": "^1.0.4",
+    "joycon-ts-loader": "^1.0.1",
     "joycon-yaml-loader": "^1.0.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",

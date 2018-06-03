@@ -1,4 +1,5 @@
 import JoyCon from 'joycon';
+import JoyConTSLoader from 'joycon-ts-loader';
 import JoyConYAMLLoader from 'joycon-yaml-loader';
 import nvl from 'nvl';
 import { homedir } from 'os';
@@ -38,10 +39,12 @@ export default function loadConfig(privilegeConfigOrConfigPath?: Configuration |
 			`${NAME}.config.js`,
 			`${NAME}.config.json`,
 			`${NAME}.config.yaml`,
-			`${NAME}.config.yml`
+			`${NAME}.config.yml`,
+			`${NAME}.config.ts`
 		],
 		stopDir: homedir()
 	});
+	joycon.addLoader(JoyConTSLoader);
 	joycon.addLoader(JoyConYAMLLoader);
 
 	let config: Configuration;
