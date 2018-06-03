@@ -1,5 +1,6 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { resolve } from 'path';
+
+import getPostCSSConfigPath from './getPostCSSConfigPath';
 
 /**
  * Infuse common CSS use.
@@ -9,13 +10,14 @@ import { resolve } from 'path';
  * @param {boolean} minimize Minimize CSS?
  * @param {boolean} sourceMap Enable source map?
  * @param {number} [importLoaders=1] `css-loader`'s `importLoaders`
+ * @returns {Promise<void>}
  */
-export default function infuseCommonCSSUse(
+export default async function infuseCommonCSSUse(
 	rule: any,
 	minimize: boolean,
 	sourceMap: boolean,
 	importLoaders: number = 1
-): void {
+): Promise<void> {
 	rule
 		.use('css-extract')
 			.loader(MiniCssExtractPlugin.loader)
@@ -32,7 +34,7 @@ export default function infuseCommonCSSUse(
 			.loader('postcss-loader')
 			.options({
 				config: {
-					path: resolve(__dirname, '../../postcss.config.js')
+					path: await getPostCSSConfigPath()
 				},
 				sourceMap
 			})

@@ -9,12 +9,12 @@ import createBaseConfig from './createBaseConfig';
  *
  * @export
  * @param {CommonOptions} options Options
- * @returns {any} `webpack-chain`'s config instance
+ * @returns {Promise<any>} `webpack-chain`'s config instance
  */
-export default function createESMConfig(options: CommonOptions): any {
+export default async function createESMConfig(options: CommonOptions): Promise<any> {
 	const baseOptions: BaseOptions = Object.assign({ minimize: false }, options);
 
-	const config = createBaseConfig(baseOptions);
+	const config = await createBaseConfig(baseOptions);
 
 	config
 		.output

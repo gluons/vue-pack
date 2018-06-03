@@ -41,7 +41,7 @@ export default async function bundle(config?: Configuration): Promise<Stats> {
 	// tslint:disable-next-line: no-unused-expression
 	config.cleanOutDir && await del(join(config.outDir, '*'));
 
-	const webpackConfigs = createConfigs(config);
+	const webpackConfigs = await createConfigs(config);
 
 	return await build(webpackConfigs);
 }

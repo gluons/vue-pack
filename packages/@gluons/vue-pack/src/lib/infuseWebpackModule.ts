@@ -7,8 +7,13 @@ import infuseCommonCSSUse from '../utils/infuseCommonCSSUse';
  * @param {any} config `webpack-chain`'s config instance
  * @param {boolean} minimize Minimize CSS?
  * @param {boolean} sourceMap Enable source map?
+ * @returns {Promise<void>}
  */
-export default function infuseWebpackModule(config: any, minimize: boolean, sourceMap: boolean): void {
+export default async function infuseWebpackModule(
+	config: any,
+	minimize: boolean,
+	sourceMap: boolean
+): Promise<void> {
 	// Vue
 	config.module.rule('vue')
 		.test(/\.vue$/)
@@ -25,11 +30,11 @@ export default function infuseWebpackModule(config: any, minimize: boolean, sour
 
 	// CSS
 	config.module.rule('css').test(/\.css$/);
-	infuseCommonCSSUse(config.module.rule('css'), minimize, sourceMap);
+	await infuseCommonCSSUse(config.module.rule('css'), minimize, sourceMap);
 
 	// SCSS
 	config.module.rule('scss').test(/\.scss$/);
-	infuseCommonCSSUse(config.module.rule('scss'), minimize, sourceMap, 2);
+	await infuseCommonCSSUse(config.module.rule('scss'), minimize, sourceMap, 2);
 	config.module.rule('scss')
 		.use('scss')
 			.loader('sass-loader')

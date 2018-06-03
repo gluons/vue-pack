@@ -6,12 +6,12 @@ import createBaseConfig from './createBaseConfig';
  *
  * @export
  * @param {WebOptions} options Options
- * @returns {any} `webpack-chain`'s config instance
+ * @returns {Promise<any>} `webpack-chain`'s config instance
  */
-export default function createWebConfig(options: WebOptions): any {
+export default async function createWebConfig(options: WebOptions): Promise<any> {
 	const { libraryName, minimize } = options;
 
-	const config = createBaseConfig(options);
+	const config = await createBaseConfig(options);
 
 	config
 		.output

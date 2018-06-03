@@ -9,9 +9,9 @@ import infuseWebpackPlugins from './infuseWebpackPlugins';
  *
  * @export
  * @param {BaseOptions} options Options
- * @returns {any} `webpack-chain`'s config instance
+ * @returns {Promise<any>} `webpack-chain`'s config instance
  */
-export default function createBaseConfig(options: BaseOptions): any {
+export default async function createBaseConfig(options: BaseOptions): Promise<any> {
 	const {
 		entry,
 		fileName,
@@ -54,7 +54,7 @@ export default function createBaseConfig(options: BaseOptions): any {
 		.stats('none')
 	;
 
-	infuseWebpackModule(config, minimize, sourceMap);
+	await infuseWebpackModule(config, minimize, sourceMap);
 	infuseWebpackPlugins(config, cssFileName);
 
 	return config;

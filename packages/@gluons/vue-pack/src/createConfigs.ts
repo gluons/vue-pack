@@ -20,13 +20,13 @@ const barOptions = [
  *
  * @export
  * @param {Configuration} config `vue-pack`'s configuration
- * @returns {WebpackConfiguration[]}
+ * @returns {Promise<WebpackConfiguration[]>}
  */
-export default function createConfigs(config: Configuration): WebpackConfiguration[] {
-	const commonJSConfig = createCJSConfig(toCommonOptions(config));
-	const esModuleConfig = createESMConfig(toCommonOptions(config));
-	const webUnminConfig = createWebConfig(toWebOptions(config, false));
-	const webMinConfig = createWebConfig(toWebOptions(config, true));
+export default async function createConfigs(config: Configuration): Promise<WebpackConfiguration[]> {
+	const commonJSConfig = await createCJSConfig(toCommonOptions(config));
+	const esModuleConfig = await createESMConfig(toCommonOptions(config));
+	const webUnminConfig = await createWebConfig(toWebOptions(config, false));
+	const webMinConfig = await createWebConfig(toWebOptions(config, true));
 
 	/**
 	 * All `webpack-chain` config instances
