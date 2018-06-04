@@ -27,7 +27,8 @@ export default async function infuseWebpackModule(
 			.loader('ts-loader')
 			.options({
 				compilerOptions: {
-					sourceMap: true
+					sourceMap: true,
+					declaration: true
 				},
 				appendTsSuffixTo: [/\.vue$/]
 			})
