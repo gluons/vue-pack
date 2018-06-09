@@ -23,7 +23,6 @@ export default async function createCJSConfig(options: CommonOptions): Promise<a
 			.libraryExport('default')
 			.end()
 		.externals([nodeExternals()])
-		.target('node')
 	;
 
 	return config;

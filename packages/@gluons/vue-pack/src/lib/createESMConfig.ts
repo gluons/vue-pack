@@ -22,7 +22,6 @@ export default async function createESMConfig(options: CommonOptions): Promise<a
 			.libraryTarget('commonjs2')
 			.end()
 		.externals([nodeExternals()])
-		.target('node')
 	;
 
 	return config;
