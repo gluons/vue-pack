@@ -5,9 +5,14 @@ import yargs = require('yargs');
 
 import loadConfig, { Argv } from './utils/loadConfig';
 
+const vuePackPkg = require('@gluons/vue-pack/package.json');
+
 const argv: Argv = yargs
 	.help()
+	.version()
+	.usage('$0', vuePackPkg.description)
 	.alias('help', 'h')
+	.alias('version', 'v')
 	.option('config', {
 		alias: 'c',
 		desc: 'Path to config file',
