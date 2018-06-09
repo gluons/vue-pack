@@ -18,7 +18,8 @@
     "prebuild": "rimraf dist/*",
     "build": "tsc -p .",
     "lint": "tslint -p .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "ts-node ./scripts/prepareTest.ts",
+    "test": "npm run lint && jest -c ./jest.config.json"
   },
   "repository": {
     "type": "git",
@@ -73,8 +74,14 @@
     "webpackbar": "^2.6.1"
   },
   "devDependencies": {
+    "@types/jest": "^23.0.0",
     "@types/node": "6",
+    "@vue/test-utils": "^1.0.0-beta.18",
+    "jest": "^23.1.0",
+    "postcss-brand-colors": "^2.0.0",
     "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.1.0",
     "tslint": "^5.10.0",
     "tslint-config-gluons": "^1.0.5",
     "typescript": "^2.8.3",
