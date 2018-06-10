@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
-import bundle, { Configuration, displayError, displaySuccess } from '@gluons/vue-pack';
+import bundle, { Configuration } from '@gluons/vue-pack';
 import yargs = require('yargs');
 
+import displayError from './utils/displayError';
+import displaySuccess from './utils/displaySuccess';
 import loadConfig, { Argv } from './utils/loadConfig';
 
 const vuePackPkg = require('@gluons/vue-pack/package.json');

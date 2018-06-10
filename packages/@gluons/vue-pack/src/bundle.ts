@@ -8,8 +8,6 @@ import build from './build';
 import createConfigs from './createConfigs';
 import Configuration from './types/Configuration';
 import Plugin from './types/Plugin';
-import displayError from './utils/displayError';
-import displaySuccess from './utils/displaySuccess';
 import fulfilConfig from './utils/fulfilConfig';
 import loadConfig from './utils/loadConfig';
 import validateConfig from './utils/validateConfig';
@@ -17,8 +15,6 @@ import validateConfig from './utils/validateConfig';
 export { Configuration, Stats };
 export {
 	AggregateError,
-	displaySuccess,
-	displayError,
 	loadConfig
 };
 export * from './types/Plugin';
