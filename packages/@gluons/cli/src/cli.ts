@@ -62,7 +62,9 @@ try {
 		})
 		.catch(err => {
 			displayError(err);
+			process.exitCode = 1;
 		});
 } catch (err) {
 	displayError(err);
+	process.exitCode = 1;
 }
