@@ -1,6 +1,9 @@
 {
   "name": "vue-pack",
   "private": true,
+  "scripts": {
+    "test": "lerna exec -- yarn test"
+  },
   "workspaces": [
     "packages/@gluons/*",
     "packages/*"
