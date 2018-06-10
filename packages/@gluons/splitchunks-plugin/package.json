@@ -1,0 +1,47 @@
+{
+  "name": "@gluons/vue-pack-splitchunks-plugin",
+  "version": "0.0.1",
+  "description": "A vue-pack plugin to customize webpack's splitChunks.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist/*",
+    "build": "tsc -p .",
+    "lint": "tslint -p .",
+    "test": "npm run lint && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "keywords": [
+    "vue-pack",
+    "vue-pack-plugin",
+    "webpack",
+    "splitchunks"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-pack/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-pack",
+  "peerDependencies": {
+    "@gluons/vue-pack": "^0.0.1"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "tslint": "^5.10.0",
+    "tslint-config-gluons": "^1.0.5",
+    "typescript": "^2.9.1"
+  }
+}
