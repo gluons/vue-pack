@@ -4,7 +4,6 @@ install: lerna bootstrap
 node_js:
   - "node"
   - "lts/carbon"
-  - "lts/boron"
 script: lerna exec -- yarn test
 cache: yarn
 after_success:
