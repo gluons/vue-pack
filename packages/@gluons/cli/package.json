@@ -18,7 +18,8 @@
     "prebuild": "rimraf dist/*",
     "build": "tsc -p .",
     "lint": "tslint -p .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "npm run build && ts-node ./scripts/prepareTest.ts",
+    "test": "npm run lint && jest -c ./jest.config.json"
   },
   "repository": {
     "type": "git",
@@ -45,7 +46,6 @@
   },
   "dependencies": {
     "@gluons/vue-pack": "^0.0.1",
-    "@types/aggregate-error": "^1.0.0",
     "aggregate-error": "^1.0.0",
     "chalk": "^2.4.1",
     "lodash.isnil": "^4.0.0",
@@ -54,14 +54,24 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
+    "@types/aggregate-error": "^1.0.0",
+    "@types/cross-spawn": "^6.0.0",
+    "@types/jest": "^23.0.0",
     "@types/lodash.isnil": "^4.0.3",
     "@types/lodash.omitby": "^4.6.3",
     "@types/lodash.pick": "^4.4.3",
     "@types/node": "6",
     "@types/yargs": "^11.0.0",
+    "@vue/test-utils": "^1.0.0-beta.18",
+    "cross-spawn": "^6.0.5",
+    "jest": "^23.1.0",
     "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.1.0",
     "tslint": "^5.10.0",
     "tslint-config-gluons": "^1.0.5",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
   }
 }
