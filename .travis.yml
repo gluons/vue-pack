@@ -1,0 +1,18 @@
+language: node_js
+before_script:
+  - npm install -g lerna
+install: lerna bootstrap
+node_js:
+  - "node"
+  - "lts/carbon"
+  - "lts/boron"
+script: lerna exec -- yarn test
+cache: yarn
+after_success:
+  - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $DISCORD_WEBHOOK_URL
+after_failure:
+  - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $DISCORD_WEBHOOK_URL
