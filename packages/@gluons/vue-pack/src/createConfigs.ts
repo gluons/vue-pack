@@ -38,7 +38,7 @@ export default async function createConfigs(config: Configuration): Promise<Webp
 		webMinConfig
 	];
 	allConfigs.forEach((c, i) => {
-		infuseWebpackBar(c, barOptions[i]);
+		infuseWebpackBar(c, barOptions[i], !config.noProfiler);
 	});
 
 	// Execute plugins

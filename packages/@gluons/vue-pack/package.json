@@ -18,7 +18,7 @@
     "prebuild": "rimraf dist/*",
     "build": "tsc -p .",
     "lint": "tslint -p .",
-    "pretest": "ts-node ./scripts/prepareTest.ts",
+    "pretest": "npm run build && ts-node ./scripts/prepareTest.ts",
     "test": "npm run lint && jest -c ./jest.config.json"
   },
   "repository": {
@@ -77,6 +77,7 @@
     "@types/jest": "^23.0.0",
     "@types/node": "6",
     "@vue/test-utils": "^1.0.0-beta.18",
+    "chalk": "^2.4.1",
     "jest": "^23.1.0",
     "postcss-brand-colors": "^2.0.0",
     "rimraf": "^2.6.2",

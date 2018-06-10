@@ -34,6 +34,10 @@ export default interface Configuration {
 	 */
 	sourceMap?: boolean;
 	/**
+	 * Disable `webpackbar`'s profiler?
+	 */
+	noProfiler?: boolean;
+	/**
 	 * Plugins
 	 */
 	plugins?: Plugin[];

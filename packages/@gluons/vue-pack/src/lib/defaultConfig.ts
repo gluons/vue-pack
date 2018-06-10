@@ -13,7 +13,8 @@ const defaultConfig = {
 	},
 	outDir: resolve(process.cwd(), './dist'),
 	cleanOutDir: true,
-	sourceMap: true
+	sourceMap: true,
+	noProfiler: false
 };
 
 export default defaultConfig;

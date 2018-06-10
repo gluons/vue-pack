@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import { resolve } from 'path';
 
 import bundle from '../dist/bundle';
@@ -8,7 +9,7 @@ process.chdir(fixturePath);
 
 bundle()
 	.then(() => {
-		console.log('Test fixture prepared.');
+		console.log(chalk.reset.inverse.bold.green(' Test fixture prepared. '));
 	})
 	.catch(err => {
 		console.error(err);
