@@ -1,1 +1,12 @@
-C:/Users/Saran/my-projects/vue-pack/packages/@gluons/vue-pack/jest.config.json
+{
+	"transform": {
+		"^.+\\.ts$": "ts-jest"
+	},
+	"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)$",
+		"moduleFileExtensions": [
+			"ts",
+			"js",
+			"json",
+			"node"
+		]
+}
