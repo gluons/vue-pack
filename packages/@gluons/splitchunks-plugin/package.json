@@ -17,6 +17,7 @@
     "prebuild": "rimraf dist/*",
     "build": "tsc -p .",
     "lint": "tslint -p .",
+    "pretest": "npm run build",
     "test": "npm run lint && jest -c ./jest.config.json"
   },
   "repository": {
