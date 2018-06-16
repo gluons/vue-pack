@@ -1,0 +1,32 @@
+{
+  "name": "vue-pack-docs",
+  "version": "0.0.1",
+  "description": "A documentation website for vue-pack.",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "keywords": [
+    "vue-pack",
+    "documentation",
+    "docs"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-pack/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-pack",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-gluons": "^3.0.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "vuepress": "^0.10.1"
+  }
+}
