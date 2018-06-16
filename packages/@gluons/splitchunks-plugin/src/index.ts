@@ -1,6 +1,8 @@
 import { Plugin, PluginContext } from '@gluons/vue-pack';
 
-import tapSplitChunks from './tapSplitChunks';
+import tapSplitChunks, { TapFunction } from './tapSplitChunks';
+
+export { TapFunction };
 
 /**
  * `SplitChunksPlugin`'s options.
@@ -12,19 +14,19 @@ export interface SplitChunksPluginOptions {
 	/**
 	 * A function to tap `splitChunks` in all configs
 	 */
-	tapAll?: (splitChunks: any) => any;
+	tapAll?: TapFunction;
 	/**
 	 * A function to tap `splitChunks` in CommonJS config
 	 */
-	tapCJS?: (splitChunks: any) => any;
+	tapCJS?: TapFunction;
 	/**
 	 * A function to tap `splitChunks` in ES module config
 	 */
-	tapESM?: (splitChunks: any) => any;
+	tapESM?: TapFunction;
 	/**
 	 * A function to tap `splitChunks` in web config.
 	 */
-	tapWeb?: (splitChunks: any) => any;
+	tapWeb?: TapFunction;
 }
 
 /**
