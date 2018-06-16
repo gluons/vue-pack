@@ -61,11 +61,7 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/jest@^23.0.0":
-  version "23.0.0"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.0.0.tgz#760cac74f00bb9c3075587716d2b3b4435663bc0"
-
-"@types/jest@^23.1.0":
+"@types/jest@^23.0.0", "@types/jest@^23.1.0":
   version "23.1.0"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.0.tgz#8054dd838ba23dc331794d26456b86c7e50bf0f6"
 
@@ -100,8 +96,8 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.1.2.tgz#1b928a0baa408fc8ae3ac012cc81375addc147c6"
 
 "@types/node@8":
-  version "8.10.19"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.19.tgz#66b5b6325c048cbf4512b7a88b0e79c2ee99d3d2"
+  version "8.10.20"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.20.tgz#fe674ea52e13950ab10954433a7824438aabbcac"
 
 "@types/tapable@*":
   version "1.0.2"
@@ -141,8 +137,8 @@
     vue-template-es2015-compiler "^1.6.0"
 
 "@vue/test-utils@^1.0.0-beta.18":
-  version "1.0.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.18.tgz#53c22c4b90211a98dbf2708c0b717c18adaa993c"
+  version "1.0.0-beta.19"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.19.tgz#a1ec452081f6c7a9fa245478e2de227953a30455"
   dependencies:
     lodash "^4.17.4"
 
@@ -6534,8 +6530,8 @@ ts-loader@^4.3.0:
     semver "^5.0.1"
 
 ts-node@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-6.1.0.tgz#a2c37a11fdb58e60eca887a1269b025cf4d2f8b8"
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-6.1.1.tgz#19607140acb06150441fcdb61be11f73f7b6657e"
   dependencies:
     arrify "^1.0.0"
     diff "^3.1.0"
@@ -6609,8 +6605,8 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 typescript@^2.8.3, typescript@^2.9.1:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.1.tgz#fdb19d2c67a15d11995fd15640e373e09ab09961"
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
 uglify-es@^3.3.4:
   version "3.3.9"
