@@ -61,7 +61,7 @@ Enable generating source maps.
 Disable [WebpackBar](https://github.com/nuxt/webpackbar)'s profiler.
 
 ## `plugins`
-**Type:** `Plugin[]`
+**Type:** [`Plugin[]`](/plugin/)
 
 `vue-pack`'s plugins.
 
