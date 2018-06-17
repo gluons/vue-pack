@@ -1,6 +1,7 @@
 ---
 sidebar: auto
 prev: /get-started/
+next: /plugin/
 ---
 
 # Configuration

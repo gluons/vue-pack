@@ -5,8 +5,23 @@ module.exports = {
 		repo: 'gluons/vue-pack',
 		docsBranch: 'docs',
 		nav: [
-			{ text: 'Get Started', link: '/get-started/' },
-			{ text: 'Configuration', link: '/configuration/' }
+			{
+				text: 'Get Started',
+				link: '/get-started/'
+			},
+			{
+				text: 'Configuration',
+				link: '/configuration/'
+			},
+			{
+				text: 'Plugins',
+				items: [
+					{
+						text: 'Plugin',
+						link: '/plugin/'
+					}
+				]
+			}
 		]
 	}
 };
