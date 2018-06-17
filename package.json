@@ -4,7 +4,10 @@
   "description": "A documentation website for vue-pack.",
   "private": true,
   "scripts": {
-    "dev": "vuepress dev"
+    "build": "vuepress build",
+    "dev": "vuepress dev",
+    "lint": "eslint --ext .vue,.js .vuepress/",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
