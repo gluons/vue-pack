@@ -63,4 +63,23 @@ const MyAwesomePlugin: PluginFunction = (options): Plugin => {
 		// Do anything that you want...
 	}
 }
+
+export = MyAwesomePlugin;
+```
+
+After that, add your plugin into `vue-pack`'s config.
+
+**`vue-pack.config.js`**
+```js{6-10}
+const MyAwesomePlugin = require('my-awesome-vue-pack-plugin');
+
+module.exports = {
+	entry: './src/index.ts',
+	libraryName: 'MyVuePlugin',
+	plugins: [
+		MyAwesomePlugin({
+			// Options...
+		})
+	]
+};
 ```
