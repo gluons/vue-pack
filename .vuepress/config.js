@@ -19,6 +19,10 @@ module.exports = {
 					{
 						text: 'Plugin',
 						link: '/plugin/'
+					},
+					{
+						text: 'Creating a plugin',
+						link: '/creating-plugin/'
 					}
 				]
 			}

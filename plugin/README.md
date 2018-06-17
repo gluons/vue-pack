@@ -1,6 +1,7 @@
 ---
 sidebar: auto
 prev: /configuration/
+next: /creating-plugin/
 ---
 
 # Plugin
@@ -11,7 +12,14 @@ prev: /configuration/
 type Plugin = (context: PluginContext) => void;
 ```
 
+### `context`
+**Type:** [`PluginContext`](#plugincontext)
+
+Context of plugin.
+
 ## PluginContext
+
+Context of plugin.
 
 ```ts
 interface PluginContext {
