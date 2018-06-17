@@ -1,4 +1,5 @@
 module.exports = {
+	base: '/vue-pack/',
 	title: 'Vue Pack',
 	description: 'Bundle Vue.js library via webpack.',
 	themeConfig: {
