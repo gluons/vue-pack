@@ -7,8 +7,8 @@ features:
   details: Bundle Vue.js library as CommonJS, ES module and Web easily.
 - title: Customizable
   details: Able to custom via config and plugins.
-- title: Support Pre-Processors
-  details: Support TypeScript, SCSS, PostCSS and Pug
+- title: Built-in Pre-Processors
+  details: Support TypeScript, SCSS, PostCSS and Pug out of the box.
 footer: Made with ❤️ by Saran Tanpituckpong
 ---
 

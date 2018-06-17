@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+prev: /get-started/
 ---
 
 # Configuration
