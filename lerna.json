@@ -1,11 +1,11 @@
 {
-	"lerna": "2.11.0",
-	"version": "0.0.1",
-	"npmClient": "yarn",
-	"useWorkspaces": true,
-	"command": {
-		"publish": {
-			"message": ":bookmark: %v"
-		}
-	}
+  "lerna": "2.11.0",
+  "version": "0.0.1",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "message": ":bookmark: %v"
+    }
+  }
 }
