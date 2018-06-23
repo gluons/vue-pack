@@ -23,13 +23,13 @@ Context of plugin.
 
 ```ts
 interface PluginContext {
-	readonly webpackConfigs: PluginConfigGroup;
+	readonly webpackConfigs: PluginWebpackConfigGroup;
 	readonly config: Configuration;
 }
 ```
 
 ### `webpackConfigs`
-**Type:** [`PluginConfigGroup`](#pluginconfiggroup)
+**Type:** [`PluginWebpackConfigGroup`](#pluginwebpackconfiggroup)
 
 Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configurations instance that's created in `vue-pack`.
 
@@ -38,12 +38,12 @@ Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'
 
 `vue-pack`'s configuration.
 
-## PluginConfigGroup
+## PluginWebpackConfigGroup
 
 Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configurations instance.
 
 ```ts
-interface PluginConfigGroup {
+interface PluginWebpackConfigGroup {
 	readonly commonJSConfig;
 	readonly esModuleConfig;
 	readonly webUnminConfig;
