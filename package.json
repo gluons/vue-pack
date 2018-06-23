@@ -2,6 +2,7 @@
   "name": "vue-pack",
   "private": true,
   "scripts": {
+    "build": "lerna exec -- yarn build",
     "test": "lerna exec -- yarn test"
   },
   "workspaces": [
