@@ -1,12 +1,12 @@
 import Configuration from './Configuration';
 
 /**
- * Group of `webpack-chain`'s config instances for plugin.
+ * Group of `webpack-chain`'s configs instance for plugin.
  *
  * @export
- * @interface PluginConfigGroup
+ * @interface PluginWebpackConfigGroup
  */
-export interface PluginConfigGroup {
+export interface PluginWebpackConfigGroup {
 	/**
 	 * Common JS `webpack-chain`'s config instance
 	 */
@@ -35,7 +35,7 @@ export interface PluginContext {
 	/**
 	 * Group of all `webpack-chain`'s configs
 	 */
-	readonly webpackConfigs: PluginConfigGroup;
+	readonly webpackConfigs: PluginWebpackConfigGroup;
 	/**
 	 * `vue-pack`'s configuration
 	 */

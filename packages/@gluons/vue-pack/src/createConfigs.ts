@@ -4,7 +4,7 @@ import createCJSConfig from './lib/createCJSConfig';
 import createESMConfig from './lib/createESMConfig';
 import createWebConfig from './lib/createWebConfig';
 import Configuration, { toCommonOptions, toWebOptions } from './types/Configuration';
-import { PluginConfigGroup } from './types/Plugin';
+import { PluginWebpackConfigGroup } from './types/Plugin';
 import executePlugins from './utils/executePlugins';
 import infuseWebpackBar from './utils/infuseWebpackBar';
 
@@ -42,7 +42,7 @@ export default async function createConfigs(config: Configuration): Promise<Webp
 	});
 
 	// Execute plugins
-	const webpackConfigGroup: PluginConfigGroup = {
+	const webpackConfigGroup: PluginWebpackConfigGroup = {
 		commonJSConfig,
 		esModuleConfig,
 		webUnminConfig,
