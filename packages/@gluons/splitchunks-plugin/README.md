@@ -26,7 +26,7 @@ Add this plugin into `vue-pack` config.
 
 **`vue-pack.config.js`**
 ```js
-const splitChunks = require('@gluons/vue-pack-splitchunks-plugin');
+const splitChunks = require('@gluons/vue-pack-splitchunks-plugin').default;
 
 const options = {
 	tapAll(splitChunks) {
@@ -49,7 +49,7 @@ const options = {
 
 		return splitChunks;
 	}
-}
+};
 
 module.exports = {
 	plugins: [
