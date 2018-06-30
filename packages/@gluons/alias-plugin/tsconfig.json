@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"target": "es2015",
+		"esModuleInterop": true,
+		"outDir": "dist",
+		"declaration": true,
+		"noUnusedLocals": true
+	},
+	"include": [
+		"src"
+	]
+}
