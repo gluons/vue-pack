@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-cli",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A CLI tool for vue-pack.",
   "bin": {
     "vue-pack": "./dist/cli.js"
@@ -45,7 +45,7 @@
     "vue": "2"
   },
   "dependencies": {
-    "@gluons/vue-pack": "^0.0.2",
+    "@gluons/vue-pack": "^0.1.0",
     "aggregate-error": "^1.0.0",
     "chalk": "^2.4.1",
     "lodash.isnil": "^4.0.0",

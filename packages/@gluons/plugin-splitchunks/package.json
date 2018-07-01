@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-splitchunks-plugin",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A vue-pack plugin to customize webpack's splitChunks.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -40,7 +40,7 @@
     "@gluons/vue-pack": "^0.0.1"
   },
   "devDependencies": {
-    "@gluons/vue-pack": "^0.0.2",
+    "@gluons/vue-pack": "^0.1.0",
     "@types/jest": "^23.1.0",
     "@types/webpack": "^4.4.0",
     "jest": "^23.1.0",
