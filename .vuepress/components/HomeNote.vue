@@ -23,12 +23,12 @@ blockquote {
 <style lang="scss" scoped>
 p {
 	color: blueviolet;
+	background-color: mistyrose;
 	font-size: 1.4rem;
-	border-left-color: blueviolet;
 	text-align: center;
 	padding: {
-		top: 1rem;
-		bottom: 1rem;
+		top: 2rem;
+		bottom: 2rem;
 	}
 }
 </style>
