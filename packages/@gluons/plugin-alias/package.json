@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-alias-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A vue-pack plugin to customize webpack's resolve.alias.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
