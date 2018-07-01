@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/gluons/vue-pack",
   "peerDependencies": {
-    "@gluons/vue-pack": "^0.0.1"
+    "@gluons/vue-pack": "^0.1.0"
   },
   "devDependencies": {
     "@gluons/vue-pack": "^0.1.0",
