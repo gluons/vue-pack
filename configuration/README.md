@@ -48,6 +48,12 @@ Output directory of bundled files.
 
 Clean output directory before bundling.
 
+## `define`
+**Type:** `object`  
+**Default:** `{}`
+
+Define global constants which can be configured at compile time by **webpack**'s [DefinePlugin](https://webpack.js.org/plugins/define-plugin/).
+
 ## `sourceMap`
 **Type:** `boolean`  
 **Default:** `true`
