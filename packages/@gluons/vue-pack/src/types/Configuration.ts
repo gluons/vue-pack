@@ -30,6 +30,10 @@ export default interface Configuration {
 	 */
 	cleanOutDir?: boolean;
 	/**
+	 * Define global constants which can be configured at compile time
+	 */
+	define?: { [key: string]: any };
+	/**
 	 * Enable source map?
 	 */
 	sourceMap?: boolean;
@@ -55,6 +59,7 @@ export function toCommonOptions(config: Configuration): CommonOptions {
 		entry: config.entry,
 		fileName: config.fileName,
 		outDir: config.outDir,
+		define: config.define,
 		sourceMap: config.sourceMap
 	};
 

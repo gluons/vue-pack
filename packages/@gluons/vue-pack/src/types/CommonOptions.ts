@@ -18,6 +18,10 @@ export default interface CommonOptions {
 	 */
 	outDir: string;
 	/**
+	 * Define global constants which can be configured at compile time
+	 */
+	define: { [key: string]: any };
+	/**
 	 * Enable source map?
 	 */
 	sourceMap: boolean;

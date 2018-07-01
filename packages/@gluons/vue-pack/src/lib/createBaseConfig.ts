@@ -16,6 +16,7 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 		entry,
 		fileName,
 		outDir,
+		define,
 		minimize,
 		sourceMap
 	} = options;
@@ -55,7 +56,7 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 	;
 
 	await infuseWebpackModule(config, minimize, sourceMap);
-	infuseWebpackPlugins(config, cssFileName);
+	infuseWebpackPlugins(config, cssFileName, define);
 
 	return config;
 }
