@@ -52,7 +52,7 @@
     "aggregate-error": "^1.0.0",
     "autoprefixer": "^8.5.0",
     "browserslist-config-vue": "^1.0.3",
-    "css-loader": "^0.28.11",
+    "css-loader": "^1.0.0",
     "del": "^3.0.0",
     "joycon": "^1.0.4",
     "joycon-yaml-loader": "^1.0.0",
