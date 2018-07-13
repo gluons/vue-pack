@@ -59,7 +59,7 @@
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
     "nvl": "^1.1.1",
-    "postcss-load-config": "^1.2.0",
+    "postcss-load-config": "^2.0.0",
     "postcss-loader": "^2.1.5",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
