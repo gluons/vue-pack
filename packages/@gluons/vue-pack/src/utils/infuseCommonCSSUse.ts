@@ -7,14 +7,12 @@ import getPostCSSConfigPath from './getPostCSSConfigPath';
  *
  * @export
  * @param {any} rule `webpack-chain`'s Rule
- * @param {boolean} minimize Minimize CSS?
  * @param {boolean} sourceMap Enable source map?
  * @param {number} [importLoaders=1] `css-loader`'s `importLoaders`
  * @returns {Promise<void>}
  */
 export default async function infuseCommonCSSUse(
 	rule: any,
-	minimize: boolean,
 	sourceMap: boolean,
 	importLoaders: number = 1
 ): Promise<void> {
@@ -26,7 +24,6 @@ export default async function infuseCommonCSSUse(
 			.loader('css-loader')
 			.options({
 				importLoaders,
-				minimize,
 				sourceMap
 			})
 			.end()

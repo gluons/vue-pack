@@ -55,8 +55,8 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 		.stats('none')
 	;
 
-	await infuseWebpackModule(config, minimize, sourceMap);
-	infuseWebpackPlugins(config, cssFileName, define);
+	await infuseWebpackModule(config, sourceMap);
+	infuseWebpackPlugins(config, cssFileName, minimize, sourceMap, define);
 
 	return config;
 }

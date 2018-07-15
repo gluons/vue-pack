@@ -5,13 +5,11 @@ import infuseCommonCSSUse from '../utils/infuseCommonCSSUse';
  *
  * @export
  * @param {any} config `webpack-chain`'s config instance
- * @param {boolean} minimize Minimize CSS?
  * @param {boolean} sourceMap Enable source map?
  * @returns {Promise<void>}
  */
 export default async function infuseWebpackModule(
 	config: any,
-	minimize: boolean,
 	sourceMap: boolean
 ): Promise<void> {
 	// Vue
@@ -36,11 +34,11 @@ export default async function infuseWebpackModule(
 
 	// CSS
 	config.module.rule('css').test(/\.css$/);
-	await infuseCommonCSSUse(config.module.rule('css'), minimize, sourceMap);
+	await infuseCommonCSSUse(config.module.rule('css'), sourceMap);
 
 	// SCSS
 	config.module.rule('scss').test(/\.scss$/);
-	await infuseCommonCSSUse(config.module.rule('scss'), minimize, sourceMap, 2);
+	await infuseCommonCSSUse(config.module.rule('scss'), sourceMap, 2);
 	config.module.rule('scss')
 		.use('scss')
 			.loader('sass-loader')
