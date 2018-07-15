@@ -12,11 +12,7 @@ const defaultPostCSSConfigPath = resolve(__dirname, '../../postcss.config.js');
  */
 export default async function getPostCSSConfigPath(): Promise<string> {
 	try {
-		const { file: configPath }: { file: string } = await postcssrc(
-			{},
-			process.cwd(),
-			{ argv: false }
-		);
+		const { file: configPath }: { file: string } = await postcssrc();
 
 		return nvl(configPath, defaultPostCSSConfigPath);
 	} catch {
