@@ -1,3 +1,4 @@
+import OptimizeCssnanoPlugin from '@intervolga/optimize-cssnano-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import VueLoaderPlugin from 'vue-loader/lib/plugin';
 import { DefinePlugin } from 'webpack';
@@ -8,11 +9,15 @@ import { DefinePlugin } from 'webpack';
  * @export
  * @param {any} config `webpack-chain`'s config instance
  * @param {string} cssFileName CSS file name
+ * @param {boolean} minimizeCSS Minimize CSS?
+ * @param {boolean} sourceMap Enable source map?
  * @param {{ [key: string]: any }} define Define global constants which can be configured at compile time
  */
 export default function infuseWebpackPlugins(
 	config: any,
 	cssFileName: string,
+	minimizeCSS: boolean,
+	sourceMap: boolean,
 	define: { [key: string]: any }
 ): void {
 	config
@@ -22,6 +27,13 @@ export default function infuseWebpackPlugins(
 		.plugin('css-extract')
 			.use(MiniCssExtractPlugin, [{ filename: cssFileName }])
 	;
+
+	if (minimizeCSS) {
+		config
+			.plugin('css-minimize')
+				.use(OptimizeCssnanoPlugin, [{ sourceMap }])
+		;
+	}
 
 	// If define isn't empty object, add it with `DefinePlugin`.
 	if (define && (Object.keys(define).length > 0)) {
