@@ -2,14 +2,12 @@ import BaseOptions from './BaseOptions';
 
 /**
  * Options for creating web config.
- *
- * @export
- * @interface WebOptions
- * @extends {BaseOptions}
  */
-export default interface WebOptions extends BaseOptions {
+type WebOptions = BaseOptions & {
 	/**
 	 * Library name
 	 */
-	libraryName: string;
-}
+	libraryName: string
+};
+
+export default WebOptions;

@@ -32,7 +32,7 @@ export default interface Configuration {
 	/**
 	 * Define global constants which can be configured at compile time
 	 */
-	define?: { [key: string]: any };
+	define?: Record<string, any>;
 	/**
 	 * Enable source map?
 	 */

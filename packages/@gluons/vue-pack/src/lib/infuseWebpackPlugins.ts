@@ -11,14 +11,14 @@ import { DefinePlugin } from 'webpack';
  * @param {string} cssFileName CSS file name
  * @param {boolean} minimizeCSS Minimize CSS?
  * @param {boolean} sourceMap Enable source map?
- * @param {{ [key: string]: any }} define Define global constants which can be configured at compile time
+ * @param {Record<string, any>} define Define global constants which can be configured at compile time
  */
 export default function infuseWebpackPlugins(
 	config: any,
 	cssFileName: string,
 	minimizeCSS: boolean,
 	sourceMap: boolean,
-	define: { [key: string]: any }
+	define: Record<string, any>
 ): void {
 	config
 		.plugin('vue')

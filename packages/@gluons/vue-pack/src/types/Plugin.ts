@@ -45,15 +45,15 @@ export interface PluginContext {
 /**
  * A plugin.
  *
- * @param {PluginContext} context Plugin's context
+ * @export
  */
 type Plugin = (context: PluginContext) => void;
 
 /**
  * A function that create `Plugin`. (a.k.a. `Plugin` wrapper)
  *
- * @param {any} options Plugin's options
+ * @export
  */
-export type PluginFunction = (options?: any) => Plugin;
+export type PluginFunction<T> = (options?: T) => Plugin;
 
 export default Plugin;

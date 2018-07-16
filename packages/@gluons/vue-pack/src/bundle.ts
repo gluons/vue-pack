@@ -6,16 +6,19 @@ import { Stats } from 'webpack';
 
 import build from './build';
 import createConfigs from './createConfigs';
+import ConfigParameterError from './types/ConfigParameterError';
 import Configuration from './types/Configuration';
 import Plugin from './types/Plugin';
 import fulfilConfig from './utils/fulfilConfig';
 import loadConfig from './utils/loadConfig';
 import validateConfig from './utils/validateConfig';
 
-export { Configuration, Stats };
 export {
 	AggregateError,
-	loadConfig
+	Configuration,
+	ConfigParameterError,
+	loadConfig,
+	Stats
 };
 export * from './types/Plugin';
 export { Plugin };
