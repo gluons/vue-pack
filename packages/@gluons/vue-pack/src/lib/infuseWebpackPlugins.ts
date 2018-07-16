@@ -37,9 +37,15 @@ export default function infuseWebpackPlugins(
 
 	// If define isn't empty object, add it with `DefinePlugin`.
 	if (define && (Object.keys(define).length > 0)) {
+		let stringifiedDefine: Record<string, string> = {};
+		Object.keys(define).forEach(key => {
+			const value = define[key];
+			stringifiedDefine[key] = JSON.stringify(value);
+		});
+
 		config
 			.plugin('define')
-				.use(DefinePlugin, [define])
+				.use(DefinePlugin, [stringifiedDefine])
 		;
 	}
 }
