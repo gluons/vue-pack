@@ -54,6 +54,10 @@ Clean output directory before bundling.
 
 Define global constants which can be configured at compile time by **webpack**'s [DefinePlugin](https://webpack.js.org/plugins/define-plugin/).
 
+::: tip
+Each value in `define` is [stringified](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) by default.
+:::
+
 ## `sourceMap`
 **Type:** `boolean`  
 **Default:** `true`
