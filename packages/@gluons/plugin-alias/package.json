@@ -49,7 +49,7 @@
     "rimraf": "^2.6.2",
     "ts-jest": "^23.0.0",
     "tslint": "^5.10.0",
-    "tslint-config-gluons": "^1.0.5",
+    "tslint-config-gluons": "^2.0.0",
     "typescript": "^3.0.0"
   }
 }
