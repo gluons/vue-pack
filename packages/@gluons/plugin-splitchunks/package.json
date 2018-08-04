@@ -48,7 +48,7 @@
     "rimraf": "^2.6.2",
     "ts-jest": "^23.0.0",
     "tslint": "^5.10.0",
-    "tslint-config-gluons": "^1.0.5",
+    "tslint-config-gluons": "^2.0.0",
     "typescript": "^2.9.1",
     "webpack": "^4.12.0",
     "webpack-chain": "^4.8.0"
