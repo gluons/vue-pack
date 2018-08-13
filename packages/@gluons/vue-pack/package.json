@@ -74,21 +74,11 @@
   },
   "devDependencies": {
     "@types/del": "^3.0.1",
-    "@types/jest": "^23.3.1",
-    "@types/node": "8",
-    "@types/webpack": "^4.4.9",
-    "@vue/test-utils": "^1.0.0-beta.23",
-    "chalk": "^2.4.1",
     "jest": "^23.4.2",
     "postcss-brand-colors": "^2.0.0",
     "rimraf": "^2.6.2",
-    "ts-jest": "^23.1.2",
     "ts-node": "^7.0.0",
-    "tslint": "^5.10.0",
-    "tslint-config-gluons": "^2.0.0",
-    "typescript": "^3.0.0",
-    "vue": "^2.5.17",
-    "vue-class-component": "^6.2.0"
+    "typescript": "^3.0.0"
   },
   "optionalDependencies": {
     "joycon-ts-loader": "^1.0.1"

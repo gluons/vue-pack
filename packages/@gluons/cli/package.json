@@ -57,22 +57,14 @@
   "devDependencies": {
     "@types/aggregate-error": "^1.0.0",
     "@types/cross-spawn": "^6.0.0",
-    "@types/jest": "^23.3.1",
     "@types/lodash.isnil": "^4.0.4",
     "@types/lodash.omitby": "^4.6.4",
     "@types/lodash.pick": "^4.4.4",
-    "@types/node": "8",
     "@types/yargs": "^11.0.0",
-    "@vue/test-utils": "^1.0.0-beta.23",
     "cross-spawn": "^6.0.5",
     "jest": "^23.4.2",
     "rimraf": "^2.6.2",
-    "ts-jest": "^23.1.2",
     "ts-node": "^7.0.0",
-    "tslint": "^5.10.0",
-    "tslint-config-gluons": "^2.0.0",
-    "typescript": "^3.0.0",
-    "vue": "^2.5.17",
-    "vue-template-compiler": "^2.5.17"
+    "typescript": "^3.0.0"
   }
 }
