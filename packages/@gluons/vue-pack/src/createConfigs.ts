@@ -1,12 +1,17 @@
+import {
+	Configuration,
+	ConfigurationMethods,
+	PluginWebpackConfigGroup
+} from '@gluons/vue-pack-types';
 import { Configuration as WebpackConfiguration } from 'webpack';
 
 import createCJSConfig from './lib/createCJSConfig';
 import createESMConfig from './lib/createESMConfig';
 import createWebConfig from './lib/createWebConfig';
-import Configuration, { toCommonOptions, toWebOptions } from './types/Configuration';
-import { PluginWebpackConfigGroup } from './types/Plugin';
 import executePlugins from './utils/executePlugins';
 import infuseWebpackBar from './utils/infuseWebpackBar';
+
+const { toCommonOptions, toWebOptions } = ConfigurationMethods;
 
 const barOptions = [
 	{ name: 'CommonJS', color: 'green' },

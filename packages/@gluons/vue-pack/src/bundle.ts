@@ -1,3 +1,12 @@
+import loadConfig from '@gluons/vue-pack-load-config';
+import {
+	ConfigParameterError,
+	Configuration,
+	Plugin,
+	PluginContext,
+	PluginFunction,
+	PluginWebpackConfigGroup
+} from '@gluons/vue-pack-types';
 import AggregateError from 'aggregate-error';
 import del from 'del';
 import nvl from 'nvl';
@@ -6,22 +15,19 @@ import { Stats } from 'webpack';
 
 import build from './build';
 import createConfigs from './createConfigs';
-import ConfigParameterError from './types/ConfigParameterError';
-import Configuration from './types/Configuration';
-import Plugin from './types/Plugin';
 import fulfilConfig from './utils/fulfilConfig';
-import loadConfig from './utils/loadConfig';
 import validateConfig from './utils/validateConfig';
 
 export {
 	AggregateError,
-	Configuration,
 	ConfigParameterError,
-	loadConfig,
+	Configuration,
+	Plugin,
+	PluginContext,
+	PluginFunction,
+	PluginWebpackConfigGroup,
 	Stats
 };
-export * from './types/Plugin';
-export { Plugin };
 
 /**
  * Start bundle library.
@@ -32,7 +38,7 @@ export { Plugin };
  */
 export default async function bundle(config?: Configuration): Promise<Stats> {
 	// If no config given, try to load config from config file.
-	config = nvl(config, loadConfig());
+	config = nvl(config, await loadConfig());
 
 	validateConfig(config);
 	config = fulfilConfig(config);

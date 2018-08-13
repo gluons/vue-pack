@@ -1,7 +1,7 @@
+import { Configuration } from '@gluons/vue-pack-types';
 import moren from 'moren';
 
 import defaultConfig from '../lib/defaultConfig';
-import Configuration from '../types/Configuration';
 
 /**
  * Fulfil missing config value with default config.

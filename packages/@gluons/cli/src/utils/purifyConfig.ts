@@ -1,4 +1,4 @@
-import { Configuration } from '@gluons/vue-pack';
+import { Configuration } from '@gluons/vue-pack-types';
 import isNil from 'lodash.isnil';
 import omitBy from 'lodash.omitby';
 import pick from 'lodash.pick';

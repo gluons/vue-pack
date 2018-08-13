@@ -1,0 +1,32 @@
+{
+  "name": "@gluons/vue-pack-types",
+  "version": "0.2.1",
+  "description": "Common types for vue-pack.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "prebuild": "rimraf dist/*",
+    "build": "tsc",
+    "lint": "tslint -p .",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "keywords": [
+    "vue-pack",
+    "types"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-pack/issues"
+  },
+  "homepage": "https://gluons.github.io/vue-pack/",
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "typescript": "^3.0.1"
+  }
+}

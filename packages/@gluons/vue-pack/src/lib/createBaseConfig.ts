@@ -1,6 +1,6 @@
+import { BaseOptions } from '@gluons/vue-pack-types';
 import Config from 'webpack-chain';
 
-import BaseOptions from '../types/BaseOptions';
 import infuseWebpackModule from './infuseWebpackModule';
 import infuseWebpackPlugins from './infuseWebpackPlugins';
 

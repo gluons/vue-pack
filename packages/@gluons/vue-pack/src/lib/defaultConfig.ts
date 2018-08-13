@@ -1,8 +1,8 @@
+import { Configuration } from '@gluons/vue-pack-types';
+
 import slugify from '@sindresorhus/slugify';
 import { PartialDefaults } from 'moren';
 import { resolve } from 'path';
-
-import Configuration from '../types/Configuration';
 
 /**
  * Default config.

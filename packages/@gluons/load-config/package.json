@@ -1,0 +1,50 @@
+{
+  "name": "@gluons/vue-pack-load-config",
+  "version": "0.2.1",
+  "description": "A configuration loader for vue-pack.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "prebuild": "rimraf dist/*",
+    "build": "tsc",
+    "lint": "tslint -p .",
+    "pretest": "npm run build",
+    "test": "npm run lint && jest -c jest.config.json --verbose --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "keywords": [
+    "vue-pack",
+    "config",
+    "configuration",
+    "config-loader",
+    "configuration-loader"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-pack/issues"
+  },
+  "homepage": "https://gluons.github.io/vue-pack/",
+  "peerDependencies": {},
+  "dependencies": {
+    "@gluons/vue-pack-types": "^0.2.1",
+    "joycon": "^1.1.0",
+    "joycon-yaml-loader": "^1.0.0",
+    "nvl": "^1.1.1"
+  },
+  "devDependencies": {
+    "jest": "^23.5.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.0.1"
+  },
+  "optionalDependencies": {
+    "joycon-ts-loader": "^1.0.2"
+  }
+}

@@ -1,4 +1,5 @@
-import WebOptions from '../types/WebOptions';
+import { WebOptions } from '@gluons/vue-pack-types';
+
 import createBaseConfig from './createBaseConfig';
 
 /**

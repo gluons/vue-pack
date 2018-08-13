@@ -1,5 +1,9 @@
-import Configuration from '../types/Configuration';
-import Plugin, { PluginContext, PluginWebpackConfigGroup } from '../types/Plugin';
+import {
+	Configuration,
+	Plugin,
+	PluginContext,
+	PluginWebpackConfigGroup
+} from '@gluons/vue-pack-types';
 
 /**
  * Execute plugins.

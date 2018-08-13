@@ -1,0 +1,7 @@
+module.exports = {
+	entry: './src/index.js',
+	libraryName: 'Hello',
+	fileName: 'hello-plugin',
+	outDir: './bundles',
+	sourceMap: false,
+};

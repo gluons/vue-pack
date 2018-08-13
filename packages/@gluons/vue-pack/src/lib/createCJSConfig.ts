@@ -1,7 +1,6 @@
+import { BaseOptions, CommonOptions } from '@gluons/vue-pack-types';
 import nodeExternals from 'webpack-node-externals';
 
-import BaseOptions from '../types/BaseOptions';
-import CommonOptions from '../types/CommonOptions';
 import createBaseConfig from './createBaseConfig';
 
 /**

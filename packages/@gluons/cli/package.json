@@ -47,6 +47,8 @@
   },
   "dependencies": {
     "@gluons/vue-pack": "^0.2.0",
+    "@gluons/vue-pack-load-config": "^0.2.1",
+    "@gluons/vue-pack-types": "^0.2.1",
     "aggregate-error": "^1.0.0",
     "chalk": "^2.4.1",
     "lodash.isnil": "^4.0.0",

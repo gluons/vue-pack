@@ -47,24 +47,19 @@ const argv: Argv = yargs
 	.argv
 ;
 
-let config: Configuration;
+(async () => {
+	try {
+		let config: Configuration;
+		if (argv.config) {
+			config = await loadConfig(argv.config as string);
+		} else {
+			config = await loadConfig(argv);
+		}
 
-try {
-	if (argv.config) {
-		config = loadConfig(argv.config as string);
-	} else {
-		config = loadConfig(argv);
+		await bundle(config);
+		displaySuccess();
+	} catch (err) {
+		displayError(err);
+		process.exitCode = 1;
 	}
-
-	bundle(config)
-		.then(() => {
-			displaySuccess();
-		})
-		.catch(err => {
-			displayError(err);
-			process.exitCode = 1;
-		});
-} catch (err) {
-	displayError(err);
-	process.exitCode = 1;
-}
+})();

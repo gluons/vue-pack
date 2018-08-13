@@ -1,8 +1,7 @@
+import { ConfigParameterError, Configuration } from '@gluons/vue-pack-types';
 import AggregateError from 'aggregate-error';
 
 import requiredConfig from '../lib/requiredConfig';
-import ConfigParameterError from '../types/ConfigParameterError';
-import Configuration from '../types/Configuration';
 
 /**
  * Validate `vue-pack`'s configuration.
