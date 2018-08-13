@@ -22,5 +22,5 @@ child.on('exit', code => {
 	}
 });
 child.on('error', err => {
-	console.error(`${red('Error')}`, err);
+	console.error(`${red(' Error ')}`, err);
 });

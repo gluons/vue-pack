@@ -20,7 +20,7 @@
     "build": "tsc -p .",
     "lint": "tslint -p .",
     "pretest": "npm run build && ts-node ./scripts/prepareTest.ts",
-    "test": "npm run lint && jest -c ./jest.config.json"
+    "test": "npm run lint && jest -c ./jest.config.json --colors"
   },
   "repository": {
     "type": "git",
