@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
+    "pretest": "npm run build",
     "test": "cross-env FORCE_COLOR=1 lerna run test --stream"
   },
   "workspaces": [
