@@ -2,12 +2,11 @@
   "name": "vue-pack",
   "private": true,
   "scripts": {
-    "build": "lerna exec -- yarn build",
-    "test": "lerna exec -- yarn test"
+    "build": "lerna run build",
+    "test": "lerna run test --stream"
   },
   "workspaces": [
-    "packages/@gluons/*",
-    "packages/*"
+    "packages/@gluons/*"
   ],
   "repository": {
     "type": "git",
