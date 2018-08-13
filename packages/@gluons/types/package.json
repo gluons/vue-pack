@@ -4,6 +4,9 @@
   "description": "Common types for vue-pack.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublishOnly": "npm run build",
     "prebuild": "rimraf dist/*",
