@@ -1,0 +1,55 @@
+{
+  "name": "@gluons/vue-pack-dev",
+  "version": "0.2.1",
+  "description": "A development server for vue-pack.",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist/*",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "testcafe firefox ./test/*.test.ts -a \"ts-node ./scripts/run.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "keywords": [
+    "vue-pack",
+    "dev",
+    "dev-server",
+    "development"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-pack/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-pack",
+  "dependencies": {
+    "autoprefixer": "^9.1.1",
+    "css-loader": "^1.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "moren": "^1.1.0",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "ts-loader": "^4.4.2",
+    "vue-loader": "^15.3.0",
+    "webpack": "^4.16.5",
+    "webpack-serve": "^2.0.2",
+    "webpackbar": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/webpack-serve": "^2.0.0",
+    "@types/webpackbar": "^2.6.0",
+    "jest": "^23.5.0",
+    "rimraf": "^2.6.2",
+    "testcafe": "^0.21.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  }
+}
