@@ -4,6 +4,10 @@
 		"^.+\\.ts$": "ts-jest"
 	},
 	"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)$",
+	"testPathIgnorePatterns": [
+		"/node_modules/",
+		"<rootDir>/test/devServer.test.ts"
+	],
 	"moduleFileExtensions": [
 		"ts",
 		"js",

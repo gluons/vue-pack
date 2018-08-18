@@ -8,7 +8,7 @@ import { Arguments } from 'yargs';
  * Purify impure config from CLI.
  *
  * @export
- * @param {(Configuration | Arguments)} impureConfig Impure config.
+ * @param {(Configuration | Arguments)} impureConfig Impure config
  * @returns {Configuration}
  */
 export default function purifyConfig(impureConfig: Configuration | Arguments): Configuration {

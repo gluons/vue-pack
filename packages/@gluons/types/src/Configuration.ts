@@ -1,4 +1,5 @@
 import CommonOptions from './CommonOptions';
+import DevOptions from './DevOptions';
 import Plugin from './Plugin';
 import WebOptions from './WebOptions';
 
@@ -45,6 +46,10 @@ export default interface Configuration {
 	 * Plugins
 	 */
 	plugins?: Plugin[];
+	/**
+	 * Options for `vue-pack-dev`
+	 */
+	dev?: DevOptions;
 }
 
 /**
