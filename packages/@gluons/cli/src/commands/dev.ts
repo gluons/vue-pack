@@ -1,12 +1,12 @@
 import serve, { DefaultOptions, Options } from '@gluons/vue-pack-dev';
-import { Configuration } from '@gluons/vue-pack-types';
+import loadConfig from '@gluons/vue-pack-load-config';
 import nvl from 'nvl';
-import { resolve } from 'path';
 import { Arguments, CommandBuilder } from 'yargs';
 
 import displayError from '../utils/displayError';
-import loadConfig from '../utils/loadConfig';
+import isNonEmptyStr from '../utils/isNonEmptyStr';
 import purifyDevOptions from '../utils/purifyDevOptions';
+import resolvePath from '../utils/resolvePath';
 
 export const command = 'dev';
 
@@ -48,17 +48,12 @@ export const builder: CommandBuilder = yargs => {
 
 export async function handler(argv: Arguments): Promise<void> {
 	try {
-		let config: Configuration;
-		if (argv.config) {
-			config = await loadConfig(argv.config as string);
-		} else {
-			config = await loadConfig();
-		}
-
+		const configPath: string = isNonEmptyStr(argv.config) ? argv.config : null;
+		const config = await loadConfig(null, configPath);
 		const cliOptions = purifyDevOptions(argv);
 		const configDevOptions = config.dev;
 
-		const entry = resolve(process.cwd(), nvl(cliOptions.entry, configDevOptions.entry));
+		const entry = resolvePath(nvl(cliOptions.entry, configDevOptions.entry));
 		const port = nvl(cliOptions.port, configDevOptions.port);
 		const open = nvl<boolean>(!argv.noOpen, configDevOptions.open);
 		const htmlTitle = nvl(cliOptions.htmlTitle, configDevOptions.htmlTitle);

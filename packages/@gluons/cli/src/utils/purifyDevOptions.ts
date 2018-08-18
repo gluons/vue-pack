@@ -1,26 +1,19 @@
 import { DevOptions } from '@gluons/vue-pack-types';
-import isNil from 'lodash.isnil';
-import omitBy from 'lodash.omitby';
-import pick from 'lodash.pick';
 import { Arguments } from 'yargs';
+
+import convertArguments from './convertArguments';
 
 /**
  * Purify impure development options from CLI.
  *
  * @export
- * @param {(DevOptions | Arguments)} impureOptions Impure development options
+ * @param {Arguments} impureOptions Impure development options
  * @returns {DevOptions}
  */
-export default function purifyDevOptions(impureOptions: DevOptions | Arguments): DevOptions {
-	const options: DevOptions = omitBy(
-		pick(impureOptions, [
-			'entry',
-			'port',
-			'open',
-			'htmlTitle'
-		]),
-		value => isNil(value)
-	) as DevOptions;
-
-	return options;
+export default function purifyDevOptions(impureOptions: Arguments): DevOptions {
+	return convertArguments(impureOptions, [
+		'entry',
+		'port',
+		'htmlTitle'
+	]);
 }

@@ -1,9 +1,12 @@
-import bundle, { Configuration } from '@gluons/vue-pack';
+import bundle from '@gluons/vue-pack';
+import loadConfig from '@gluons/vue-pack-load-config';
 import { Arguments, CommandBuilder } from 'yargs';
 
 import displayError from '../utils/displayError';
 import displaySuccess from '../utils/displaySuccess';
-import loadConfig from '../utils/loadConfig';
+import isNonEmptyStr from '../utils/isNonEmptyStr';
+import purifyConfig from '../utils/purifyConfig';
+import resolvePath from '../utils/resolvePath';
 
 export const command = ['*', 'build'];
 
@@ -17,7 +20,6 @@ export const builder: CommandBuilder = yargs => {
 			desc: 'Path to config file.',
 			normalize: true
 		})
-		.conflicts('config', ['entry', 'libraryName', 'fileName', 'outDir'])
 		.option('entry', {
 			type: 'string',
 			alias: 'i',
@@ -46,12 +48,11 @@ export const builder: CommandBuilder = yargs => {
 
 export async function handler(argv: Arguments): Promise<void> {
 	try {
-		let config: Configuration;
-		if (argv.config) {
-			config = await loadConfig(argv.config as string);
-		} else {
-			config = await loadConfig(argv);
-		}
+		const configPath: string = isNonEmptyStr(argv.config) ? argv.config : null;
+		const cliConfig = purifyConfig(argv);
+		const config = await loadConfig(cliConfig, configPath);
+
+		config.entry = resolvePath(config.entry);
 
 		await bundle(config);
 		displaySuccess();

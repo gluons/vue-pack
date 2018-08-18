@@ -8,10 +8,14 @@ const red = chalk.reset.inverse.bold.red;
 const cliPath = resolve(__dirname, '../dist/cli.js');
 const fixturePath = resolve(__dirname, '../test/fixture');
 
-const child = spawn('node', [cliPath], {
-	cwd: fixturePath,
-	stdio: 'inherit'
-});
+const child = spawn(
+	'node',
+	[cliPath, '-c', './vue-pack.config.js', '-l', 'Hello'],
+	{
+		cwd: fixturePath,
+		stdio: 'inherit'
+	}
+);
 
 child.on('exit', code => {
 	if (code === 0) {
