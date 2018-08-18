@@ -4,10 +4,12 @@
   "description": "A development server for vue-pack.",
   "main": "index.js",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "prebuild": "rimraf dist/*",
     "build": "tsc",
+    "lint": "tslint -p .",
     "pretest": "npm run build",
-    "test": "testcafe firefox ./test/*.test.ts -a \"ts-node ./scripts/run.ts\""
+    "test": "npm run lint && testcafe firefox ./test/*.test.ts -a \"ts-node ./scripts/run.ts\""
   },
   "repository": {
     "type": "git",
