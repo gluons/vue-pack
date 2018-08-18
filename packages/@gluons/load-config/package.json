@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-load-config",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "A configuration loader for vue-pack.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/gluons/vue-pack/tree/master/packages/@gluons/load-config",
   "dependencies": {
-    "@gluons/vue-pack-types": "^0.2.1",
+    "@gluons/vue-pack-types": "^1.0.0",
     "joycon": "^1.1.0",
     "joycon-yaml-loader": "^1.0.0",
     "nvl": "^1.1.1"
