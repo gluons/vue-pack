@@ -2,7 +2,14 @@
   "name": "@gluons/vue-pack-dev",
   "version": "0.2.1",
   "description": "A development server for vue-pack (and vue-up).",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "prebuild": "rimraf dist/*",
