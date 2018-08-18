@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/gluons/vue-pack/issues"
   },
-  "homepage": "https://github.com/gluons/vue-pack",
+  "homepage": "https://github.com/gluons/vue-pack/tree/master/packages/@gluons/dev",
   "dependencies": {
     "autoprefixer": "^9.1.1",
     "browserslist-config-vue": "^1.0.3",

@@ -34,8 +34,7 @@
   "bugs": {
     "url": "https://github.com/gluons/vue-pack/issues"
   },
-  "homepage": "https://gluons.github.io/vue-pack/",
-  "peerDependencies": {},
+  "homepage": "https://github.com/gluons/vue-pack/tree/master/packages/@gluons/load-config",
   "dependencies": {
     "@gluons/vue-pack-types": "^0.2.1",
     "joycon": "^1.1.0",
