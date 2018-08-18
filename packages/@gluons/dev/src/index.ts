@@ -14,7 +14,7 @@ export interface Options {
 
 const defaults: PartialDefaults<Options> = {
 	port: 8080,
-	open: false,
+	open: true,
 	htmlTitle: 'Vue Library',
 	webpackBarName: 'Vue Pack Dev'
 };
