@@ -66,6 +66,9 @@ export default function createWebpackConfig(options: Options): Configuration {
 			]
 		},
 		resolve: {
+			alias: {
+				vue$: 'vue/dist/vue.esm.js'
+			},
 			extensions: ['.wasm', '.mjs', '.vue', '.ts', '.js', '.json']
 		},
 		plugins: [
