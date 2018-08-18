@@ -1,4 +1,9 @@
 # vue-pack-splitchunks-plugin
+![license](https://img.shields.io/github/license/gluons/vue-pack.svg?style=flat-square)
+[![npm](https://img.shields.io/npm/v/@gluons/vue-pack-splitchunks-plugin.svg?style=flat-square)](https://www.npmjs.com/package/@gluons/vue-pack-splitchunks-plugin)
+[![TSLint](https://img.shields.io/badge/TSLint-gluons-15757B.svg?style=flat-square)](https://github.com/gluons/tslint-config-gluons)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lernajs.io/)
+[![Travis (.com)](https://img.shields.io/travis/com/gluons/vue-pack.svg?style=flat-square)](https://travis-ci.com/gluons/vue-pack)
 
 A [vue-pack](https://github.com/gluons/vue-pack) plugin to customize webpack's [splitChunks](https://webpack.js.org/configuration/optimization/#optimization-splitchunks).
 
