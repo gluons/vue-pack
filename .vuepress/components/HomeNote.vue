@@ -23,7 +23,7 @@ blockquote {
 <style lang="scss" scoped>
 p {
 	color: blueviolet;
-	background-color: mistyrose;
+	background-color: antiquewhite;
 	font-size: 1.4rem;
 	text-align: center;
 	padding: {
