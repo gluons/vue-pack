@@ -1,6 +1,6 @@
 # vue-pack
 [![license](https://img.shields.io/github/license/gluons/vue-pack.svg?style=flat-square)](./LICENSE)
-[![npm](https://img.shields.io/npm/v/@gluons/vue-pack.svg?style=flat-square)](https://www.npmjs.com/package/@gluons/vue-pack)
+[![GitHub release](https://img.shields.io/github/release/gluons/vue-pack.svg?style=flat-square)](https://github.com/gluons/vue-pack/releases)
 [![TSLint](https://img.shields.io/badge/TSLint-gluons-15757B.svg?style=flat-square)](https://github.com/gluons/tslint-config-gluons)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lernajs.io/)
 [![Travis (.com)](https://img.shields.io/travis/com/gluons/vue-pack.svg?style=flat-square)](https://travis-ci.com/gluons/vue-pack)
