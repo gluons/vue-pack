@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/gluons/vue-pack",
   "devDependencies": {
-    "eslint": "^5.2.0",
-    "eslint-config-gluons": "^3.0.0",
-    "eslint-plugin-vue": "^4.7.0",
-    "node-sass": "^4.9.2",
-    "sass-loader": "^7.0.3",
-    "vuepress": "^0.12.0"
+    "eslint": "^5.4.0",
+    "eslint-config-gluons": "^4.0.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "vuepress": "^0.14.2"
   }
 }
