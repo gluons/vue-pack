@@ -11,7 +11,12 @@
 		"strict": true,
 		"experimentalDecorators": true,
 		"noUnusedLocals": true,
-		"declaration": true
+		"declaration": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"@com/*": ["src/components/*"]
+		}
 	},
 	"include": [
 		"src"

@@ -7,6 +7,6 @@ import { resolve } from 'path';
  * @param {string} path Path
  * @returns {string}
  */
-export default function resolvePath(path: string): string {
+export default function resolveCwd(path: string): string {
 	return resolve(process.cwd(), path);
 }

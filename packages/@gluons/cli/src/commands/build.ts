@@ -6,7 +6,7 @@ import displayError from '../utils/displayError';
 import displaySuccess from '../utils/displaySuccess';
 import isNonEmptyStr from '../utils/isNonEmptyStr';
 import purifyConfig from '../utils/purifyConfig';
-import resolvePath from '../utils/resolvePath';
+import resolveCwd from '../utils/resolveCwd';
 
 export const command = ['*', 'build'];
 
@@ -40,7 +40,7 @@ export const builder: CommandBuilder = yargs => {
 			type: 'string',
 			alias: 'o',
 			desc: 'Output directory.',
-			defaultDescription: './dist',
+			defaultDescription: JSON.stringify('./dist'),
 			normalize: true
 		})
 	;
@@ -52,7 +52,7 @@ export async function handler(argv: Arguments): Promise<void> {
 		const cliConfig = purifyConfig(argv);
 		const config = await loadConfig(cliConfig, configPath);
 
-		config.entry = resolvePath(config.entry);
+		config.entry = resolveCwd(config.entry);
 
 		await bundle(config);
 		displaySuccess();

@@ -31,6 +31,10 @@ export default interface Configuration {
 	 */
 	cleanOutDir?: boolean;
 	/**
+	 * Alias to path
+	 */
+	alias?: Record<string, string>;
+	/**
 	 * Define global constants which can be configured at compile time
 	 */
 	define?: Record<string, any>;
@@ -64,6 +68,7 @@ export function toCommonOptions(config: Configuration): CommonOptions {
 		entry: config.entry,
 		fileName: config.fileName,
 		outDir: config.outDir,
+		alias: config.alias,
 		define: config.define,
 		sourceMap: config.sourceMap
 	};

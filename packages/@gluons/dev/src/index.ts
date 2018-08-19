@@ -16,6 +16,10 @@ export interface Options {
 	 */
 	entry: string;
 	/**
+	 * Alias to path
+	 */
+	alias?: Record<string, string>;
+	/**
 	 * Port of development server
 	 */
 	port?: number;

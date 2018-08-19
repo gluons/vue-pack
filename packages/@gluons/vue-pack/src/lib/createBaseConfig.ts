@@ -1,6 +1,7 @@
 import { BaseOptions } from '@gluons/vue-pack-types';
 import Config from 'webpack-chain';
 
+import infuseAliases from './infuseAliases';
 import infuseWebpackModule from './infuseWebpackModule';
 import infuseWebpackPlugins from './infuseWebpackPlugins';
 
@@ -16,6 +17,7 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 		entry,
 		fileName,
 		outDir,
+		alias,
 		define,
 		minimize,
 		sourceMap
@@ -55,6 +57,7 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 		.stats('none')
 	;
 
+	infuseAliases(config, alias);
 	await infuseWebpackModule(config, sourceMap);
 	infuseWebpackPlugins(config, cssFileName, minimize, sourceMap, define);
 

@@ -6,7 +6,7 @@ import { Arguments, CommandBuilder } from 'yargs';
 import displayError from '../utils/displayError';
 import isNonEmptyStr from '../utils/isNonEmptyStr';
 import purifyDevOptions from '../utils/purifyDevOptions';
-import resolvePath from '../utils/resolvePath';
+import resolveCwd from '../utils/resolveCwd';
 
 export const command = 'dev';
 
@@ -53,13 +53,15 @@ export async function handler(argv: Arguments): Promise<void> {
 		const cliOptions = purifyDevOptions(argv);
 		const configDevOptions = config.dev;
 
-		const entry = resolvePath(nvl(cliOptions.entry, configDevOptions.entry));
+		const entry = resolveCwd(nvl(cliOptions.entry, configDevOptions.entry));
+		const alias = config.alias;
 		const port = nvl(cliOptions.port, configDevOptions.port);
 		const open = nvl<boolean>(!argv.noOpen, configDevOptions.open);
 		const htmlTitle = nvl(cliOptions.htmlTitle, configDevOptions.htmlTitle);
 
 		const options: Options = {
 			entry,
+			alias,
 			port,
 			open,
 			htmlTitle

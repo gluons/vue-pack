@@ -4,5 +4,8 @@ module.exports = {
 	entry: resolve(__dirname, './src/index.ts'),
 	outDir: resolve(__dirname, './dist'),
 	libraryName: 'Hello',
+	alias: {
+		'@com': resolve(__dirname, './src/components/')
+	},
 	noProfiler: true
 };

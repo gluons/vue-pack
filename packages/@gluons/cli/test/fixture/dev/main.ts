@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import HelloPlugin from '../src';
+import HelloPlugin from '@/index';
 
 Vue.use(HelloPlugin);
 

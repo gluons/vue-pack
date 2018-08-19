@@ -9,12 +9,18 @@ import getCSSUses from './getCSSUses';
 
 export interface Options {
 	entry: string;
+	alias: Record<string, string>;
 	htmlTitle: string;
 	webpackBarName: string;
 }
 
 export default function createWebpackConfig(options: Options): Configuration {
-	const { entry, htmlTitle, webpackBarName } = options;
+	const { entry, alias, htmlTitle, webpackBarName } = options;
+	const builtInAlias: Record<string, string> = {
+		'@': resolve(process.cwd(), './src')
+	};
+
+	const finalAlias = Object.assign({}, builtInAlias, alias);
 
 	const config: Configuration = {
 		mode: 'development',
@@ -67,7 +73,8 @@ export default function createWebpackConfig(options: Options): Configuration {
 		},
 		resolve: {
 			alias: {
-				vue$: 'vue/dist/vue.esm.js'
+				vue$: 'vue/dist/vue.esm.js',
+				...finalAlias
 			},
 			extensions: ['.wasm', '.mjs', '.vue', '.ts', '.js', '.json']
 		},

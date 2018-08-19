@@ -1,8 +1,8 @@
 import { Configuration } from '@gluons/vue-pack-types';
-
 import slugify from '@sindresorhus/slugify';
 import { PartialDefaults } from 'moren';
-import { resolve } from 'path';
+
+import resolveCwd from '../utils/resolveCwd';
 
 /**
  * Default config.
@@ -12,7 +12,7 @@ const defaultConfig: PartialDefaults<Configuration> = {
 		// Create file name from library name.
 		return slugify(config.libraryName);
 	},
-	outDir: resolve(process.cwd(), './dist'),
+	outDir: resolveCwd('./dist'),
 	cleanOutDir: true,
 	define: {},
 	sourceMap: true,

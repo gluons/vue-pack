@@ -42,6 +42,13 @@ serve({
 
 Path to entry file for development.
 
+### alias
+**Type:** `{ [key: string]: string }`
+
+Alias to path.
+
+> See webpack's [`resolve.alias`](https://webpack.js.org/configuration/resolve/#resolve-alias).
+
 ### port
 **Type:** `number`  
 **Default:** `8080`

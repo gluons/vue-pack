@@ -1,6 +1,6 @@
 import Vue, { VueConstructor } from 'vue';
 
-import Hello from './components/Hello.vue';
+import Hello from '@com/Hello.vue';
 
 function install(vue: VueConstructor<Vue>) {
 	vue.component('Hello', Hello);
