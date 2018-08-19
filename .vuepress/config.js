@@ -15,6 +15,10 @@ module.exports = {
 				link: '/configuration/'
 			},
 			{
+				text: 'Development Options',
+				link: '/dev-options/'
+			},
+			{
 				text: 'Plugins',
 				items: [
 					{

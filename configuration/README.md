@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: /get-started/
-next: /plugin/
+next: /dev-options/
 ---
 
 # Configuration
@@ -18,14 +18,13 @@ These is config files that will be loaded in `vue-pack`:
 > `.yaml`, `.yml` are loaded by [joycon-yaml-loader](https://github.com/gluons/joycon-yaml-loader)  
    `.ts` is loaded by [joycon-ts-loader](https://github.com/gluons/joycon-ts-loader)
 
-## `entry` <Badge text='Required'/>
+## `entry` <Badge type='warn' text='Required'/>
 **Type:** `string`
 
 Entry file of your library.
 
-## `libraryName` <Badge text='Required'/>
-**Type:** `string`  
-**Require:** `true`
+## `libraryName` <Badge type='warn' text='Required'/>
+**Type:** `string`
 
 Library name.
 
@@ -34,7 +33,9 @@ Library name.
 
 Name of output bundled files (without extension).
 
-> If it isn't provided, `vue-pack` will generate file name from [`libraryName`](#libraryname) by [slugify](https://github.com/sindresorhus/slugify).
+::: tip
+If it isn't provided, `vue-pack` will generate file name from [`libraryName`](#libraryname) by [slugify](https://github.com/sindresorhus/slugify).
+:::
 
 ## `outDir`
 **Type:** `string`  
@@ -48,8 +49,19 @@ Output directory of bundled files.
 
 Clean output directory before bundling.
 
+## `alias`
+**Type:** `{ [key: string]: string }`
+
+Alias to path
+
+> See webpack's [`resolve.alias`](https://webpack.js.org/configuration/resolve/#resolve-alias).
+
+::: tip
+`vue-pack` provides `@` as alias to your `./src` directory out of the box.
+:::
+
 ## `define`
-**Type:** `object`  
+**Type:** `{ [key: string]: any }`  
 **Default:** `{}`
 
 Define global constants which can be configured at compile time by **webpack**'s [DefinePlugin](https://webpack.js.org/plugins/define-plugin/).
@@ -75,13 +87,7 @@ Disable [WebpackBar](https://github.com/nuxt/webpackbar)'s profiler.
 
 `vue-pack`'s plugins.
 
+## `dev`
+**Type:** [`DevOptions`](/dev-options/)
 
-<style>
-.badge {
-	background-color: deeppink !important;
-	border-radius: 0 !important;
-	vertical-align: middle;
-	margin-left: 1em;
-	padding: 5px;
-}
-</style>
+Options for `vue-pack`'s development server.

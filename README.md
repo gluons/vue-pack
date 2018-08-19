@@ -20,23 +20,7 @@ footer: Made with ❤️ by Saran Tanpituckpong
 Vue Pack requires [Node.js](https://nodejs.org/) >= 8.
 :::
 
-### Core
-
-**Install via [npm](https://www.npmjs.com/):**
-
-```bash
-npm install --save-dev @gluons/vue-pack
-```
-
----
-
-**Install via [Yarn](https://yarnpkg.com/):**
-
-```bash
-yarn add --dev @gluons/vue-pack
-```
-
-### CLI
+### CLI (Preferred)
 
 **Install via [npm](https://www.npmjs.com/):**
 
@@ -56,4 +40,20 @@ npm install --save-dev @gluons/vue-pack-cli
 yarn global add @gluons/vue-pack-cli
 # Or install locally
 yarn add --dev @gluons/vue-pack-cli
+```
+
+### Core
+
+**Install via [npm](https://www.npmjs.com/):**
+
+```bash
+npm install --save-dev @gluons/vue-pack
+```
+
+---
+
+**Install via [Yarn](https://yarnpkg.com/):**
+
+```bash
+yarn add --dev @gluons/vue-pack
 ```
