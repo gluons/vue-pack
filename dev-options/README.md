@@ -20,6 +20,20 @@ For **alias**, it'll use [`alias`](/configuration/#alias) from [Configuration](/
 
 Path to entry file for development.
 
+## `define`
+**Type:** `{ [key: string]: any }`
+
+Define global constants which can be configured at compile time by **webpack**'s [DefinePlugin](https://webpack.js.org/plugins/define-plugin/).
+
+::: tip
+Each value in `define` is [stringified](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) by default.
+:::
+
+::: tip
+These constants are defined only in development server.  
+**It will not be included in production bundle.**
+:::
+
 ## `port`
 **Type:** `number`  
 **Default:** `8080`
