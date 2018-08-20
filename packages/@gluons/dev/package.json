@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/gluons/vue-pack/tree/master/packages/@gluons/dev",
   "dependencies": {
-    "autoprefixer": "^9.1.1",
+    "autoprefixer": "^9.1.2",
     "browserslist-config-vue": "^1.0.3",
     "css-loader": "^1.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
@@ -50,7 +50,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "ts-loader": "^4.4.2",
-    "vue-loader": "^15.3.0",
+    "vue-loader": "^15.4.0",
     "webpack": "^4.16.5",
     "webpack-serve": "^2.0.2",
     "webpackbar": "^2.6.2"
