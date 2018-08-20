@@ -55,6 +55,7 @@ export async function handler(argv: Arguments): Promise<void> {
 
 		const entry = resolveCwd(nvl(cliOptions.entry, configDevOptions.entry));
 		const alias = config.alias;
+		const define = config.define;
 		const port = nvl(cliOptions.port, configDevOptions.port);
 		const open = nvl<boolean>(!argv.noOpen, configDevOptions.open);
 		const htmlTitle = nvl(cliOptions.htmlTitle, configDevOptions.htmlTitle);
@@ -62,6 +63,7 @@ export async function handler(argv: Arguments): Promise<void> {
 		const options: Options = {
 			entry,
 			alias,
+			define,
 			port,
 			open,
 			htmlTitle
