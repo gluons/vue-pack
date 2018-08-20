@@ -49,6 +49,11 @@ Alias to path.
 
 > See webpack's [`resolve.alias`](https://webpack.js.org/configuration/resolve/#resolve-alias).
 
+### define
+**Type:** `{ [key: string]: any }`
+
+Define global constants which can be configured at compile time by **webpack**'s [DefinePlugin](https://webpack.js.org/plugins/define-plugin/).
+
 ### port
 **Type:** `number`  
 **Default:** `8080`
