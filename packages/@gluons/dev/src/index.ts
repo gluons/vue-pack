@@ -20,6 +20,10 @@ export interface Options {
 	 */
 	alias?: Record<string, string>;
 	/**
+	 * Define global constants which can be configured at compile time
+	 */
+	define?: Record<string, any>;
+	/**
 	 * Port of development server
 	 */
 	port?: number;

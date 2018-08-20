@@ -2,7 +2,7 @@ import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { resolve } from 'path';
 import VueLoaderPlugin from 'vue-loader/lib/plugin';
-import { Configuration } from 'webpack';
+import { Configuration, DefinePlugin } from 'webpack';
 import WebpackBar from 'webpackbar';
 
 import getCSSUses from './getCSSUses';
@@ -10,17 +10,35 @@ import getCSSUses from './getCSSUses';
 export interface Options {
 	entry: string;
 	alias: Record<string, string>;
+	define: Record<string, any>;
+	port: number;
 	htmlTitle: string;
 	webpackBarName: string;
 }
 
 export default function createWebpackConfig(options: Options): Configuration {
-	const { entry, alias, htmlTitle, webpackBarName } = options;
+	const {
+		entry,
+		alias,
+		define,
+		port,
+		htmlTitle,
+		webpackBarName
+	} = options;
 	const builtInAlias: Record<string, string> = {
 		'@': resolve(process.cwd(), './src')
 	};
 
 	const finalAlias = Object.assign({}, builtInAlias, alias);
+
+	let stringifiedDefine: Record<string, any> = null;
+	if (define && (Object.keys(define).length > 0)) {
+		stringifiedDefine = {};
+		Object.keys(define).forEach(key => {
+			const value = define[key];
+			stringifiedDefine[key] = JSON.stringify(value);
+		});
+	}
 
 	const config: Configuration = {
 		mode: 'development',
@@ -79,13 +97,14 @@ export default function createWebpackConfig(options: Options): Configuration {
 			extensions: ['.wasm', '.mjs', '.vue', '.ts', '.js', '.json']
 		},
 		plugins: [
+			...(stringifiedDefine ? [new DefinePlugin(stringifiedDefine)] : []),
 			new WebpackBar({
 				name: webpackBarName
 			}),
 			new FriendlyErrorsWebpackPlugin({
 				compilationSuccessInfo: {
 					messages: [
-						'You development server is running on http://localhost:8080'
+						`You development server is running on http://localhost:${port}`
 					]
 				}
 			}),

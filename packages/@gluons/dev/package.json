@@ -16,8 +16,9 @@
     "prebuild": "rimraf dist/*",
     "build": "tsc",
     "lint": "tslint -p .",
+    "fixture:dev": "ts-node ./scripts/run.ts",
     "pretest": "npm run build",
-    "test": "npm run lint && testcafe firefox ./test/*.test.ts -a \"ts-node ./scripts/run.ts\""
+    "test": "npm run lint && testcafe firefox ./test/*.test.ts -a \"npm run fixture:dev\""
   },
   "repository": {
     "type": "git",

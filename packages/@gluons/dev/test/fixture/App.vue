@@ -7,11 +7,13 @@
 <script lang="ts">
 import Vue, { VueConstructor } from 'vue';
 
+declare const TEXT1: string;
+
 export default Vue.extend({
 	name: 'App',
 	data() {
 		return {
-			text1: 'Hello, World!',
+			text1: TEXT1,
 			text2: 'Who am I?'
 		};
 	}

@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe';
 
 fixture('Dev Server')
-	.page('http://localhost:8080');
+	.page('http://localhost:8888');
 
 test('App page', async t => {
 	const appExists = await Selector('#app').exists;
