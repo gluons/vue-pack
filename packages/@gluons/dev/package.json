@@ -18,7 +18,7 @@
     "lint": "tslint -p .",
     "fixture:dev": "ts-node ./scripts/run.ts",
     "pretest": "npm run build",
-    "test": "npm run lint && testcafe firefox ./test/*.test.ts -a \"npm run fixture:dev\""
+    "test": "npm run lint && testcafe firefox ./test/*.test.ts -a \"npm run fixture:dev\" --app-init-delay 5000"
   },
   "repository": {
     "type": "git",
@@ -51,7 +51,7 @@
     "sass-loader": "^7.1.0",
     "ts-loader": "^4.4.2",
     "vue-loader": "^15.4.0",
-    "webpack": "^4.16.5",
+    "webpack": "^4.17.0",
     "webpack-serve": "^2.0.2",
     "webpackbar": "^2.6.2"
   },
