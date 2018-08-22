@@ -8,6 +8,7 @@ module.exports = {
 	},
 	noProfiler: true,
 	dev: {
-		entry: resolve(__dirname, './dev/main.ts')
+		entry: resolve(__dirname, './dev/main.ts'),
+		htmlTitle: 'Hello Plugin'
 	}
 };

@@ -41,7 +41,7 @@ export const builder: CommandBuilder = yargs => {
 		.option('htmlTitle', {
 			type: 'string',
 			desc: 'Title of development page.',
-			default: DefaultOptions.htmlTitle
+			defaultDescription: JSON.stringify(DefaultOptions.htmlTitle)
 		})
 	;
 };
