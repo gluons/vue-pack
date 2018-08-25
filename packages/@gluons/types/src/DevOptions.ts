@@ -1,5 +1,5 @@
 /**
- * `vue-up`'s development options.
+ * `vue-pack`'s development options.
  *
  * @export
  * @interface DevOptions
