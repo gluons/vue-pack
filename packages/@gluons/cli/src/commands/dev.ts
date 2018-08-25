@@ -1,5 +1,6 @@
 import serve, { DefaultOptions, Options } from '@gluons/vue-pack-dev';
 import loadConfig from '@gluons/vue-pack-load-config';
+import { DevOptions } from '@gluons/vue-pack-types';
 import nvl from 'nvl';
 import { Arguments, CommandBuilder } from 'yargs';
 
@@ -45,7 +46,7 @@ export async function handler(argv: Arguments): Promise<void> {
 		const configPath: string = isNonEmptyStr(argv.config) ? argv.config : null;
 		const config = await loadConfig(null, configPath);
 		const cliOptions = purifyDevOptions(argv);
-		const configDevOptions = config.dev;
+		const configDevOptions = nvl(config.dev, {}) as DevOptions;
 
 		const entry = resolveCwd(nvl(cliOptions.entry, configDevOptions.entry));
 		const alias = config.alias;
