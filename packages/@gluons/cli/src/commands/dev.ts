@@ -51,7 +51,7 @@ export async function handler(argv: Arguments): Promise<void> {
 		const alias = config.alias;
 		const define = configDevOptions.define;
 		const port = nvl(cliOptions.port, configDevOptions.port);
-		const open = nvl<boolean>(!argv.noOpen, configDevOptions.open);
+		const open = !nvl<boolean>(argv.noOpen, !configDevOptions.open);
 		const htmlTitle = nvl(cliOptions.htmlTitle, configDevOptions.htmlTitle);
 
 		const options: Options = {
