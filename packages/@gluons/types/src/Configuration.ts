@@ -12,38 +12,70 @@ import WebOptions from './WebOptions';
 export default interface Configuration {
 	/**
 	 * Bundle's entry
+	 *
+	 * @type {string}
+	 * @memberof Configuration
 	 */
 	entry: string;
 	/**
 	 * Library name
+	 *
+	 * @type {string}
+	 * @memberof Configuration
 	 */
 	libraryName: string;
 	/**
 	 * Output file name (without extension)
+	 *
+	 * @type {string}
+	 * @memberof Configuration
 	 */
 	fileName?: string;
 	/**
 	 * Output directory
+	 *
+	 * @type {string}
+	 * @default 'dist'
+	 * @memberof Configuration
 	 */
 	outDir?: string;
 	/**
 	 * Clean output directory before bundling
+	 *
+	 * @type {boolean}
+	 * @default true
+	 * @memberof Configuration
 	 */
 	cleanOutDir?: boolean;
 	/**
 	 * Alias to path
+	 *
+	 * @type {Record<string, string>}
+	 * @memberof Configuration
 	 */
 	alias?: Record<string, string>;
 	/**
 	 * Define global constants which can be configured at compile time
+	 *
+	 * @type {Record<string, any>}
+	 * @default {}
+	 * @memberof Configuration
 	 */
 	define?: Record<string, any>;
 	/**
 	 * Enable source map?
+	 *
+	 * @type {boolean}
+	 * @default true
+	 * @memberof Configuration
 	 */
 	sourceMap?: boolean;
 	/**
 	 * Disable `webpackbar`'s profiler?
+	 *
+	 * @type {boolean}
+	 * @default false
+	 * @memberof Configuration
 	 */
 	noProfiler?: boolean;
 	/**

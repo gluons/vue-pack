@@ -34,10 +34,18 @@ export interface PluginWebpackConfigGroup {
 export interface PluginContext {
 	/**
 	 * Group of all `webpack-chain`'s configs
+	 *
+	 * @type {PluginWebpackConfigGroup}
+	 * @readonly
+	 * @memberof PluginContext
 	 */
 	readonly webpackConfigs: PluginWebpackConfigGroup;
 	/**
 	 * `vue-pack`'s configuration
+	 *
+	 * @type {Configuration}
+	 * @readonly
+	 * @memberof PluginContext
 	 */
 	readonly config: Configuration;
 }
@@ -50,7 +58,7 @@ export interface PluginContext {
 type Plugin = (context: PluginContext) => void;
 
 /**
- * A function that create `Plugin`. (a.k.a. `Plugin` wrapper)
+ * A higher-order function that return `Plugin`.
  *
  * @export
  */
