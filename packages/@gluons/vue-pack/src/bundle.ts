@@ -2,6 +2,7 @@ import loadConfig from '@gluons/vue-pack-load-config';
 import {
 	ConfigParameterError,
 	Configuration,
+	DevOptions,
 	Plugin,
 	PluginContext,
 	PluginFunction,
@@ -22,6 +23,7 @@ export {
 	AggregateError,
 	ConfigParameterError,
 	Configuration,
+	DevOptions,
 	Plugin,
 	PluginContext,
 	PluginFunction,
