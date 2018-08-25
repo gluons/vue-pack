@@ -47,6 +47,6 @@
     "typescript": "^3.0.1"
   },
   "optionalDependencies": {
-    "joycon-ts-loader": "^1.0.2"
+    "joycon-ts-loader": "^2.0.0"
   }
 }
