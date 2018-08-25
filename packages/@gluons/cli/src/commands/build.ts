@@ -14,12 +14,6 @@ export const describe = 'Bundle Vue.js library.';
 
 export const builder: CommandBuilder = yargs => {
 	return yargs
-		.option('config', {
-			type: 'string',
-			alias: 'c',
-			desc: 'Path to config file.',
-			normalize: true
-		})
 		.option('entry', {
 			type: 'string',
 			alias: 'i',
