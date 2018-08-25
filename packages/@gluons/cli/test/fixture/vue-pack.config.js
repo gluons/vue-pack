@@ -9,6 +9,7 @@ module.exports = {
 	noProfiler: true,
 	dev: {
 		entry: resolve(__dirname, './dev/main.ts'),
+		port: 8888,
 		htmlTitle: 'Hello Plugin'
 	}
 };

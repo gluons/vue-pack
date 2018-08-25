@@ -24,13 +24,13 @@ export const builder: CommandBuilder = yargs => {
 			type: 'number',
 			alias: 'p',
 			desc: 'Port of development server.',
-			default: DefaultOptions.port
+			defaultDescription: JSON.stringify(DefaultOptions.port)
 		})
 		.option('noOpen', {
 			type: 'boolean',
 			alias: 'n',
 			desc: 'Do not open in browser when server run.',
-			default: !DefaultOptions.open
+			defaultDescription: JSON.stringify(!DefaultOptions.open)
 		})
 		.option('htmlTitle', {
 			type: 'string',

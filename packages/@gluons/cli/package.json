@@ -23,7 +23,7 @@
     "fixture:dev": "cd ./test/fixture && node ../../dist/cli.js dev -n",
     "test:build": "jest -c ./jest.config.json --colors",
     "test:dev": "testcafe firefox ./test/devServer.test.ts -a \"npm run fixture:dev\" --app-init-delay 5000",
-    "test": "run-p lint test:*"
+    "test": "npm run lint && run-p test:*"
   },
   "repository": {
     "type": "git",
