@@ -7119,12 +7119,12 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
 
-postcss-brand-colors@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-brand-colors/-/postcss-brand-colors-2.0.0.tgz#36bd7568c11baa2165f7a029f6c9fc336e23dd6d"
+postcss-brand-colors@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-brand-colors/-/postcss-brand-colors-3.0.0.tgz#3ccad0ac3f831502b2f0db349c2cce6aad563106"
   dependencies:
     brand-colors "^2.0.1"
-    postcss "^6.0.12"
+    postcss "^7.0.2"
 
 postcss-calc@^6.0.0:
   version "6.0.1"
@@ -7408,7 +7408,7 @@ postcss-value-parser@^3.0.0, postcss-value-parser@^3.2.3, postcss-value-parser@^
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.12, postcss@^6.0.20, postcss@^6.0.23:
+postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.20, postcss@^6.0.23:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   dependencies:
