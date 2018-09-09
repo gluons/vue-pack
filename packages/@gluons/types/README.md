@@ -5,6 +5,7 @@
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lernajs.io/)
 [![Travis (.com)](https://img.shields.io/travis/com/gluons/vue-pack.svg?style=flat-square)](https://travis-ci.com/gluons/vue-pack)
 [![Codacy grade](https://img.shields.io/codacy/grade/98523b5b7cd7435a8c71b296e84522f8.svg?style=flat-square)](https://www.codacy.com/app/gluons/vue-pack)
+[![Known Vulnerabilities](https://snyk.io/test/github/gluons/vue-pack/badge.svg?targetFile=packages%2F%40gluons%2Ftypes%2Fpackage.json&style=flat-square)](https://snyk.io/test/github/gluons/vue-pack?targetFile=packages%2F%40gluons%2Ftypes%2Fpackage.json)
 
 [TypeScript](https://www.typescriptlang.org/) types for [vue-pack](https://github.com/gluons/vue-pack).
 
