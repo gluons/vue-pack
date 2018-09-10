@@ -10,7 +10,6 @@
 		"esModuleInterop": true,
 		"strict": true,
 		"experimentalDecorators": true,
-		"outDir": "dist",
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"declaration": true,

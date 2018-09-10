@@ -5,11 +5,13 @@ import infuseCommonCSSUse from '../utils/infuseCommonCSSUse';
  *
  * @export
  * @param {any} config `webpack-chain`'s config instance
+ * @param {string} outDir Output directory
  * @param {boolean} sourceMap Enable source map?
  * @returns {Promise<void>}
  */
 export default async function infuseWebpackModule(
 	config: any,
+	outDir: string,
 	sourceMap: boolean
 ): Promise<void> {
 	// Vue
@@ -25,6 +27,7 @@ export default async function infuseWebpackModule(
 			.loader('ts-loader')
 			.options({
 				compilerOptions: {
+					outDir,
 					sourceMap: true,
 					declaration: true
 				},

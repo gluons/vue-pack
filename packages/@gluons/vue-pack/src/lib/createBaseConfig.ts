@@ -58,7 +58,7 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 	;
 
 	infuseAliases(config, alias);
-	await infuseWebpackModule(config, sourceMap);
+	await infuseWebpackModule(config, outDir, sourceMap);
 	infuseWebpackPlugins(config, cssFileName, minimize, sourceMap, define);
 
 	return config;
