@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-dev",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A development server for vue-pack (and vue-up).",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
