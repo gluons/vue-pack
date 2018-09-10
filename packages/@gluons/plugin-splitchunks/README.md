@@ -36,23 +36,27 @@ Add this plugin into `vue-pack` config.
 const splitChunks = require('@gluons/vue-pack-splitchunks-plugin').default;
 
 const options = {
+	// For all webpack's config
 	tapAll(splitChunks) {
-		// Do any with `splitChunks`
+		// Do anything with `splitChunks`
 
 		return splitChunks;
 	},
+
+
+	// For individual webpack's config
 	tapCJS(splitChunks) {
-		// Do any with `splitChunks`
+		// Do anything with `splitChunks`
 
 		return splitChunks;
 	},
 	tapESM(splitChunks) {
-		// Do any with `splitChunks`
+		// Do anything with `splitChunks`
 
 		return splitChunks;
 	},
 	tapWeb(splitChunks) {
-		// Do any with `splitChunks`
+		// Do anything with `splitChunks`
 
 		return splitChunks;
 	}
