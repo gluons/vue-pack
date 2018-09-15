@@ -1,0 +1,48 @@
+{
+  "name": "@gluons/vue-pack-banner-plugin",
+  "version": "1.7.0",
+  "description": "A vue-pack plugin to add bundle's banner.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "prebuild": "rimraf dist/*",
+    "build": "tsc",
+    "lint": "tslint -p .",
+    "pretest": "npm run build",
+    "test": "npm run lint && jest -c ./jest.config.json --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "keywords": [
+    "vue-pack",
+    "vue-pack-plugin",
+    "webpack",
+    "banner"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-pack/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-pack",
+  "peerDependencies": {
+    "@gluons/vue-pack": "*"
+  },
+  "devDependencies": {
+    "@gluons/vue-pack": "^1.6.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "webpack": "^4.19.0"
+  }
+}
