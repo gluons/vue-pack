@@ -57,11 +57,6 @@
   },
   "devDependencies": {
     "@types/webpack-serve": "^2.0.0",
-    "@types/webpackbar": "^2.6.0",
-    "jest": "^23.6.0",
-    "rimraf": "^2.6.2",
-    "testcafe": "^0.22.0",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.0.1"
+    "@types/webpackbar": "^2.6.0"
   }
 }

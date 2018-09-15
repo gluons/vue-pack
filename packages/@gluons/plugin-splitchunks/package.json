@@ -16,7 +16,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "prebuild": "rimraf dist/*",
-    "build": "tsc -p .",
+    "build": "tsc",
     "lint": "tslint -p .",
     "pretest": "npm run build",
     "test": "npm run lint && jest -c ./jest.config.json --colors"
@@ -42,9 +42,6 @@
   },
   "devDependencies": {
     "@gluons/vue-pack": "^1.6.0",
-    "jest": "^23.6.0",
-    "rimraf": "^2.6.2",
-    "typescript": "^3.0.0",
     "webpack": "^4.17.3"
   }
 }
