@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: /configuration/
-next: /plugin/
+next: /externals/
 ---
 
 # Development Options

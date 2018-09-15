@@ -70,6 +70,14 @@ Define global constants which can be configured at compile time by **webpack**'s
 Each value in `define` is [stringified](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) by default.
 :::
 
+## `externals`
+**Type:** [`Externals`](/externals/)  
+**Default:** `{ web: { vue: 'Vue' }, module: [nodeExternals()] }`
+
+Configure external dependencies for webpack.
+
+> See webpack's [`externals`](https://webpack.js.org/configuration/externals/).
+
 ## `sourceMap`
 **Type:** `boolean`  
 **Default:** `true`

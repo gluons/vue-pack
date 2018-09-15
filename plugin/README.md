@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: /configuration/
+prev: /externals/
 next: /creating-plugin/
 ---
 

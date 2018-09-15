@@ -19,6 +19,10 @@ module.exports = {
 				link: '/dev-options/'
 			},
 			{
+				text: 'Externals',
+				link: '/externals/'
+			},
+			{
 				text: 'Plugins',
 				items: [
 					{
