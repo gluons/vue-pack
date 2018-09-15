@@ -47,7 +47,11 @@ export default function createWebpackConfig(options: Options): Configuration {
 			rules: [
 				{
 					test: /\.vue$/,
-					loader: 'vue-loader'
+					loader: 'vue-loader',
+					options: {
+						hotReload: true,
+						productionMode: false
+					}
 				},
 				{
 					test: /\.ts$/,
