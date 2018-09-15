@@ -38,7 +38,7 @@
     "@gluons/vue-pack": "*"
   },
   "devDependencies": {
-    "@gluons/vue-pack": "^1.6.0"
+    "@gluons/vue-pack": "^1.7.0"
   },
   "dependencies": {
     "webpack": "^4.19.0"
