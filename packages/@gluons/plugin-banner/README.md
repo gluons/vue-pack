@@ -29,8 +29,6 @@ yarn add --dev @gluons/vue-pack-banner-plugin
 
 ## Usage
 
-## Usage
-
 Add this plugin into `vue-pack` [config](https://gluons.github.io/vue-pack/configuration/).
 
 **`vue-pack.config.js`**
