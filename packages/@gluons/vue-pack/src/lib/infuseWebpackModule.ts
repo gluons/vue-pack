@@ -17,7 +17,12 @@ export default async function infuseWebpackModule(
 	// Vue
 	config.module.rule('vue')
 		.test(/\.vue$/)
-		.use('vue').loader('vue-loader')
+		.use('vue')
+			.loader('vue-loader')
+			.options({
+				hotReload: false,
+				productionMode: true
+			})
 	;
 
 	// TypeScript

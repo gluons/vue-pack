@@ -1,5 +1,4 @@
 import { BaseOptions, CommonOptions } from '@gluons/vue-pack-types';
-import nodeExternals from 'webpack-node-externals';
 
 import createBaseConfig from './createBaseConfig';
 
@@ -12,6 +11,7 @@ import createBaseConfig from './createBaseConfig';
  */
 export default async function createESMConfig(options: CommonOptions): Promise<any> {
 	const baseOptions: BaseOptions = Object.assign({ minimize: false }, options);
+	const { externals: { module: moduleExternals } } = options;
 
 	const config = await createBaseConfig(baseOptions);
 
@@ -20,7 +20,7 @@ export default async function createESMConfig(options: CommonOptions): Promise<a
 			.filename('[name].es.js')
 			.libraryTarget('commonjs2')
 			.end()
-		.externals([nodeExternals()])
+		.externals(moduleExternals)
 	;
 
 	return config;

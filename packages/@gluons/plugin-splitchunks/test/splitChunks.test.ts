@@ -41,6 +41,7 @@ describe('SplitChunksPlugin', () => {
 		const vuePackConfig: VuePackConfig = {
 			entry: 'index.ts',
 			libraryName: 'Test',
+			externals: {}, // Prevent destructuring error
 			plugins: [
 				SplitChunksPlugin({
 					tapAll
@@ -66,6 +67,7 @@ describe('SplitChunksPlugin', () => {
 		const vuePackConfig: VuePackConfig = {
 			entry: 'index.ts',
 			libraryName: 'Test',
+			externals: {}, // Prevent destructuring error
 			plugins: [
 				SplitChunksPlugin({
 					tapCJS
@@ -104,6 +106,7 @@ describe('SplitChunksPlugin', () => {
 		const vuePackConfig: VuePackConfig = {
 			entry: 'index.ts',
 			libraryName: 'Test',
+			externals: {}, // Prevent destructuring error
 			plugins: [
 				SplitChunksPlugin({
 					tapESM
@@ -142,6 +145,7 @@ describe('SplitChunksPlugin', () => {
 		const vuePackConfig: VuePackConfig = {
 			entry: 'index.ts',
 			libraryName: 'Test',
+			externals: {}, // Prevent destructuring error
 			plugins: [
 				SplitChunksPlugin({
 					tapWeb

@@ -11,6 +11,7 @@ import createBaseConfig from './createBaseConfig';
  */
 export default async function createWebConfig(options: WebOptions): Promise<any> {
 	const { libraryName, minimize } = options;
+	const { externals: { web: webExternals } } = options;
 
 	const config = await createBaseConfig(options);
 
@@ -21,9 +22,7 @@ export default async function createWebConfig(options: WebOptions): Promise<any>
 			.libraryTarget('window')
 			.libraryExport('default')
 			.end()
-		.externals({
-			vue: 'Vue'
-		})
+		.externals(webExternals)
 	;
 
 	return config;

@@ -1,5 +1,6 @@
 import CommonOptions from './CommonOptions';
 import DevOptions from './DevOptions';
+import Externals from './Externals';
 import Plugin from './Plugin';
 import WebOptions from './WebOptions';
 
@@ -63,6 +64,14 @@ export default interface Configuration {
 	 */
 	define?: Record<string, any>;
 	/**
+	 * Configure external dependencies for webpack
+	 *
+	 * @type {Externals}
+	 * @default { web: { vue: 'Vue' }, module: [nodeExternals()] }
+	 * @memberof Configuration
+	 */
+	externals?: Externals;
+	/**
 	 * Enable source map?
 	 *
 	 * @type {boolean}
@@ -102,6 +111,7 @@ export function toCommonOptions(config: Configuration): CommonOptions {
 		outDir: config.outDir,
 		alias: config.alias,
 		define: config.define,
+		externals: config.externals,
 		sourceMap: config.sourceMap
 	};
 
