@@ -33,7 +33,7 @@ Add this plugin into `vue-pack` config.
 
 **`vue-pack.config.js`**
 ```js
-const splitChunks = require('@gluons/vue-pack-splitchunks-plugin').default;
+const splitChunks = require('@gluons/vue-pack-splitchunks-plugin');
 
 const options = {
 	// For all webpack's config

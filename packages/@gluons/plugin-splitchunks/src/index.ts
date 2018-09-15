@@ -59,3 +59,5 @@ export default function SplitChunksPlugin(options?: SplitChunksPluginOptions): P
 		}
 	};
 }
+
+module.exports = SplitChunksPlugin;
