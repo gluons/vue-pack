@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/gluons/vue-pack/issues"
   },
-  "homepage": "https://github.com/gluons/vue-pack",
+  "homepage": "https://github.com/gluons/vue-pack/tree/master/packages/@gluons/plugin-banner",
   "peerDependencies": {
     "@gluons/vue-pack": "*"
   },
