@@ -12,15 +12,24 @@ module.exports = {
 			},
 			{
 				text: 'Configuration',
-				link: '/configuration/'
+				items: [
+					{
+						text: 'Configuration',
+						link: '/configuration/'
+					},
+					{
+						text: 'Externals',
+						link: '/externals/'
+					},
+					{
+						text: 'Webpack Chainer',
+						link: '/webpack-chainer/'
+					}
+				]
 			},
 			{
 				text: 'Development Options',
 				link: '/dev-options/'
-			},
-			{
-				text: 'Externals',
-				link: '/externals/'
 			},
 			{
 				text: 'Plugins',

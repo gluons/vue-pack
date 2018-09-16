@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: /configuration/
-next: /externals/
+next: /plugin/
 ---
 
 # Development Options
@@ -48,6 +48,6 @@ Open in browser when server run.
 
 ## `htmlTitle`
 **Type:** `string`  
-**Default:** `Vue Library`
+**Default:** `'Vue Library'`
 
 Title of development page.

@@ -1,7 +1,7 @@
 ---
 sidebar: auto
-prev: /dev-options/
-next: /plugin/
+prev: /configuration/
+next: /webpack-chainer/
 ---
 
 # Externals

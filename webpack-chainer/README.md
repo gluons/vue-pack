@@ -1,53 +1,27 @@
 ---
 sidebar: auto
-prev: /dev-options/
-next: /creating-plugin/
+prev: /externals/
 ---
 
-# Plugin
+# WebpackChainer
 
-`vue-pack`'s plugin.
-
-```ts
-type Plugin = (context: PluginContext) => void;
-```
-
-### `context`
-**Type:** [`PluginContext`](#plugincontext)
-
-Context of plugin.
-
-## PluginContext
-
-Context of plugin.
+A function that will receive the group of [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain) configurations instance.
 
 ```ts
-interface PluginContext {
-	readonly webpackConfigs: PluginWebpackConfigGroup;
-	readonly config: Configuration;
-}
+type WebpackChainer = (webpackConfigs: WebpackChainConfigGroup) => void;
 ```
 
 ### `webpackConfigs`
-**Type:** [`PluginWebpackConfigGroup`](#pluginwebpackconfiggroup)
+**Type:** [`WebpackChainConfigGroup`](#webpackchainconfiggroup)
 
-Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configurations instance that's created in `vue-pack`.
+Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configurations instance that's created in vue-pack.
 
-### `config`
-**Type:** [`Configuration`](/configuration/)
-
-`vue-pack`'s configuration.
-
-## PluginWebpackConfigGroup
+## WebpackChainConfigGroup
 
 Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configurations instance.
 
-::: tip
-It's alias of [`WebpackChainConfigGroup`](/webpack-chainer/#webpackchainconfiggroup).
-:::
-
 ```ts
-interface PluginWebpackConfigGroup {
+interface WebpackChainConfigGroup {
 	readonly commonJSConfig;
 	readonly esModuleConfig;
 	readonly webUnminConfig;

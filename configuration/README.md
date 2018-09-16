@@ -84,6 +84,11 @@ Configure external dependencies for webpack.
 
 Enable generating source maps.
 
+## `chainWebpack`
+**Type:** [`WebpackChainer`](/webpack-chainer/)  
+
+A function that provide all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain) instances for customizing webpack configs.
+
 ## `noProfiler`
 **Type:** `boolean`  
 **Default:** `false`
