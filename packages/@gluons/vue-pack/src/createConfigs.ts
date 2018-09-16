@@ -8,8 +8,8 @@ import { Configuration as WebpackConfiguration } from 'webpack';
 import createCJSConfig from './lib/createCJSConfig';
 import createESMConfig from './lib/createESMConfig';
 import createWebConfig from './lib/createWebConfig';
-import executeChainWebpack from './utils/executeChainWebpack';
-import executePlugins from './utils/executePlugins';
+import executeChainWebpack from './lib/executeChainWebpack';
+import executePlugins from './lib/executePlugins';
 import infuseWebpackBar from './utils/infuseWebpackBar';
 
 const { toCommonOptions, toWebOptions } = ConfigurationMethods;
