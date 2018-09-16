@@ -5,6 +5,11 @@ prev: /plugin/
 
 # Creating a plugin
 
+::: tip
+Don't forget to add `vue-pack-plugin` into **package.json**'s `keywords`.  
+It'll help you to find your plugin on [npm](https://www.npmjs.com/search?q=keywords:vue-pack-plugin).
+:::
+
 ## Simple plugin
 
 You can create a plugin easily by just export [`Plugin`](/plugin/) function.  
