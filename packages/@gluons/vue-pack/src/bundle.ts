@@ -1,13 +1,5 @@
 import loadConfig from '@gluons/vue-pack-load-config';
-import {
-	ConfigParameterError,
-	Configuration,
-	DevOptions,
-	Plugin,
-	PluginContext,
-	PluginFunction,
-	PluginWebpackConfigGroup
-} from '@gluons/vue-pack-types';
+import { Configuration } from '@gluons/vue-pack-types';
 import AggregateError from 'aggregate-error';
 import del from 'del';
 import nvl from 'nvl';
@@ -19,15 +11,10 @@ import createConfigs from './createConfigs';
 import fulfilConfig from './utils/fulfilConfig';
 import validateConfig from './utils/validateConfig';
 
+export * from '@gluons/vue-pack-types';
+
 export {
 	AggregateError,
-	ConfigParameterError,
-	Configuration,
-	DevOptions,
-	Plugin,
-	PluginContext,
-	PluginFunction,
-	PluginWebpackConfigGroup,
 	Stats
 };
 

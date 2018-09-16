@@ -1,29 +1,13 @@
 import Configuration from './Configuration';
+import { WebpackChainConfigGroup } from './WebpackChainer';
 
 /**
  * Group of `webpack-chain`'s configs instance for plugin.
  *
+ * @alias WebpackChainConfigGroup
  * @export
- * @interface PluginWebpackConfigGroup
  */
-export interface PluginWebpackConfigGroup {
-	/**
-	 * Common JS `webpack-chain`'s config instance
-	 */
-	readonly commonJSConfig: any;
-	/**
-	 * ES module `webpack-chain`'s config instance
-	 */
-	readonly esModuleConfig: any;
-	/**
-	 * Unminified web `webpack-chain`'s config instance
-	 */
-	readonly webUnminConfig: any;
-	/**
-	 * Minified web `webpack-chain`'s config instance
-	 */
-	readonly webMinConfig: any;
-}
+export type PluginWebpackConfigGroup = WebpackChainConfigGroup;
 
 /**
  * Plugin context.

@@ -3,6 +3,7 @@ import DevOptions from './DevOptions';
 import Externals from './Externals';
 import Plugin from './Plugin';
 import WebOptions from './WebOptions';
+import WebpackChainer from './WebpackChainer';
 
 /**
  * `vue-pack`'s configuration.
@@ -79,6 +80,13 @@ export default interface Configuration {
 	 * @memberof Configuration
 	 */
 	sourceMap?: boolean;
+	/**
+	 * A function that provide all `webpack-chain` instances for customizing webpack configs.
+	 *
+	 * @type {WebpackChainer}
+	 * @memberof Configuration
+	 */
+	chainWebpack?: WebpackChainer;
 	/**
 	 * Disable `webpackbar`'s profiler?
 	 *

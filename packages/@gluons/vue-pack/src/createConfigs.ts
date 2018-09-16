@@ -1,13 +1,14 @@
 import {
 	Configuration,
 	ConfigurationMethods,
-	PluginWebpackConfigGroup
+	WebpackChainConfigGroup
 } from '@gluons/vue-pack-types';
 import { Configuration as WebpackConfiguration } from 'webpack';
 
 import createCJSConfig from './lib/createCJSConfig';
 import createESMConfig from './lib/createESMConfig';
 import createWebConfig from './lib/createWebConfig';
+import executeChainWebpack from './utils/executeChainWebpack';
 import executePlugins from './utils/executePlugins';
 import infuseWebpackBar from './utils/infuseWebpackBar';
 
@@ -46,14 +47,14 @@ export default async function createConfigs(config: Configuration): Promise<Webp
 		infuseWebpackBar(c, barOptions[i], !config.noProfiler);
 	});
 
-	// Execute plugins
-	const webpackConfigGroup: PluginWebpackConfigGroup = {
+	const webpackConfigGroup: WebpackChainConfigGroup = {
 		commonJSConfig,
 		esModuleConfig,
 		webUnminConfig,
 		webMinConfig
 	};
-	executePlugins(webpackConfigGroup, config);
+	executePlugins(webpackConfigGroup, config); // Execute plugins
+	executeChainWebpack(webpackConfigGroup, config); // Execute user's custom chain webpack
 
 	return allConfigs.map(c => c.toConfig() as WebpackConfiguration);
 }
