@@ -1,3 +1,5 @@
+/// <reference path='./jest-extend.d.ts' />
+
 import { Configuration as VuePackConfig } from '@gluons/vue-pack';
 import createConfigs from '@gluons/vue-pack/dist/createConfigs';
 import { BannerPlugin as WebpackBannerPlugin, Plugin } from 'webpack';
