@@ -1,17 +1,6 @@
 {
-	"testURL": "http://localhost",
-	"transform": {
-		"^.+\\.ts$": "ts-jest"
-	},
-	"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)$",
+	"preset": "ts-jest",
 	"testPathIgnorePatterns": [
-		"/node_modules/",
 		"<rootDir>/test/devServer.test.ts"
-	],
-	"moduleFileExtensions": [
-		"ts",
-		"js",
-		"json",
-		"node"
 	]
 }
