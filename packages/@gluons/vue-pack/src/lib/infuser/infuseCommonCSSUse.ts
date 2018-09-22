@@ -1,6 +1,6 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-import getPostCSSConfigPath from './getPostCSSConfigPath';
+import getPostCSSConfigPath from '../../utils/getPostCSSConfigPath';
 
 /**
  * Infuse common CSS use.

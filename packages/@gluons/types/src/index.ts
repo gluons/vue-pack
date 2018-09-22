@@ -1,5 +1,4 @@
 import BaseOptions from './BaseOptions';
-import CommonOptions from './CommonOptions';
 import WebOptions from './WebOptions';
 
 import ConfigParameterError from './ConfigParameterError';
@@ -12,7 +11,6 @@ import WebpackChainer, { WebpackChainConfigGroup } from './WebpackChainer';
 
 export {
 	BaseOptions,
-	CommonOptions,
 	WebOptions,
 	ConfigParameterError,
 	Configuration,

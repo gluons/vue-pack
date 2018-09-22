@@ -1,6 +1,8 @@
 import { WebOptions } from '@gluons/vue-pack-types';
 
 import createBaseConfig from './createBaseConfig';
+import infuseWebpackOptimization from './infuser/infuseWebpackOptimization';
+import infuseWebpackPlugins from './infuser/infuseWebpackPlugins';
 
 /**
  * Create web config via `webpack-chain`'s config instance.
@@ -10,8 +12,14 @@ import createBaseConfig from './createBaseConfig';
  * @returns {Promise<any>} `webpack-chain`'s config instance
  */
 export default async function createWebConfig(options: WebOptions): Promise<any> {
-	const { libraryName, minimize } = options;
-	const { externals: { web: webExternals } } = options;
+	const {
+		libraryName,
+		fileName,
+		define,
+		sourceMap,
+		minimize,
+		externals: { web: webExternals }
+	} = options;
 
 	const config = await createBaseConfig(options);
 
@@ -24,6 +32,15 @@ export default async function createWebConfig(options: WebOptions): Promise<any>
 			.end()
 		.externals(webExternals)
 	;
+
+	infuseWebpackOptimization(config, minimize);
+	infuseWebpackPlugins({
+		config,
+		fileName,
+		minimize,
+		sourceMap,
+		define
+	});
 
 	return config;
 }

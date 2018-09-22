@@ -1,13 +1,19 @@
-import BaseOptions from './BaseOptions';
+import Configuration from './Configuration';
 
 /**
  * Options for creating web config.
  */
-type WebOptions = BaseOptions & {
-	/**
-	 * Library name
-	 */
-	libraryName: string
-};
+type WebOptions = (
+	Required<
+		Pick<
+			Configuration,
+			'entry' | 'libraryName' | 'fileName' | 'outDir' | 'alias' | 'define' | 'externals' | 'sourceMap'
+		>
+	>
+	&
+	{
+		minimize: boolean
+	}
+);
 
 export default WebOptions;

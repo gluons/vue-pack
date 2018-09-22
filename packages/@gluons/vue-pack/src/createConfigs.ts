@@ -5,14 +5,13 @@ import {
 } from '@gluons/vue-pack-types';
 import { Configuration as WebpackConfiguration } from 'webpack';
 
-import createCJSConfig from './lib/createCJSConfig';
-import createESMConfig from './lib/createESMConfig';
+import createModuleConfig, { Options as CreateModuleConfigOptions } from './lib/createModuleConfig';
 import createWebConfig from './lib/createWebConfig';
 import executeChainWebpack from './lib/executeChainWebpack';
 import executePlugins from './lib/executePlugins';
-import infuseWebpackBar from './utils/infuseWebpackBar';
+import infuseWebpackBar from './lib/infuser/infuseWebpackBar';
 
-const { toCommonOptions, toWebOptions } = ConfigurationMethods;
+const { toBaseOptions, toWebOptions } = ConfigurationMethods;
 
 const barOptions = [
 	{ name: 'CommonJS', color: 'green' },
@@ -29,8 +28,24 @@ const barOptions = [
  * @returns {Promise<WebpackConfiguration[]>}
  */
 export default async function createConfigs(config: Configuration): Promise<WebpackConfiguration[]> {
-	const commonJSConfig = await createCJSConfig(toCommonOptions(config));
-	const esModuleConfig = await createESMConfig(toCommonOptions(config));
+	const baseOptions = toBaseOptions(config);
+	const commonJSOptions: CreateModuleConfigOptions = Object.assign(
+		{},
+		baseOptions,
+		{
+			moduleType: 'common'
+		} as CreateModuleConfigOptions
+	);
+	const esModuleOptions: CreateModuleConfigOptions = Object.assign(
+		{},
+		baseOptions,
+		{
+			moduleType: 'es'
+		} as CreateModuleConfigOptions
+	);
+
+	const commonJSConfig = await createModuleConfig(commonJSOptions);
+	const esModuleConfig = await createModuleConfig(esModuleOptions);
 	const webUnminConfig = await createWebConfig(toWebOptions(config, false));
 	const webMinConfig = await createWebConfig(toWebOptions(config, true));
 
