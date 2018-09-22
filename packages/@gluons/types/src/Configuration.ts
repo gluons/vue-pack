@@ -1,9 +1,10 @@
-import CommonOptions from './CommonOptions';
 import DevOptions from './DevOptions';
 import Externals from './Externals';
 import Plugin from './Plugin';
-import WebOptions from './WebOptions';
 import WebpackChainer from './WebpackChainer';
+
+import BaseOptions from './BaseOptions';
+import WebOptions from './WebOptions';
 
 /**
  * `vue-pack`'s configuration.
@@ -105,25 +106,31 @@ export default interface Configuration {
 	dev?: DevOptions;
 }
 
-/**
- * Convert `Configuration` to `CommonOptions`.
- *
- * @export
- * @param {Configuration} config `vue-pack`'s configuration.
- * @returns {CommonOptions}
- */
-export function toCommonOptions(config: Configuration): CommonOptions {
-	const commonOptions: CommonOptions = {
-		entry: config.entry,
-		fileName: config.fileName,
-		outDir: config.outDir,
-		alias: config.alias,
-		define: config.define,
-		externals: config.externals,
-		sourceMap: config.sourceMap
-	};
+function pick<T extends object, U extends keyof T>(obj: T, keys: U[]): Required<Pick<T, U>> {
+	return keys.reduce<Required<T>>(
+		(newObj, key) => {
+			if (key in obj) {
+				newObj[key] = obj[key];
+			}
 
-	return commonOptions;
+			return newObj;
+		},
+		{} as Required<T>
+	);
+}
+
+export function toBaseOptions(config: Configuration): BaseOptions {
+	const baseOptions: BaseOptions = pick(config, [
+		'entry',
+		'fileName',
+		'outDir',
+		'alias',
+		'define',
+		'externals',
+		'sourceMap'
+	]);
+
+	return baseOptions;
 }
 
 /**
@@ -135,13 +142,21 @@ export function toCommonOptions(config: Configuration): CommonOptions {
  * @returns {WebOptions}
  */
 export function toWebOptions(config: Configuration, minimize: boolean): WebOptions {
-	const commonOptions = toCommonOptions(config);
 	const webOptions: WebOptions = Object.assign(
+		{},
+		pick(config, [
+			'entry',
+			'libraryName',
+			'fileName',
+			'outDir',
+			'alias',
+			'define',
+			'externals',
+			'sourceMap'
+		]),
 		{
-			libraryName: config.libraryName,
 			minimize
-		},
-		commonOptions
+		}
 	);
 
 	return webOptions;

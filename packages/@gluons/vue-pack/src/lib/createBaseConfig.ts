@@ -2,8 +2,7 @@ import { BaseOptions } from '@gluons/vue-pack-types';
 import Config from 'webpack-chain';
 
 import infuseAliases from './infuseAliases';
-import infuseWebpackModule from './infuseWebpackModule';
-import infuseWebpackPlugins from './infuseWebpackPlugins';
+import infuseWebpackModule from './infuser/infuseWebpackModule';
 
 /**
  * Create base config via `webpack-chain`'s config instance.
@@ -18,12 +17,8 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 		fileName,
 		outDir,
 		alias,
-		define,
-		minimize,
 		sourceMap
 	} = options;
-
-	const cssFileName = minimize ? `${fileName}.min.css` : `${fileName}.css`;
 
 	const config = new Config(); // webpack-chain Config
 
@@ -40,26 +35,12 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 				.merge(['.vue', '.ts', '.js', '.json'])
 				.end()
 			.end()
-		.optimization
-			.minimize(minimize)
-			.splitChunks({
-				cacheGroups: {
-					styles: {
-						name: 'styles',
-						test: /\.css$/,
-						chunks: 'all',
-						enforce: true
-					}
-				}
-			})
-			.end()
 		.devtool(sourceMap ? 'source-map' : false)
 		.stats('none')
 	;
 
 	infuseAliases(config, alias);
 	await infuseWebpackModule(config, outDir, sourceMap);
-	infuseWebpackPlugins(config, cssFileName, minimize, sourceMap, define);
 
 	return config;
 }

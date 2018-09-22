@@ -1,13 +1,13 @@
-import CommonOptions from './CommonOptions';
+import Configuration from './Configuration';
 
 /**
  * Options for creating base config.
  */
-type BaseOptions = CommonOptions & {
-	/**
-	 * Enable minimization?
-	 */
-	minimize: boolean
-};
+type BaseOptions = Required<
+	Pick<
+		Configuration,
+		'entry' | 'fileName' | 'outDir' | 'alias' | 'define' | 'externals' | 'sourceMap'
+	>
+>;
 
 export default BaseOptions;

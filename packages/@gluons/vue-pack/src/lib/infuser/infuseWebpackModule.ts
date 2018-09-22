@@ -1,4 +1,4 @@
-import infuseCommonCSSUse from '../utils/infuseCommonCSSUse';
+import infuseCommonCSSUse from './infuseCommonCSSUse';
 
 /**
  * Infuse webpack's module.
