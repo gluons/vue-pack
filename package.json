@@ -14,13 +14,16 @@
     "url": "git+https://github.com/gluons/vue-pack.git"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.9",
     "@types/jest": "^23.3.2",
     "@types/node": "8",
     "@types/webpack": "^4.4.11",
+    "@vue/server-test-utils": "^1.0.0-beta.25",
     "@vue/test-utils": "^1.0.0-beta.25",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
     "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.2",
     "cross-env": "^5.2.0",
     "jest": "^23.6.0",
     "lerna": "^3.4.0",
@@ -33,6 +36,7 @@
     "typescript": "^3.0.3",
     "vue": "^2.5.17",
     "vue-class-component": "^6.2.0",
+    "vue-server-renderer": "^2.5.17",
     "vue-template-compiler": "^2.5.17"
   }
 }

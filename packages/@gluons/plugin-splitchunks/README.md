@@ -55,6 +55,11 @@ const options = {
 
 		return splitChunks;
 	},
+	tapSSR(splitChunks) {
+		// Do anything with `splitChunks`
+
+		return splitChunks;
+	}
 	tapWeb(splitChunks) {
 		// Do anything with `splitChunks`
 

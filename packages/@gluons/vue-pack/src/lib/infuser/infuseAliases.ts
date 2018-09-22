@@ -1,4 +1,4 @@
-import resolveCwd from '../utils/resolveCwd';
+import resolveCwd from '../../utils/resolveCwd';
 
 /**
  * Infuse webpack's `resolve.alias`.

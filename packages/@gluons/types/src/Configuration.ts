@@ -142,9 +142,8 @@ export function toBaseOptions(config: Configuration): BaseOptions {
  * @returns {WebOptions}
  */
 export function toWebOptions(config: Configuration, minimize: boolean): WebOptions {
-	const webOptions: WebOptions = Object.assign(
-		{},
-		pick(config, [
+	const webOptions: WebOptions = {
+		...pick(config, [
 			'entry',
 			'libraryName',
 			'fileName',
@@ -154,10 +153,8 @@ export function toWebOptions(config: Configuration, minimize: boolean): WebOptio
 			'externals',
 			'sourceMap'
 		]),
-		{
-			minimize
-		}
-	);
+		minimize
+	};
 
 	return webOptions;
 }

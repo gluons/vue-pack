@@ -5,7 +5,7 @@ import {
 } from '@gluons/vue-pack-types';
 import { Configuration as WebpackConfiguration } from 'webpack';
 
-import createModuleConfig, { Options as CreateModuleConfigOptions } from './lib/createModuleConfig';
+import createModuleConfig from './lib/createModuleConfig';
 import createWebConfig from './lib/createWebConfig';
 import executeChainWebpack from './lib/executeChainWebpack';
 import executePlugins from './lib/executePlugins';
@@ -16,6 +16,7 @@ const { toBaseOptions, toWebOptions } = ConfigurationMethods;
 const barOptions = [
 	{ name: 'CommonJS', color: 'green' },
 	{ name: 'ES Module', color: 'magenta' },
+	{ name: 'Server-Side Rendering', color: 'blue' },
 	{ name: 'Web Unminified', color: 'cyan' },
 	{ name: 'Web Minified', color: 'yellow' }
 ];
@@ -29,23 +30,18 @@ const barOptions = [
  */
 export default async function createConfigs(config: Configuration): Promise<WebpackConfiguration[]> {
 	const baseOptions = toBaseOptions(config);
-	const commonJSOptions: CreateModuleConfigOptions = Object.assign(
-		{},
-		baseOptions,
-		{
-			moduleType: 'common'
-		} as CreateModuleConfigOptions
-	);
-	const esModuleOptions: CreateModuleConfigOptions = Object.assign(
-		{},
-		baseOptions,
-		{
-			moduleType: 'es'
-		} as CreateModuleConfigOptions
-	);
-
-	const commonJSConfig = await createModuleConfig(commonJSOptions);
-	const esModuleConfig = await createModuleConfig(esModuleOptions);
+	const commonJSConfig = await createModuleConfig({
+		...baseOptions,
+		moduleType: 'common'
+	});
+	const esModuleConfig = await createModuleConfig({
+		...baseOptions,
+		moduleType: 'es'
+	});
+	const ssrConfig = await createModuleConfig({
+		...baseOptions,
+		moduleType: 'ssr'
+	});
 	const webUnminConfig = await createWebConfig(toWebOptions(config, false));
 	const webMinConfig = await createWebConfig(toWebOptions(config, true));
 
@@ -55,6 +51,7 @@ export default async function createConfigs(config: Configuration): Promise<Webp
 	const allConfigs = [
 		commonJSConfig,
 		esModuleConfig,
+		ssrConfig,
 		webUnminConfig,
 		webMinConfig
 	];
@@ -65,6 +62,7 @@ export default async function createConfigs(config: Configuration): Promise<Webp
 	const webpackConfigGroup: WebpackChainConfigGroup = {
 		commonJSConfig,
 		esModuleConfig,
+		ssrConfig,
 		webUnminConfig,
 		webMinConfig
 	};

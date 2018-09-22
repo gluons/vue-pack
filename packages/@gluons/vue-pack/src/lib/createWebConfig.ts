@@ -1,6 +1,7 @@
 import { WebOptions } from '@gluons/vue-pack-types';
 
 import createBaseConfig from './createBaseConfig';
+import infuseWebpackModule from './infuser/infuseWebpackModule';
 import infuseWebpackOptimization from './infuser/infuseWebpackOptimization';
 import infuseWebpackPlugins from './infuser/infuseWebpackPlugins';
 
@@ -15,6 +16,7 @@ export default async function createWebConfig(options: WebOptions): Promise<any>
 	const {
 		libraryName,
 		fileName,
+		outDir,
 		define,
 		sourceMap,
 		minimize,
@@ -34,6 +36,12 @@ export default async function createWebConfig(options: WebOptions): Promise<any>
 	;
 
 	infuseWebpackOptimization(config, minimize);
+	await infuseWebpackModule({
+		config,
+		outDir,
+		sourceMap,
+		ssr: false
+	});
 	infuseWebpackPlugins({
 		config,
 		fileName,

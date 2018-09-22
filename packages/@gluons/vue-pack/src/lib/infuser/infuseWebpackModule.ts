@@ -1,19 +1,56 @@
 import infuseCommonCSSUse from './infuseCommonCSSUse';
 
 /**
+ * `infuseWebpackModule`'s options.
+ *
+ * @interface Options
+ */
+interface Options {
+	/**
+	 * `webpack-chain`'s config instance
+	 *
+	 * @type {any}
+	 * @memberof Options
+	 */
+	config: any;
+	/**
+	 * Output directory
+	 *
+	 * @type {string}
+	 * @memberof Options
+	 */
+	outDir: string;
+	/**
+	 * Enable source map?
+	 *
+	 * @type {boolean}
+	 * @memberof Options
+	 */
+	sourceMap: boolean;
+	/**
+	 * Enable SSR (Server-Side Rendering) support?
+	 *
+	 * @type {boolean}
+	 * @memberof Options
+	 */
+	ssr: boolean;
+}
+
+/**
  * Infuse webpack's module.
  *
  * @export
- * @param {any} config `webpack-chain`'s config instance
- * @param {string} outDir Output directory
- * @param {boolean} sourceMap Enable source map?
+ * @param {Options} options Options
  * @returns {Promise<void>}
  */
-export default async function infuseWebpackModule(
-	config: any,
-	outDir: string,
-	sourceMap: boolean
-): Promise<void> {
+export default async function infuseWebpackModule(options: Options): Promise<void> {
+	const {
+		config,
+		outDir,
+		sourceMap,
+		ssr
+	} = options;
+
 	// Vue
 	config.module.rule('vue')
 		.test(/\.vue$/)
@@ -21,7 +58,8 @@ export default async function infuseWebpackModule(
 			.loader('vue-loader')
 			.options({
 				hotReload: false,
-				productionMode: true
+				productionMode: true,
+				optimizeSSR: ssr
 			})
 	;
 
