@@ -28,10 +28,18 @@ const tapESM = splitChunks => Object.assign({}, splitChunks, {
 	}
 });
 
-const tapWeb = splitChunks => Object.assign({}, splitChunks, {
+const tapSSR = splitChunks => Object.assign({}, splitChunks, {
 	cacheGroups: {
 		vendors: {
 			test: /vendors4/
+		}
+	}
+});
+
+const tapWeb = splitChunks => Object.assign({}, splitChunks, {
+	cacheGroups: {
+		vendors: {
+			test: /vendors5/
 		}
 	}
 });
@@ -141,6 +149,45 @@ describe('SplitChunksPlugin', () => {
 		}
 	});
 
+	it('should change `splitChunks` in only SSR config', async () => {
+		const vuePackConfig: VuePackConfig = {
+			entry: 'index.ts',
+			libraryName: 'Test',
+			externals: {}, // Prevent destructuring error
+			plugins: [
+				SplitChunksPlugin({
+					tapSSR
+				})
+			]
+		};
+
+		const configs: Configuration[] = await createConfigs(vuePackConfig);
+
+		for (let i = 0; i < configs.length; i++) { // tslint:disable-line: prefer-for-of
+			const config = configs[i];
+
+			expect(config.optimization).toHaveProperty('splitChunks');
+
+			if (i === 2) {
+				expect(config.optimization.splitChunks).toMatchObject({
+					cacheGroups: {
+						vendors: {
+							test: /vendors4/
+						}
+					}
+				});
+			} else {
+				expect(config.optimization.splitChunks).not.toMatchObject({
+					cacheGroups: {
+						vendors: {
+							test: /vendors4/
+						}
+					}
+				});
+			}
+		}
+	});
+
 	it('should change `splitChunks` in only web config', async () => {
 		const vuePackConfig: VuePackConfig = {
 			entry: 'index.ts',
@@ -160,11 +207,11 @@ describe('SplitChunksPlugin', () => {
 
 			expect(config.optimization).toHaveProperty('splitChunks');
 
-			if ((i === 2) || (i === 3)) {
+			if ((i === 3) || (i === 4)) {
 				expect(config.optimization.splitChunks).toMatchObject({
 					cacheGroups: {
 						vendors: {
-							test: /vendors4/
+							test: /vendors5/
 						}
 					}
 				});
@@ -172,7 +219,7 @@ describe('SplitChunksPlugin', () => {
 				expect(config.optimization.splitChunks).not.toMatchObject({
 					cacheGroups: {
 						vendors: {
-							test: /vendors4/
+							test: /vendors5/
 						}
 					}
 				});

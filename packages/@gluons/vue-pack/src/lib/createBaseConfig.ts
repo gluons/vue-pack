@@ -1,8 +1,7 @@
 import { BaseOptions } from '@gluons/vue-pack-types';
 import Config from 'webpack-chain';
 
-import infuseAliases from './infuseAliases';
-import infuseWebpackModule from './infuser/infuseWebpackModule';
+import infuseAliases from './infuser/infuseAliases';
 
 /**
  * Create base config via `webpack-chain`'s config instance.
@@ -40,7 +39,6 @@ export default async function createBaseConfig(options: BaseOptions): Promise<an
 	;
 
 	infuseAliases(config, alias);
-	await infuseWebpackModule(config, outDir, sourceMap);
 
 	return config;
 }

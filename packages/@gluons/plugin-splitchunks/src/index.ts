@@ -13,18 +13,37 @@ export { TapFunction };
 export interface SplitChunksPluginOptions {
 	/**
 	 * A function to tap `splitChunks` in all configs
+	 *
+	 * @type {TapFunction}
+	 * @memberof SplitChunksPluginOptions
 	 */
 	tapAll?: TapFunction;
 	/**
 	 * A function to tap `splitChunks` in CommonJS config
+	 *
+	 * @type {TapFunction}
+	 * @memberof SplitChunksPluginOptions
 	 */
 	tapCJS?: TapFunction;
 	/**
 	 * A function to tap `splitChunks` in ES module config
+	 *
+	 * @type {TapFunction}
+	 * @memberof SplitChunksPluginOptions
 	 */
 	tapESM?: TapFunction;
 	/**
+	 * A function to tap `splitChunks` in SSR config
+	 *
+	 * @type {TapFunction}
+	 * @memberof SplitChunksPluginOptions
+	 */
+	tapSSR?: TapFunction;
+	/**
 	 * A function to tap `splitChunks` in web config.
+	 *
+	 * @type {TapFunction}
+	 * @memberof SplitChunksPluginOptions
 	 */
 	tapWeb?: TapFunction;
 }
@@ -49,10 +68,11 @@ export default function SplitChunksPlugin(options?: SplitChunksPluginOptions): P
 				tapSplitChunks(config, options.tapAll);
 			});
 		}
-		// tslint:disable:no-unused-expression
+
 		(typeof options.tapCJS === 'function') && tapSplitChunks(webpackConfigs.commonJSConfig, options.tapCJS);
 		(typeof options.tapESM === 'function') && tapSplitChunks(webpackConfigs.esModuleConfig, options.tapESM);
-		// tslint:enable:no-unused-expression
+		(typeof options.tapSSR === 'function') && tapSplitChunks(webpackConfigs.ssrConfig, options.tapSSR);
+
 		if (typeof options.tapWeb === 'function') {
 			tapSplitChunks(webpackConfigs.webUnminConfig, options.tapWeb);
 			tapSplitChunks(webpackConfigs.webMinConfig, options.tapWeb);
