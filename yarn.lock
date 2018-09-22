@@ -729,12 +729,12 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
 
 "@types/node@*":
-  version "10.10.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.10.1.tgz#d5c96ca246a418404914d180b7fdd625ad18eca6"
+  version "10.10.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.10.3.tgz#09c75a4ad84d6a3d286790bdd9489a4f8ee9906c"
 
 "@types/node@8":
-  version "8.10.29"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.29.tgz#b3a13b58dd7b0682bf1b42022bef4a5a9718f687"
+  version "8.10.30"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.30.tgz#2c82cbed5f79d72280c131d2acffa88fbd8dd353"
 
 "@types/range-parser@*":
   version "1.2.2"
@@ -9324,8 +9324,8 @@ tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
 tslint-config-gluons@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/tslint-config-gluons/-/tslint-config-gluons-2.0.2.tgz#628f0bdb9dd82bb47125badc1d45e50311a0abd1"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/tslint-config-gluons/-/tslint-config-gluons-2.0.3.tgz#767764e8cc7ccce9ee92199664e7cad5b24b37cd"
 
 tslint@^5.11.0:
   version "5.11.0"
