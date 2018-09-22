@@ -43,34 +43,7 @@ Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'
 Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configurations instance.
 
 ::: tip
-It's alias of [`WebpackChainConfigGroup`](/webpack-chainer/#webpackchainconfiggroup).
+`PluginWebpackConfigGroup` is alias of `WebpackChainConfigGroup`.
+
+Please see [`WebpackChainConfigGroup`](/webpack-chainer/#webpackchainconfiggroup) for more information.
 :::
-
-```ts
-interface PluginWebpackConfigGroup {
-	readonly commonJSConfig;
-	readonly esModuleConfig;
-	readonly webUnminConfig;
-	readonly webMinConfig;
-}
-```
-
-### `commonJSConfig`
-**Type:** [`WebpackChainConfig`](https://github.com/mozilla-neutrino/webpack-chain#config)
-
-Common JS [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configuration instance.
-
-### `esModuleConfig`
-**Type:** [`WebpackChainConfig`](https://github.com/mozilla-neutrino/webpack-chain#config)
-
-ES module [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configuration instance.
-
-### `webUnminConfig`
-**Type:** [`WebpackChainConfig`](https://github.com/mozilla-neutrino/webpack-chain#config)
-
-Non-minified web [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configuration instance.
-
-### `webMinConfig`
-**Type:** [`WebpackChainConfig`](https://github.com/mozilla-neutrino/webpack-chain#config)
-
-Minified web [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configuration instance.

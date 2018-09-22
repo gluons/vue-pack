@@ -24,6 +24,7 @@ Group of all [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'
 interface WebpackChainConfigGroup {
 	readonly commonJSConfig;
 	readonly esModuleConfig;
+	readonly ssrConfig;
 	readonly webUnminConfig;
 	readonly webMinConfig;
 }
@@ -38,6 +39,11 @@ Common JS [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s c
 **Type:** [`WebpackChainConfig`](https://github.com/mozilla-neutrino/webpack-chain#config)
 
 ES module [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configuration instance.
+
+### `ssrConfig`
+**Type:** [`WebpackChainConfig`](https://github.com/mozilla-neutrino/webpack-chain#config)
+
+SSR ([Server-Side Rendering](https://vuejs.org/v2/guide/ssr.html)) [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain)'s configuration instance.
 
 ### `webUnminConfig`
 **Type:** [`WebpackChainConfig`](https://github.com/mozilla-neutrino/webpack-chain#config)
