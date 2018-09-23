@@ -71,8 +71,9 @@ export default async function infuseWebpackModule(options: Options): Promise<voi
 			.options({
 				compilerOptions: {
 					outDir,
-					sourceMap: true,
-					declaration: true
+					sourceMap,
+					declaration: true,
+					declarationMap: sourceMap
 				},
 				appendTsSuffixTo: [/\.vue$/]
 			})
