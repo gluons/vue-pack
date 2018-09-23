@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Bundle Vue.js library via webpack.",
   "main": "./dist/bundle.js",
   "typings": "./dist/bundle.d.ts",
@@ -45,7 +45,7 @@
     "vue": "2"
   },
   "dependencies": {
-    "@gluons/vue-pack-load-config": "^1.9.0",
+    "@gluons/vue-pack-load-config": "^1.10.0",
     "@gluons/vue-pack-types": "^1.9.0",
     "@intervolga/optimize-cssnano-plugin": "^1.0.5",
     "@sindresorhus/slugify": "^0.3.0",

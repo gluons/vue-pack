@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-load-config",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "A configuration loader for vue-pack.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
