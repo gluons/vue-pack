@@ -94,6 +94,14 @@ export default async function infuseWebpackModule(options: Options): Promise<voi
 	// Pug
 	config.module.rule('pug')
 		.test(/\.pug$/)
-		.use('pug').loader('pug-plain-loader')
+		.oneOf('vue')
+			.resourceQuery(/^\?vue/)
+			.use('pug-plain')
+				.loader('pug-plain-loader')
+				.end()
+			.end()
+		.oneOf('pug')
+			.use('pug')
+				.loader('pug-loader')
 	;
 }
