@@ -9,7 +9,7 @@ next: /plugin/
 Options for `vue-pack`'s development server.
 
 
-> Using [webpack-serve](https://github.com/webpack-contrib/webpack-serve) under the hood.
+> Using [webpack-dev-server](https://github.com/webpack/webpack-dev-server) under the hood.
 
 ::: tip
 For **alias**, it'll use [`alias`](/configuration/#alias) from [Configuration](/configuration/).
