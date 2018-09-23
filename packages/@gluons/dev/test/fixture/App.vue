@@ -1,7 +1,7 @@
 <template lang="pug">
-	#app
-		p {{ text1 }}
-		p {{ text2 }}
+#app
+	p {{ text1 }}
+	p {{ text2 }}
 </template>
 
 <script lang="ts">

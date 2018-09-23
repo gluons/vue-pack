@@ -1,20 +1,13 @@
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { resolve } from 'path';
+import terminalLink from 'terminal-link';
 import VueLoaderPlugin from 'vue-loader/lib/plugin';
-import { Configuration, DefinePlugin } from 'webpack';
+import { Configuration, DefinePlugin, HotModuleReplacementPlugin } from 'webpack';
 import WebpackBar from 'webpackbar';
 
+import { Options } from './';
 import getCSSUses from './getCSSUses';
-
-export interface Options {
-	entry: string;
-	alias: Record<string, string>;
-	define: Record<string, any>;
-	port: number;
-	htmlTitle: string;
-	webpackBarName: string;
-}
 
 export default function createWebpackConfig(options: Options): Configuration {
 	const {
@@ -22,14 +15,19 @@ export default function createWebpackConfig(options: Options): Configuration {
 		alias,
 		define,
 		port,
+		open,
 		htmlTitle,
 		webpackBarName
 	} = options;
+
 	const builtInAlias: Record<string, string> = {
 		'@': resolve(process.cwd(), './src')
 	};
-
 	const finalAlias = Object.assign({}, builtInAlias, alias);
+	const serverUrl = `http://localhost:${port}`;
+	const serverLink = terminalLink(serverUrl, serverUrl, {
+		fallback: () => serverUrl
+	});
 
 	let stringifiedDefine: Record<string, any> = null;
 	if (define && (Object.keys(define).length > 0)) {
@@ -102,13 +100,14 @@ export default function createWebpackConfig(options: Options): Configuration {
 		},
 		plugins: [
 			...(stringifiedDefine ? [new DefinePlugin(stringifiedDefine)] : []),
+			new HotModuleReplacementPlugin(),
 			new WebpackBar({
 				name: webpackBarName
 			}),
 			new FriendlyErrorsWebpackPlugin({
 				compilationSuccessInfo: {
 					messages: [
-						`You development server is running on http://localhost:${port}`
+						`You development server is running on ${serverLink}`
 					]
 				}
 			}),
@@ -119,7 +118,15 @@ export default function createWebpackConfig(options: Options): Configuration {
 			})
 		],
 		devtool: 'eval-source-map',
-		stats: false
+		stats: false,
+		devServer: {
+			host: 'localhost',
+			port,
+			hot: true,
+			inline: true,
+			open,
+			stats: false
+		}
 	};
 
 	return config;
