@@ -9,7 +9,7 @@
 
 A development server for [vue-pack](https://github.com/gluons/vue-pack) (and [vue-up](https://github.com/gluons/vue-up)).
 
-> Using [webpack-serve](https://github.com/webpack-contrib/webpack-serve) under the hood.
+> Using [webpack-dev-server](https://github.com/webpack/webpack-dev-server) under the hood.
 
 ## Installation
 
@@ -27,7 +27,7 @@ const serve = require('@gluons/vue-pack-dev').default;
 serve({
 	entry: '<path to your entry file>'
 })
-	.then(result => {
+	.then(() => {
 		console.log('Server is running.');
 	})
 	.catch(err => {
@@ -82,7 +82,7 @@ Name of progress bar of [WebpackBar](https://github.com/nuxt/webpackbar).
 ## API
 
 ### serve(options)
-**Return:** [`Promise<Result>`](https://github.com/webpack-contrib/webpack-serve#resultapp)
+**Return:** `Promise<void>`
 
 Run development server.
 
