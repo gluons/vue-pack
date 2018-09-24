@@ -9,6 +9,10 @@
 
 🎀 Bundle [Vue.js](https://vuejs.org/) library via [webpack](https://webpack.js.org/).
 
+
+> Vue Pack is created to suit my personal requirements.  
+  But you can also use it if it meets your requirements. 🙂
+
 ## ⚙️ Installation
 
 ### CLI (Preferred)
