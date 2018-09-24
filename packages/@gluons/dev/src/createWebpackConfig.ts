@@ -15,7 +15,6 @@ export default function createWebpackConfig(options: Options): Configuration {
 		alias,
 		define,
 		port,
-		open,
 		htmlTitle,
 		webpackBarName
 	} = options;
@@ -124,7 +123,13 @@ export default function createWebpackConfig(options: Options): Configuration {
 			port,
 			hot: true,
 			inline: true,
-			open,
+			/*
+			 * `open` won't work in Node API. It only works in CLI.
+			 * See https://github.com/webpack/webpack-dev-server/issues/311#issuecomment-423873185
+			 *
+			 * So, disable it and do it myself.
+			 */
+			open: false,
 			stats: false
 		}
 	};

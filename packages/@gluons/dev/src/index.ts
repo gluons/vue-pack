@@ -1,5 +1,6 @@
 import clipboardy from 'clipboardy';
 import moren, { PartialDefaults } from 'moren';
+import opn from 'opn';
 import webpack, { Configuration } from 'webpack';
 import WebpackDevServer, { Configuration as DevConfiguration } from 'webpack-dev-server';
 
@@ -59,7 +60,9 @@ export const DefaultOptions: PartialDefaults<Options> = {
  * @param {Options} options Options
  * @returns {Promise<void>}
  */
-export default function serve(options: Options): Promise<void> {
+export default async function serve(options: Options): Promise<void> {
+	process.env.NODE_ENV = 'development';
+
 	const finalOptions: Required<Options> = moren(options, DefaultOptions) as Required<Options>;
 	const { port, open } = finalOptions;
 	const serverUrl = `http://localhost:${port}`;
@@ -67,21 +70,25 @@ export default function serve(options: Options): Promise<void> {
 	const webpackConfig: Configuration = createWebpackConfig(finalOptions);
 	const devConfig: DevConfiguration = webpackConfig.devServer;
 
-	return new Promise<void>((resolve, reject) => {
-		WebpackDevServer.addDevServerEntrypoints(webpackConfig, devConfig);
+	WebpackDevServer.addDevServerEntrypoints(webpackConfig, devConfig);
 
-		const compiler = webpack(webpackConfig);
-		const server = new WebpackDevServer(compiler, devConfig);
+	const compiler = webpack(webpackConfig);
+	const server = new WebpackDevServer(compiler, devConfig);
 
+	await new Promise<void>((resolve, reject) => {
 		server.listen(port, '127.0.0.1', err => {
 			if (err) {
 				reject(err);
 			} else {
-				// Copy server URL to clipboard when `open` is false
-				!open && clipboardy.writeSync(serverUrl);
-
 				resolve();
 			}
 		});
 	});
+
+	if (open) {
+		await opn(serverUrl);
+	} else {
+		// Copy server URL to clipboard when `open` is false
+		clipboardy.writeSync(serverUrl);
+	}
 }
