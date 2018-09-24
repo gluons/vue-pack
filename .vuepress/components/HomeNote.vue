@@ -12,23 +12,12 @@ export default {
 };
 </script>
 
-<style scoped>
-blockquote {
-	color: blueviolet;
-	font-size: 1.3em;
-	border-left-color: blueviolet;
-}
-</style>
-
 <style lang="scss" scoped>
 p {
 	color: blueviolet;
 	background-color: antiquewhite;
 	font-size: 1.4rem;
 	text-align: center;
-	padding: {
-		top: 2rem;
-		bottom: 2rem;
-	}
+	padding: 2rem 1.5rem;
 }
 </style>
