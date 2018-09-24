@@ -26,6 +26,8 @@ export {
  * @returns {Promise<Stats>} Promise of `webpack`'s stats
  */
 export default async function bundle(config?: Configuration): Promise<Stats> {
+	process.env.NODE_ENV = 'production';
+
 	// If no config given, try to load config from config file.
 	config = nvl(config, await loadConfig());
 
