@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "Bundle Vue.js library via webpack.",
   "main": "./dist/bundle.js",
   "typings": "./dist/bundle.d.ts",
