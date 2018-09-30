@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-types",
-  "version": "1.9.0",
+  "version": "1.12.2",
   "description": "TypeScript types for vue-pack.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
