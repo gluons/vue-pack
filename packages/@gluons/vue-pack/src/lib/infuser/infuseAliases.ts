@@ -9,6 +9,7 @@ import resolveCwd from '../../utils/resolveCwd';
  */
 export default function infuseAliases(config: any, alias: Record<string, string>): void {
 	const builtInAlias: Record<string, string> = {
+		'vue$': 'vue/dist/vue.esm.js',
 		'@': resolveCwd('./src')
 	};
 
