@@ -5,6 +5,7 @@ import del from 'del';
 import nvl from 'nvl';
 import { join } from 'path';
 import { Stats } from 'webpack';
+import nodeExternals from 'webpack-node-externals';
 
 import build from './build';
 import createConfigs from './createConfigs';
@@ -15,7 +16,8 @@ export * from '@gluons/vue-pack-types';
 
 export {
 	AggregateError,
-	Stats
+	Stats,
+	nodeExternals
 };
 
 /**
