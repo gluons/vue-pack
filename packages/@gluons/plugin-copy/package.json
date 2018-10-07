@@ -1,0 +1,50 @@
+{
+  "name": "@gluons/vue-pack-copy-plugin",
+  "version": "1.13.0",
+  "description": "A vue-pack plugin to copy files or directories to build directory.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "prebuild": "rimraf dist/*",
+    "build": "tsc",
+    "lint": "tslint -p .",
+    "pretest": "npm run build",
+    "test": "npm run lint && jest -c ./jest.config.json --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-pack.git"
+  },
+  "keywords": [
+    "vue-pack",
+    "vue-pack-plugin",
+    "webpack",
+    "copy",
+    "copy-plugin"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-pack/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-pack/tree/master/packages/@gluons/plugin-copy",
+  "peerDependencies": {
+    "@gluons/vue-pack": "*"
+  },
+  "dependencies": {
+    "@types/minimatch": "^3.0.3",
+    "copy-webpack-plugin": "^4.5.2"
+  },
+  "devDependencies": {
+    "@gluons/vue-pack": "^1.12.2",
+    "@types/copy-webpack-plugin": "^4.4.2",
+    "webpack": "^4.20.2"
+  }
+}
