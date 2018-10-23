@@ -40,11 +40,11 @@
   },
   "dependencies": {
     "@types/minimatch": "^3.0.3",
-    "copy-webpack-plugin": "^4.5.3"
+    "copy-webpack-plugin": "^4.5.4"
   },
   "devDependencies": {
     "@gluons/vue-pack": "^1.14.1",
     "@types/copy-webpack-plugin": "^4.4.2",
-    "webpack": "^4.20.2"
+    "webpack": "^4.22.0"
   }
 }
