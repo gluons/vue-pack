@@ -48,7 +48,7 @@
     "@gluons/vue-pack-load-config": "^1.14.2",
     "@gluons/vue-pack-types": "^1.14.2",
     "@intervolga/optimize-cssnano-plugin": "^1.0.5",
-    "@sindresorhus/slugify": "^0.4.0",
+    "@sindresorhus/slugify": "^0.6.0",
     "@types/aggregate-error": "^1.0.0",
     "aggregate-error": "^1.0.0",
     "autoprefixer": "^9.3.0",
