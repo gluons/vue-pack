@@ -45,6 +45,6 @@
   "devDependencies": {
     "@gluons/vue-pack": "^1.15.0",
     "@types/copy-webpack-plugin": "^4.4.2",
-    "webpack": "^4.22.0"
+    "webpack": "^4.27.1"
   }
 }
