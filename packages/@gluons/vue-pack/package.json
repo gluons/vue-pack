@@ -55,7 +55,7 @@
     "browserslist-config-vue": "^1.0.3",
     "css-loader": "^1.0.0",
     "del": "^3.0.0",
-    "mini-css-extract-plugin": "^0.4.4",
+    "mini-css-extract-plugin": "^0.5.0",
     "moren": "^2.0.0",
     "node-sass": "^4.9.4",
     "nvl": "^1.1.1",
