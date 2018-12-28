@@ -50,7 +50,7 @@
     "@intervolga/optimize-cssnano-plugin": "^1.0.5",
     "@sindresorhus/slugify": "^0.6.0",
     "@types/aggregate-error": "^1.0.0",
-    "aggregate-error": "^1.0.0",
+    "aggregate-error": "^2.0.0",
     "autoprefixer": "^9.4.2",
     "browserslist-config-vue": "^1.0.3",
     "css-loader": "^2.0.1",
