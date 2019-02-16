@@ -60,7 +60,6 @@
   "devDependencies": {
     "@types/clipboardy": "^1.1.0",
     "@types/opn": "^5.1.0",
-    "@types/webpack-dev-server": "^3.1.2",
-    "@types/webpackbar": "^2.6.0"
+    "@types/webpack-dev-server": "^3.1.2"
   }
 }
