@@ -42,7 +42,7 @@ export const builder: CommandBuilder = yargs => {
 
 export async function handler(argv: Arguments): Promise<void> {
 	try {
-		const configPath: string = isNonEmptyStr(argv.config) ? argv.config : null;
+		const configPath: string = isNonEmptyStr(argv.config) ? argv.config as string : null;
 		const cliConfig = purifyConfig(argv);
 		const config = await loadConfig(cliConfig, configPath);
 
