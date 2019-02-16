@@ -67,7 +67,7 @@
     "sass-loader": "^7.1.0",
     "ts-loader": "^5.3.1",
     "vue-loader": "^15.4.0",
-    "vue-template-compiler": "2.6.4",
+    "vue-template-compiler": "2.6.6",
     "webpack": "^4.27.1",
     "webpack-chain": "^5.0.1",
     "webpack-node-externals": "^1.7.2",
