@@ -1,0 +1,8 @@
+{
+	"browsers": "firefox",
+	"src": [
+		"test/devServer.test.ts"
+	],
+	"appCommand": "cd ./test/fixture && node ../../dist/cli.js dev -n",
+	"appInitDelay": 60000
+}

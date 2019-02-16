@@ -1,7 +1,8 @@
 import { Selector } from 'testcafe';
 
-fixture('Dev Server')
-	.page('http://localhost:8888');
+/* tslint:disable: no-unused-expression */
+fixture`Dev Server`
+	.page`http://localhost:8888`;
 
 test('App page', async t => {
 	const appExists = await Selector('#app').exists;
