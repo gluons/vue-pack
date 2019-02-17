@@ -5,6 +5,7 @@
     "build": "lerna run build --stream",
     "format": "prettier --write \"**/{src,test}/**/*.{json,js,vue}\" \"*.{json,js}\" && prettier-tslint fix \"**/{src,test}/**/*.ts\"",
     "postformat": "lerna run lint -- --fix",
+    "pretest": "npm run build",
     "test": "cross-env FORCE_COLOR=1 lerna run test --stream && jest --verbose"
   },
   "workspaces": [
