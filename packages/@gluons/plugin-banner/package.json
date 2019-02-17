@@ -7,9 +7,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "prebuild": "rimraf dist/*",
