@@ -6,7 +6,13 @@ import Configuration from './Configuration';
 type BaseOptions = Required<
 	Pick<
 		Configuration,
-		'entry' | 'fileName' | 'outDir' | 'alias' | 'define' | 'externals' | 'sourceMap'
+		| 'entry'
+		| 'fileName'
+		| 'outDir'
+		| 'alias'
+		| 'define'
+		| 'externals'
+		| 'sourceMap'
 	>
 >;
 

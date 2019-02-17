@@ -3,10 +3,7 @@
 		"module": "es2015",
 		"moduleResolution": "node",
 		"target": "es5",
-		"lib": [
-			"dom",
-			"es2015"
-		],
+		"lib": ["dom", "es2015"],
 		"esModuleInterop": true,
 		"strict": true,
 		"experimentalDecorators": true,
@@ -19,7 +16,5 @@
 			"@com/*": ["src/components/*"]
 		}
 	},
-	"include": [
-		"src"
-	]
+	"include": ["src"]
 }

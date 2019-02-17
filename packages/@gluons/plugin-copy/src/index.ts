@@ -100,7 +100,7 @@ export interface Pattern {
  */
 export default function CopyPlugin(patterns: Array<string | Pattern>): Plugin {
 	return (context: PluginContext) => {
-		if (!Array.isArray(patterns) || (patterns.length === 0)) {
+		if (!Array.isArray(patterns) || patterns.length === 0) {
 			return;
 		}
 
@@ -110,9 +110,7 @@ export default function CopyPlugin(patterns: Array<string | Pattern>): Plugin {
 			if (Object.prototype.hasOwnProperty.call(webpackConfigs, key)) {
 				const config = webpackConfigs[key];
 
-				config
-					.plugin('copy')
-					.use(CopyWebpackPlugin, [patterns]);
+				config.plugin('copy').use(CopyWebpackPlugin, [patterns]);
 			}
 		}
 	};

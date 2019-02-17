@@ -6,7 +6,11 @@ import Configuration from './Configuration';
 import * as ConfigurationMethods from './Configuration';
 import DevOptions from './DevOptions';
 import Externals from './Externals';
-import Plugin, { PluginContext, PluginFunction, PluginWebpackConfigGroup } from './Plugin';
+import Plugin, {
+	PluginContext,
+	PluginFunction,
+	PluginWebpackConfigGroup
+} from './Plugin';
 import WebpackChainer, { WebpackChainConfigGroup } from './WebpackChainer';
 
 export {

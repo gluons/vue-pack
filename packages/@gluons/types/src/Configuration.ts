@@ -106,7 +106,10 @@ export default interface Configuration {
 	dev?: DevOptions;
 }
 
-function pick<T extends object, U extends keyof T>(obj: T, keys: U[]): Required<Pick<T, U>> {
+function pick<T extends object, U extends keyof T>(
+	obj: T,
+	keys: U[]
+): Required<Pick<T, U>> {
 	return keys.reduce<Required<T>>(
 		(newObj, key) => {
 			if (key in obj) {
@@ -141,7 +144,10 @@ export function toBaseOptions(config: Configuration): BaseOptions {
  * @param {boolean} minimize Enable minimization?
  * @returns {WebOptions}
  */
-export function toWebOptions(config: Configuration, minimize: boolean): WebOptions {
+export function toWebOptions(
+	config: Configuration,
+	minimize: boolean
+): WebOptions {
 	const webOptions: WebOptions = {
 		...pick(config, [
 			'entry',

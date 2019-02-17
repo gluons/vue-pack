@@ -1,8 +1,7 @@
 import { Selector } from 'testcafe';
 
 /* tslint:disable: no-unused-expression */
-fixture`Dev Server`
-	.page`http://localhost:8888`;
+fixture`Dev Server`.page`http://localhost:8888`;
 
 test('Hello plugin development page', async t => {
 	const title = await Selector('title').textContent;

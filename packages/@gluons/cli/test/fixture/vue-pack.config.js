@@ -8,9 +8,11 @@ module.exports = {
 		'@com': resolve(__dirname, './src/components/')
 	},
 	externals: {
-		module: [nodeExternals({
-			modulesDir: resolve(__dirname, '../../../../../node_modules/') // Yarn workspace node modules
-		})]
+		module: [
+			nodeExternals({
+				modulesDir: resolve(__dirname, '../../../../../node_modules/') // Yarn workspace node modules
+			})
+		]
 	},
 	noProfiler: true,
 	dev: {

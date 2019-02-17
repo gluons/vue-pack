@@ -14,7 +14,9 @@ export default function validateConfig(config: Configuration) {
 
 	requiredConfig.forEach(requiredConfigName => {
 		if (!config[requiredConfigName]) {
-			errors.push(new ConfigParameterError(requiredConfigName, 'missing'));
+			errors.push(
+				new ConfigParameterError(requiredConfigName, 'missing')
+			);
 		}
 	});
 

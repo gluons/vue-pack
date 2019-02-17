@@ -3,21 +3,18 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { resolve } from 'path';
 import terminalLink from 'terminal-link';
 import VueLoaderPlugin from 'vue-loader/lib/plugin';
-import { Configuration, DefinePlugin, HotModuleReplacementPlugin } from 'webpack';
+import {
+	Configuration,
+	DefinePlugin,
+	HotModuleReplacementPlugin
+} from 'webpack';
 import WebpackBar from 'webpackbar';
 
 import { Options } from './';
 import getCSSUses from './getCSSUses';
 
 export default function createWebpackConfig(options: Options): Configuration {
-	const {
-		entry,
-		alias,
-		define,
-		port,
-		htmlTitle,
-		webpackBarName
-	} = options;
+	const { entry, alias, define, port, htmlTitle, webpackBarName } = options;
 
 	const builtInAlias: Record<string, string> = {
 		'@': resolve(process.cwd(), './src')
@@ -29,7 +26,7 @@ export default function createWebpackConfig(options: Options): Configuration {
 	});
 
 	let stringifiedDefine: Record<string, any> = null;
-	if (define && (Object.keys(define).length > 0)) {
+	if (define && Object.keys(define).length > 0) {
 		stringifiedDefine = {};
 		Object.keys(define).forEach(key => {
 			const value = define[key];

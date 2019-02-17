@@ -10,15 +10,12 @@ import WebpackBar from 'webpackbar';
  */
 export default function infuseWebpackBar(
 	config: any,
-	options: { name: string, color: string },
+	options: { name: string; color: string },
 	profiler: boolean
 ): void {
 	const barOptions = Object.assign({}, options, {
 		profile: profiler
 	});
 
-	config
-		.plugin('webpackbar')
-			.use(WebpackBar, [barOptions])
-	;
+	config.plugin('webpackbar').use(WebpackBar, [barOptions]);
 }

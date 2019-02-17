@@ -43,41 +43,38 @@ interface Options {
  * @param {Options} options Options
  * @returns {Promise<void>}
  */
-export default async function infuseWebpackModule(options: Options): Promise<void> {
-	const {
-		config,
-		outDir,
-		sourceMap,
-		ssr
-	} = options;
+export default async function infuseWebpackModule(
+	options: Options
+): Promise<void> {
+	const { config, outDir, sourceMap, ssr } = options;
 
 	// Vue
-	config.module.rule('vue')
+	config.module
+		.rule('vue')
 		.test(/\.vue$/)
 		.use('vue')
-			.loader('vue-loader')
-			.options({
-				hotReload: false,
-				productionMode: true,
-				optimizeSSR: ssr
-			})
-	;
+		.loader('vue-loader')
+		.options({
+			hotReload: false,
+			productionMode: true,
+			optimizeSSR: ssr
+		});
 
 	// TypeScript
-	config.module.rule('ts')
+	config.module
+		.rule('ts')
 		.test(/\.ts$/)
 		.use('ts')
-			.loader('ts-loader')
-			.options({
-				compilerOptions: {
-					outDir,
-					sourceMap,
-					declaration: true,
-					declarationMap: sourceMap
-				},
-				appendTsSuffixTo: [/\.vue$/]
-			})
-	;
+		.loader('ts-loader')
+		.options({
+			compilerOptions: {
+				outDir,
+				sourceMap,
+				declaration: true,
+				declarationMap: sourceMap
+			},
+			appendTsSuffixTo: [/\.vue$/]
+		});
 
 	// CSS
 	config.module.rule('css').test(/\.css$/);
@@ -86,23 +83,23 @@ export default async function infuseWebpackModule(options: Options): Promise<voi
 	// SCSS
 	config.module.rule('scss').test(/\.scss$/);
 	await infuseCommonCSSUse(config.module.rule('scss'), sourceMap, 2);
-	config.module.rule('scss')
+	config.module
+		.rule('scss')
 		.use('scss')
-			.loader('sass-loader')
-			.options({ sourceMap })
-	;
+		.loader('sass-loader')
+		.options({ sourceMap });
 
 	// Pug
-	config.module.rule('pug')
+	config.module
+		.rule('pug')
 		.test(/\.pug$/)
 		.oneOf('vue')
-			.resourceQuery(/^\?vue/)
-			.use('pug-plain')
-				.loader('pug-plain-loader')
-				.end()
-			.end()
+		.resourceQuery(/^\?vue/)
+		.use('pug-plain')
+		.loader('pug-plain-loader')
+		.end()
+		.end()
 		.oneOf('pug')
-			.use('pug')
-				.loader('pug-loader')
-	;
+		.use('pug')
+		.loader('pug-loader');
 }

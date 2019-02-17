@@ -17,7 +17,9 @@ export type Options = BaseOptions & { moduleType: 'common' | 'es' | 'ssr' };
  * @param {Options} options Options
  * @returns {Promise<any>} `webpack-chain`'s config instance
  */
-export default async function createModuleConfig(options: Options): Promise<any> {
+export default async function createModuleConfig(
+	options: Options
+): Promise<any> {
 	const {
 		fileName,
 		outDir,

@@ -53,7 +53,9 @@ export default async function loadConfig(
 		config = nvl(data, {});
 	}
 
-	config = privilegeConfig ? Object.assign({}, config, privilegeConfig) : config;
+	config = privilegeConfig
+		? Object.assign({}, config, privilegeConfig)
+		: config;
 
 	return config;
 }

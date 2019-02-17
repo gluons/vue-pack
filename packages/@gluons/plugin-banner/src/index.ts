@@ -19,10 +19,7 @@ export default function BannerPlugin(banner: string): Plugin {
 		Object.keys(webpackConfigs).forEach(key => {
 			const config = webpackConfigs[key];
 
-			config
-				.plugin('banner')
-				.use(WebpackBannerPlugin, [banner])
-			;
+			config.plugin('banner').use(WebpackBannerPlugin, [banner]);
 		});
 	};
 }

@@ -8,6 +8,5 @@ export default function infuseCJSOutput(config: any): void {
 	config.output
 		.filename('[name].cjs.js')
 		.libraryTarget('commonjs2')
-		.libraryExport('default')
-	;
+		.libraryExport('default');
 }

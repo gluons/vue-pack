@@ -18,7 +18,6 @@ yargs
 		alias: 'c',
 		desc: 'Path to config file.',
 		normalize: true
-	})
-	.argv;
+	}).argv;
 
 // tslint:enable:no-unused-expression

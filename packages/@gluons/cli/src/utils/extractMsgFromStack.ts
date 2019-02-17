@@ -8,7 +8,9 @@ const isMsg = (line: string) => /^\S+/.test(line);
  * @param {T} err Error
  * @returns {{ msg: string, stack: string }}
  */
-export default function extractMsgFromStack<T extends Error>(err: T): { msg: string, stack: string } {
+export default function extractMsgFromStack<T extends Error>(
+	err: T
+): { msg: string; stack: string } {
 	const stackLines = err.stack.split('\n');
 
 	const msgs = [];

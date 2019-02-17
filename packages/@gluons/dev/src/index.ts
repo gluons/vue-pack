@@ -2,7 +2,9 @@ import clipboardy from 'clipboardy';
 import moren, { PartialDefaults } from 'moren';
 import opn from 'opn';
 import webpack, { Configuration } from 'webpack';
-import WebpackDevServer, { Configuration as DevConfiguration } from 'webpack-dev-server';
+import WebpackDevServer, {
+	Configuration as DevConfiguration
+} from 'webpack-dev-server';
 
 import createWebpackConfig from './createWebpackConfig';
 
@@ -63,7 +65,10 @@ export const DefaultOptions: PartialDefaults<Options> = {
 export default async function serve(options: Options): Promise<void> {
 	process.env.NODE_ENV = 'development';
 
-	const finalOptions: Required<Options> = moren(options, DefaultOptions) as Required<Options>;
+	const finalOptions: Required<Options> = moren(
+		options,
+		DefaultOptions
+	) as Required<Options>;
 	const { port, open } = finalOptions;
 	const serverUrl = `http://localhost:${port}`;
 

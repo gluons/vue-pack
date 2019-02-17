@@ -16,24 +16,22 @@ export default async function infuseCommonCSSUse(
 	sourceMap: boolean,
 	importLoaders: number = 1
 ): Promise<void> {
-	rule
-		.use('css-extract')
-			.loader(MiniCssExtractPlugin.loader)
-			.end()
+	rule.use('css-extract')
+		.loader(MiniCssExtractPlugin.loader)
+		.end()
 		.use('css')
-			.loader('css-loader')
-			.options({
-				importLoaders,
-				sourceMap
-			})
-			.end()
+		.loader('css-loader')
+		.options({
+			importLoaders,
+			sourceMap
+		})
+		.end()
 		.use('postcss')
-			.loader('postcss-loader')
-			.options({
-				config: {
-					path: await getPostCSSConfigPath()
-				},
-				sourceMap
-			})
-	;
+		.loader('postcss-loader')
+		.options({
+			config: {
+				path: await getPostCSSConfigPath()
+			},
+			sourceMap
+		});
 }

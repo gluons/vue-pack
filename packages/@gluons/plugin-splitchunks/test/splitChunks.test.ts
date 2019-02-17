@@ -4,45 +4,50 @@ import { Configuration } from 'webpack';
 
 import SplitChunksPlugin from '../dist';
 
-const tapAll = splitChunks => Object.assign({}, splitChunks, {
-	cacheGroups: {
-		vendors: {
-			test: /vendors1/
+const tapAll = splitChunks =>
+	Object.assign({}, splitChunks, {
+		cacheGroups: {
+			vendors: {
+				test: /vendors1/
+			}
 		}
-	}
-});
+	});
 
-const tapCJS = splitChunks => Object.assign({}, splitChunks, {
-	cacheGroups: {
-		vendors: {
-			test: /vendors2/
+const tapCJS = splitChunks =>
+	Object.assign({}, splitChunks, {
+		cacheGroups: {
+			vendors: {
+				test: /vendors2/
+			}
 		}
-	}
-});
+	});
 
-const tapESM = splitChunks => Object.assign({}, splitChunks, {
-	cacheGroups: {
-		vendors: {
-			test: /vendors3/
+const tapESM = splitChunks =>
+	Object.assign({}, splitChunks, {
+		cacheGroups: {
+			vendors: {
+				test: /vendors3/
+			}
 		}
-	}
-});
+	});
 
-const tapSSR = splitChunks => Object.assign({}, splitChunks, {
-	cacheGroups: {
-		vendors: {
-			test: /vendors4/
+const tapSSR = splitChunks =>
+	Object.assign({}, splitChunks, {
+		cacheGroups: {
+			vendors: {
+				test: /vendors4/
+			}
 		}
-	}
-});
+	});
 
-const tapWeb = splitChunks => Object.assign({}, splitChunks, {
-	cacheGroups: {
-		vendors: {
-			test: /vendors5/
+const tapWeb = splitChunks =>
+	Object.assign({}, splitChunks, {
+		cacheGroups: {
+			vendors: {
+				test: /vendors5/
+			}
 		}
-	}
-});
+	});
 
 describe('SplitChunksPlugin', () => {
 	it('should change `splitChunks` in all configs', async () => {
@@ -85,7 +90,8 @@ describe('SplitChunksPlugin', () => {
 
 		const configs: Configuration[] = await createConfigs(vuePackConfig);
 
-		for (let i = 0; i < configs.length; i++) { // tslint:disable-line: prefer-for-of
+		for (let i = 0; i < configs.length; i++) {
+			// tslint:disable-line: prefer-for-of
 			const config = configs[i];
 
 			expect(config.optimization).toHaveProperty('splitChunks');
@@ -124,7 +130,8 @@ describe('SplitChunksPlugin', () => {
 
 		const configs: Configuration[] = await createConfigs(vuePackConfig);
 
-		for (let i = 0; i < configs.length; i++) { // tslint:disable-line: prefer-for-of
+		for (let i = 0; i < configs.length; i++) {
+			// tslint:disable-line: prefer-for-of
 			const config = configs[i];
 
 			expect(config.optimization).toHaveProperty('splitChunks');
@@ -163,7 +170,8 @@ describe('SplitChunksPlugin', () => {
 
 		const configs: Configuration[] = await createConfigs(vuePackConfig);
 
-		for (let i = 0; i < configs.length; i++) { // tslint:disable-line: prefer-for-of
+		for (let i = 0; i < configs.length; i++) {
+			// tslint:disable-line: prefer-for-of
 			const config = configs[i];
 
 			expect(config.optimization).toHaveProperty('splitChunks');
@@ -202,12 +210,13 @@ describe('SplitChunksPlugin', () => {
 
 		const configs: Configuration[] = await createConfigs(vuePackConfig);
 
-		for (let i = 0; i < configs.length; i++) { // tslint:disable-line: prefer-for-of
+		for (let i = 0; i < configs.length; i++) {
+			// tslint:disable-line: prefer-for-of
 			const config = configs[i];
 
 			expect(config.optimization).toHaveProperty('splitChunks');
 
-			if ((i === 3) || (i === 4)) {
+			if (i === 3 || i === 4) {
 				expect(config.optimization.splitChunks).toMatchObject({
 					cacheGroups: {
 						vendors: {

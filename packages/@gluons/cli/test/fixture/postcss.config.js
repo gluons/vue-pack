@@ -1,5 +1,3 @@
 module.exports = {
-	plugins: [
-		require('postcss-brand-colors')()
-	]
+	plugins: [require('postcss-brand-colors')()]
 };

@@ -28,7 +28,9 @@ const barOptions = [
  * @param {Configuration} config `vue-pack`'s configuration
  * @returns {Promise<WebpackConfiguration[]>}
  */
-export default async function createConfigs(config: Configuration): Promise<WebpackConfiguration[]> {
+export default async function createConfigs(
+	config: Configuration
+): Promise<WebpackConfiguration[]> {
 	const baseOptions = toBaseOptions(config);
 	const commonJSConfig = await createModuleConfig({
 		...baseOptions,

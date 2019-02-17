@@ -53,42 +53,31 @@ interface Options {
  * @param {Options} options Options
  */
 export default function infuseWebpackPlugins(options: Options): void {
-	const {
-		config,
-		fileName,
-		minimize,
-		sourceMap,
-		define
-	} = options;
+	const { config, fileName, minimize, sourceMap, define } = options;
 
 	const cssFileName = minimize ? `${fileName}.min.css` : `${fileName}.css`;
 
 	config
 		.plugin('vue')
-			.use(VueLoaderPlugin)
-			.end()
+		.use(VueLoaderPlugin)
+		.end()
 		.plugin('css-extract')
-			.use(MiniCssExtractPlugin, [{ filename: cssFileName }])
-	;
+		.use(MiniCssExtractPlugin, [{ filename: cssFileName }]);
 
 	if (minimize) {
 		config
 			.plugin('css-minimize')
-				.use(OptimizeCssnanoPlugin, [{ sourceMap }])
-		;
+			.use(OptimizeCssnanoPlugin, [{ sourceMap }]);
 	}
 
 	// If define isn't empty object, add it with `DefinePlugin`.
-	if (define && (Object.keys(define).length > 0)) {
+	if (define && Object.keys(define).length > 0) {
 		let stringifiedDefine: Record<string, string> = {};
 		Object.keys(define).forEach(key => {
 			const value = define[key];
 			stringifiedDefine[key] = JSON.stringify(value);
 		});
 
-		config
-			.plugin('define')
-				.use(DefinePlugin, [stringifiedDefine])
-		;
+		config.plugin('define').use(DefinePlugin, [stringifiedDefine]);
 	}
 }

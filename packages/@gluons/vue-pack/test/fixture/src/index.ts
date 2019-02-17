@@ -11,7 +11,7 @@ declare global {
 		Vue: VueConstructor<Vue>;
 	}
 }
-if ((typeof window !== 'undefined') && window.Vue) {
+if (typeof window !== 'undefined' && window.Vue) {
 	install(window.Vue);
 }
 

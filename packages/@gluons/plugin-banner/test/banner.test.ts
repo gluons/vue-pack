@@ -12,11 +12,9 @@ expect.extend({
 
 		for (const plugin of received) {
 			if (
-				(plugin instanceof WebpackBannerPlugin)
-				&&
-				(plugin as any).options
-				&&
-				((plugin as any).options.banner === banner)
+				plugin instanceof WebpackBannerPlugin &&
+				(plugin as any).options &&
+				(plugin as any).options.banner === banner
 			) {
 				pass = true;
 			}
@@ -24,12 +22,18 @@ expect.extend({
 
 		if (pass) {
 			return {
-				message: () => `${JSON.stringify(received)} contains webpack's BannerPlugin with banner "${banner}"`,
+				message: () =>
+					`${JSON.stringify(
+						received
+					)} contains webpack's BannerPlugin with banner "${banner}"`,
 				pass: true
 			};
 		} else {
 			return {
-				message: () => `expected ${JSON.stringify(received)} to contain webpack's BannerPlugin with banner "${banner}"`,
+				message: () =>
+					`expected ${JSON.stringify(
+						received
+					)} to contain webpack's BannerPlugin with banner "${banner}"`,
 				pass: false
 			};
 		}
@@ -42,9 +46,7 @@ describe('BannerPlugin', () => {
 			entry: 'index.ts',
 			libraryName: 'Test',
 			externals: {}, // Prevent destructuring error
-			plugins: [
-				BannerPlugin('Test Banner Plugin')
-			]
+			plugins: [BannerPlugin('Test Banner Plugin')]
 		};
 
 		const configs = await createConfigs(vuePackConfig);

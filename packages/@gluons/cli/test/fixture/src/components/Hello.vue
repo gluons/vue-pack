@@ -11,7 +11,7 @@ import Component from 'vue-class-component';
 	name: 'Hello'
 })
 export default class Hello extends Vue {
-	text: string = 'Hello, World!'
+	text: string = 'Hello, World!';
 }
 </script>
 

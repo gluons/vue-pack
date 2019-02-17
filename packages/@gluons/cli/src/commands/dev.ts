@@ -37,13 +37,14 @@ export const builder: CommandBuilder = yargs => {
 			type: 'string',
 			desc: 'Title of development page.',
 			defaultDescription: JSON.stringify(DefaultOptions.htmlTitle)
-		})
-	;
+		});
 };
 
 export async function handler(argv: Arguments): Promise<void> {
 	try {
-		const configPath: string = isNonEmptyStr(argv.config) ? argv.config as string : null;
+		const configPath: string = isNonEmptyStr(argv.config)
+			? (argv.config as string)
+			: null;
 		const config = await loadConfig(null, configPath);
 		const cliOptions = purifyDevOptions(argv);
 		const configDevOptions = nvl(config.dev, {}) as DevOptions;
@@ -52,7 +53,10 @@ export async function handler(argv: Arguments): Promise<void> {
 		const alias = config.alias;
 		const define = configDevOptions.define;
 		const port = nvl(cliOptions.port, configDevOptions.port);
-		const open = (typeof argv.noOpen === 'boolean') ? !argv.noOpen : configDevOptions.open;
+		const open =
+			typeof argv.noOpen === 'boolean'
+				? !argv.noOpen
+				: configDevOptions.open;
 		const htmlTitle = nvl(cliOptions.htmlTitle, configDevOptions.htmlTitle);
 
 		const options: Options = {

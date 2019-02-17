@@ -11,9 +11,5 @@ import convertArguments from './convertArguments';
  * @returns {DevOptions}
  */
 export default function purifyDevOptions(impureOptions: Arguments): DevOptions {
-	return convertArguments(impureOptions, [
-		'entry',
-		'port',
-		'htmlTitle'
-	]);
+	return convertArguments(impureOptions, ['entry', 'port', 'htmlTitle']);
 }

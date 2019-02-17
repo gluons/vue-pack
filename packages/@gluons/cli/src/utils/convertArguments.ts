@@ -13,18 +13,18 @@ import { Arguments } from 'yargs';
  * @param {U[]} [pickedProps] Properties to pick
  * @returns {T}
  */
-export default function convertArguments<T extends object, U extends keyof T>(argv: Arguments, pickedProps?: U[]): T {
-	if (pickedProps && (pickedProps.length > 0)) {
-		return omitBy(
-			pick<Arguments>(argv, pickedProps),
-			isNil
-		) as T;
+export default function convertArguments<T extends object, U extends keyof T>(
+	argv: Arguments,
+	pickedProps?: U[]
+): T {
+	if (pickedProps && pickedProps.length > 0) {
+		return omitBy(pick<Arguments>(argv, pickedProps), isNil) as T;
 	}
 
 	const obj: Partial<T> = {};
 
 	for (const key in argv) {
-		if ((key !== '$0') && (key !== '_') && argv.hasOwnProperty(key)) {
+		if (key !== '$0' && key !== '_' && argv.hasOwnProperty(key)) {
 			obj[key] = argv[key];
 		}
 	}

@@ -55,7 +55,9 @@ export interface SplitChunksPluginOptions {
  * @param {SplitChunksPluginOptions} [options]
  * @returns {Plugin}
  */
-export default function SplitChunksPlugin(options?: SplitChunksPluginOptions): Plugin {
+export default function SplitChunksPlugin(
+	options?: SplitChunksPluginOptions
+): Plugin {
 	return (context: PluginContext) => {
 		if (!options) {
 			return;
@@ -69,9 +71,12 @@ export default function SplitChunksPlugin(options?: SplitChunksPluginOptions): P
 			});
 		}
 
-		(typeof options.tapCJS === 'function') && tapSplitChunks(webpackConfigs.commonJSConfig, options.tapCJS);
-		(typeof options.tapESM === 'function') && tapSplitChunks(webpackConfigs.esModuleConfig, options.tapESM);
-		(typeof options.tapSSR === 'function') && tapSplitChunks(webpackConfigs.ssrConfig, options.tapSSR);
+		typeof options.tapCJS === 'function' &&
+			tapSplitChunks(webpackConfigs.commonJSConfig, options.tapCJS);
+		typeof options.tapESM === 'function' &&
+			tapSplitChunks(webpackConfigs.esModuleConfig, options.tapESM);
+		typeof options.tapSSR === 'function' &&
+			tapSplitChunks(webpackConfigs.ssrConfig, options.tapSSR);
 
 		if (typeof options.tapWeb === 'function') {
 			tapSplitChunks(webpackConfigs.webUnminConfig, options.tapWeb);

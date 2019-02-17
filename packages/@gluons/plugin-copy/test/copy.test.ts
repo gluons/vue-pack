@@ -10,20 +10,23 @@ expect.extend({
 	toContainCopyPlugin(received: Plugin[]) {
 		const pass = received.some(plugin => {
 			return (
-				Object.prototype.hasOwnProperty.call(plugin, 'apply')
-				&&
+				Object.prototype.hasOwnProperty.call(plugin, 'apply') &&
 				typeof plugin.apply === 'function'
 			);
 		});
 
 		if (pass) {
 			return {
-				message: () => `${JSON.stringify(received)} contains CopyWebpackPlugin`,
+				message: () =>
+					`${JSON.stringify(received)} contains CopyWebpackPlugin`,
 				pass: true
 			};
 		} else {
 			return {
-				message: () => `expected ${JSON.stringify(received)} to contain CopyWebpackPlugin`,
+				message: () =>
+					`expected ${JSON.stringify(
+						received
+					)} to contain CopyWebpackPlugin`,
 				pass: false
 			};
 		}
@@ -36,9 +39,7 @@ describe('CopyPlugin', () => {
 			entry: 'index.ts',
 			libraryName: 'Test',
 			externals: {}, // Prevent destructuring error
-			plugins: [
-				CopyPlugin(['somepath/*'])
-			]
+			plugins: [CopyPlugin(['somepath/*'])]
 		};
 
 		const configs = await createConfigs(vuePackConfig);

@@ -14,11 +14,7 @@ import validateConfig from './utils/validateConfig';
 
 export * from '@gluons/vue-pack-types';
 
-export {
-	AggregateError,
-	Stats,
-	nodeExternals
-};
+export { AggregateError, Stats, nodeExternals };
 
 /**
  * Start bundle library.
@@ -37,7 +33,7 @@ export default async function bundle(config?: Configuration): Promise<Stats> {
 	config = fulfilConfig(config);
 
 	// tslint:disable-next-line: no-unused-expression
-	config.cleanOutDir && await del(join(config.outDir, '*'));
+	config.cleanOutDir && (await del(join(config.outDir, '*')));
 
 	const webpackConfigs = await createConfigs(config);
 
