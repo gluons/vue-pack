@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build --stream",
+    "format": "prettier --write \"**/{src,test}/**/*.{json,js,vue}\" \"*.{json,js}\" && prettier-tslint fix \"**/{src,test}/**/*.ts\"",
     "test": "cross-env FORCE_COLOR=1 lerna run test --stream && jest --verbose"
   },
   "workspaces": [
@@ -31,6 +32,7 @@
     "jest": "^24.1.0",
     "lerna": "^3.13.0",
     "prettier": "^1.16.4",
+    "prettier-tslint": "^0.4.2",
     "rimraf": "^2.6.3",
     "testcafe": "^1.0.0",
     "ts-node": "^8.0.2",
