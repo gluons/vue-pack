@@ -20,9 +20,7 @@
     "build": "tsc",
     "lint": "tslint -p .",
     "pretest": "npm run build && ts-node ./scripts/prepareTest.ts",
-    "test:build": "jest -c ./jest.config.json --colors",
-    "test:dev": "testcafe",
-    "test": "npm run lint && run-p test:*"
+    "test": "npm run lint && testcafe"
   },
   "repository": {
     "type": "git",

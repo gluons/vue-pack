@@ -1,6 +1,0 @@
-{
-	"preset": "ts-jest",
-	"testPathIgnorePatterns": [
-		"<rootDir>/test/devServer.test.ts"
-	]
-}

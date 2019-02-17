@@ -19,7 +19,7 @@
     "build": "tsc",
     "lint": "tslint -p .",
     "pretest": "npm run build",
-    "test": "npm run lint && jest -c ./jest.config.json --colors"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
