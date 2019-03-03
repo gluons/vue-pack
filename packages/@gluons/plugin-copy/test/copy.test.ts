@@ -2,18 +2,14 @@
 
 import { Configuration as VuePackConfig } from '@gluons/vue-pack';
 import createConfigs from '@gluons/vue-pack/dist/createConfigs';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { Plugin } from 'webpack';
 
 import CopyPlugin from '../dist';
 
 expect.extend({
 	toContainCopyPlugin(received: Plugin[]) {
-		const pass = received.some(plugin => {
-			return (
-				Object.prototype.hasOwnProperty.call(plugin, 'apply') &&
-				typeof plugin.apply === 'function'
-			);
-		});
+		const pass = received.some(plugin => plugin instanceof CopyWebpackPlugin);
 
 		if (pass) {
 			return {
