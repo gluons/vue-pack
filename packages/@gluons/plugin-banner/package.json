@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-banner-plugin",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "description": "A vue-pack plugin to add banner to generated bundles.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -35,7 +35,7 @@
     "@gluons/vue-pack": "*"
   },
   "devDependencies": {
-    "@gluons/vue-pack": "^1.17.0"
+    "@gluons/vue-pack": "^1.18.0"
   },
   "dependencies": {
     "webpack": "^4.29.6"
