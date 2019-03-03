@@ -35,10 +35,10 @@
   "dependencies": {
     "@gluons/vue-pack-types": "^1.17.0",
     "joycon": "^2.2.4",
-    "joycon-yaml-loader": "^2.0.1",
+    "joycon-yaml-loader": "^2.0.2",
     "nvl": "^1.2.2"
   },
   "optionalDependencies": {
-    "joycon-ts-loader": "^3.0.0"
+    "joycon-ts-loader": "^3.0.1"
   }
 }
