@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack-copy-plugin",
-  "version": "1.18.0",
+  "version": "1.18.1",
   "description": "A vue-pack plugin to copy files or directories to build directory.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -40,7 +40,7 @@
     "copy-webpack-plugin": "^5.0.0"
   },
   "devDependencies": {
-    "@gluons/vue-pack": "^1.18.0",
+    "@gluons/vue-pack": "^1.18.1",
     "@types/copy-webpack-plugin": "^4.4.3",
     "webpack": "^4.29.6"
   }
