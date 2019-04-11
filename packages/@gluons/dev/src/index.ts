@@ -1,6 +1,6 @@
 import clipboardy from 'clipboardy';
 import moren, { PartialDefaults } from 'moren';
-import opn from 'opn';
+import opn from 'open';
 import webpack, { Configuration } from 'webpack';
 import WebpackDevServer, {
 	Configuration as DevConfiguration

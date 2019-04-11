@@ -1692,12 +1692,12 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.4.tgz#1c586b991457cbb58fef51bc4e0cfcfa347714b5"
   integrity sha512-DT25xX/YgyPKiHFOpNuANIQIVvYEwCWXgK2jYYwqgaMrYE6+tq+DtmMwlD3drl6DJbUwtlIDnn0d7tIn/EbXBg==
 
-"@types/opn@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@types/opn/-/opn-5.5.0.tgz#f7b80ae1269b76d621290befb568c87e7511e3ac"
-  integrity sha512-rfEmrSa/x0vArY1aFnVTBAmy6b2I0oNHONL59qR+vnsHfD5xacM40O4PSiVisERq/GmROjmS3Xo/ptp8fx823g==
+"@types/open@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@types/open/-/open-6.1.0.tgz#3cdf3db197a6a5d823babe6effeed243fad5d28a"
+  integrity sha512-sdB0OltczakZfdn5DYg3ZbHoQeYtU8Vbo4dys0U98gikn++M4gGDI02dzEWXPMP5uXGSjGx9GnK/yLlJMfGjlg==
   dependencies:
-    opn "*"
+    "@types/node" "*"
 
 "@types/q@^1.5.1":
   version "1.5.2"
@@ -8664,10 +8664,10 @@ onetime@^2.0.0, onetime@^2.0.1:
   dependencies:
     mimic-fn "^1.0.0"
 
-opn@*, opn@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/opn/-/opn-6.0.0.tgz#3c5b0db676d5f97da1233d1ed42d182bc5a27d2d"
-  integrity sha512-I9PKfIZC+e4RXZ/qr1RhgyCnGgYX0UEIlXgWnCOVACIvFgaC9rz6Won7xbdhoHrd8IIhV7YEpHjreNUNkqCGkQ==
+open@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/open/-/open-6.1.0.tgz#0e7e671b883976a4e5251b5d1ca905ab6f4be78f"
+  integrity sha512-Vqch7NFb/WsMujhqfq+B3u0xkssRjZlxh+NSsBSphpcgaFD7gfB0SUBfR91E9ygBlyNGNogXR2cUB8rRfoo2kQ==
   dependencies:
     is-wsl "^1.1.0"
 
