@@ -46,5 +46,8 @@
     "vue-server-renderer": "^2.6.10",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.30.0"
+  },
+  "resolutions": {
+    "tar": "^4.4.2"
   }
 }
