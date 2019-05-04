@@ -65,7 +65,7 @@
     "ts-loader": "^5.3.3",
     "vue-loader": "^15.7.0",
     "webpack": "^4.30.0",
-    "webpack-chain": "^5.2.4",
+    "webpack-chain": "^6.0.0",
     "webpack-node-externals": "^1.7.2",
     "webpackbar": "^3.1.5"
   },
