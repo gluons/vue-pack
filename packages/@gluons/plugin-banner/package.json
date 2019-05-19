@@ -38,6 +38,6 @@
     "@gluons/vue-pack": "^1.19.0"
   },
   "dependencies": {
-    "webpack": "^4.30.0"
+    "webpack": "^4.31.0"
   }
 }
