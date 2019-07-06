@@ -51,7 +51,7 @@
     "autoprefixer": "^9.5.1",
     "browserslist-config-vue": "^1.0.3",
     "css-loader": "^3.0.0",
-    "del": "^4.1.1",
+    "del": "^5.0.0",
     "mini-css-extract-plugin": "^0.7.0",
     "moren": "^3.0.0",
     "node-sass": "^4.12.0",
