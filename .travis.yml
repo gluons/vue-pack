@@ -1,3 +1,6 @@
+dist: xenial
+services:
+  - xvfb
 language: node_js
 node_js:
   - "lts/*"
@@ -8,13 +11,8 @@ before_install:
   - yarn global add lerna
 install: lerna bootstrap
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3
   - fluxbox >/dev/null 2>&1 &
 cache: yarn
-services:
-  - xvfb
 addons:
   firefox: latest
 after_success:
