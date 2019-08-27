@@ -60,7 +60,7 @@
     "@types/lodash.isnil": "^4.0.6",
     "@types/lodash.omitby": "^4.6.6",
     "@types/lodash.pick": "^4.4.6",
-    "@types/yargs": "^13.0.0",
+    "@types/yargs": "^13.0.2",
     "cross-spawn": "^6.0.5"
   }
 }
