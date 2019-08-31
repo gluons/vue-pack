@@ -1,9 +1,7 @@
 module.exports = {
 	plugins: [
 		require('autoprefixer')({
-			browsers: [
-				'extends browserslist-config-vue'
-			]
+			overrideBrowserslist: ['extends browserslist-config-vue']
 		})
 	]
 };
