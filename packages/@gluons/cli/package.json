@@ -47,13 +47,13 @@
     "@gluons/vue-pack-dev": "^1.20.0",
     "@gluons/vue-pack-load-config": "^1.20.0",
     "@gluons/vue-pack-types": "^1.20.0",
-    "aggregate-error": "^3.0.0",
+    "aggregate-error": "^3.0.1",
     "chalk": "^3.0.0",
     "lodash.isnil": "^4.0.0",
     "lodash.omitby": "^4.6.0",
     "lodash.pick": "^4.4.0",
     "nvl": "^1.2.2",
-    "yargs": "^15.0.0"
+    "yargs": "^15.0.2"
   },
   "devDependencies": {
     "@types/cross-spawn": "^6.0.0",
