@@ -16,8 +16,8 @@ const App = localVue.extend({
 });
 
 describe('Hello Plugin', () => {
-	it("should get a correct Hello plugin's component", () => {
-		const renderedString = renderToString(App, {
+	it("should get a correct Hello plugin's component", async () => {
+		const renderedString = await renderToString(App, {
 			localVue
 		});
 		const $ = cheerio.load(renderedString);
