@@ -16,7 +16,7 @@ export default function getCSSUses(importLoaders = 1): RuleSetUseItem[] {
 			options: {
 				plugins: [
 					autoprefixer({
-						browsers: ['extends browserslist-config-vue']
+						overrideBrowserslist: ['extends browserslist-config-vue']
 					})
 				],
 				sourceMap: true
