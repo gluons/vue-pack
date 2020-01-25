@@ -31,7 +31,7 @@
     "babel-jest": "^25.0.0",
     "chalk": "^3.0.0",
     "cheerio": "^1.0.0-rc.3",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.0",
     "jest": "^25.0.0",
     "lerna": "^3.20.2",
     "prettier": "^1.19.1",
