@@ -1,6 +1,6 @@
 {
   "name": "@gluons/vue-pack",
-  "version": "1.20.2",
+  "version": "1.20.3",
   "description": "Bundle Vue.js library via webpack.",
   "main": "./dist/bundle.js",
   "typings": "./dist/bundle.d.ts",
@@ -43,8 +43,8 @@
     "vue-template-compiler": "2"
   },
   "dependencies": {
-    "@gluons/vue-pack-load-config": "^1.20.1",
-    "@gluons/vue-pack-types": "^1.20.1",
+    "@gluons/vue-pack-load-config": "^1.20.3",
+    "@gluons/vue-pack-types": "^1.20.3",
     "@intervolga/optimize-cssnano-plugin": "^1.0.5",
     "@sindresorhus/slugify": "^0.11.0",
     "aggregate-error": "^3.0.1",
