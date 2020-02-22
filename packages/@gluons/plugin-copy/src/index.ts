@@ -70,11 +70,11 @@ export interface Pattern {
 	/**
 	 * Globs to ignore for this pattern
 	 *
-	 * @type {(Array<string | MinimatchGlob>)}
+	 * @type {(string | MinimatchGlob)[]}
 	 * @default []
 	 * @memberof Pattern
 	 */
-	ignore?: Array<string | MinimatchGlob>;
+	ignore?: (string | MinimatchGlob)[];
 	/**
 	 * Function that modify file content before copying
 	 *
@@ -95,10 +95,10 @@ export interface Pattern {
  * A `vue-pack` plugin to copy files or directories to build directory via `copy-webpack-plugin`.
  *
  * @export
- * @param {(Array<string | Pattern>)} patterns `copy-webpack-plugin`'s patterns
+ * @param {(string | Pattern)[]} patterns `copy-webpack-plugin`'s patterns
  * @returns {Plugin}
  */
-export default function CopyPlugin(patterns: Array<string | Pattern>): Plugin {
+export default function CopyPlugin(patterns: (string | Pattern)[]): Plugin {
 	return (context: PluginContext) => {
 		if (!Array.isArray(patterns) || patterns.length === 0) {
 			return;
