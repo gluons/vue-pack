@@ -34,7 +34,7 @@
     "cross-env": "^7.0.0",
     "jest": "^25.0.0",
     "lerna": "^3.20.2",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.0",
     "prettier-tslint": "^0.4.2",
     "rimraf": "^3.0.2",
     "testcafe": "^1.8.2",
