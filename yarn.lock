@@ -2185,10 +2185,10 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@types/webpackbar@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.npmjs.org/@types/webpackbar/-/webpackbar-2.6.0.tgz#0fa1b88e2c7ab68919d94fb8a5b3c882e4d7c94c"
-  integrity sha512-5rFY8CRCgBLlG7mimOn0lrf1LUiX6ps52/Lhv9s8mQIpXmiP/iIBdQPqta3FktxoUKDl31rNi0tVEfg5lbOOFA==
+"@types/webpackbar@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/webpackbar/-/webpackbar-4.0.0.tgz#6e18147d03c9d51e1bbfbfa2c36374e12c430f0d"
+  integrity sha512-EZ16TWfcaFjU1Y84r8d6dNdZmBymFVLHz7w2/6ppTX27bUEY+LpAkTojgP50YXPIsnKgun8wJ5YSnkzru6fbqw==
   dependencies:
     "@types/node" "*"
     "@types/webpack" "*"
