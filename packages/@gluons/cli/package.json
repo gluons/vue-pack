@@ -48,7 +48,7 @@
     "@gluons/vue-pack-load-config": "^1.20.3",
     "@gluons/vue-pack-types": "^1.20.3",
     "aggregate-error": "^3.0.1",
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "lodash.isnil": "^4.0.0",
     "lodash.omitby": "^4.6.0",
     "lodash.pick": "^4.4.0",
