@@ -110,7 +110,9 @@ export default function CopyPlugin(patterns: (string | Pattern)[]): Plugin {
 			if (Object.prototype.hasOwnProperty.call(webpackConfigs, key)) {
 				const config = webpackConfigs[key];
 
-				config.plugin('copy').use(CopyWebpackPlugin, [patterns]);
+				config.plugin('copy').use(CopyWebpackPlugin, [{
+					patterns
+				}]);
 			}
 		}
 	};
