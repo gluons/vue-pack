@@ -70,7 +70,7 @@
     "webpackbar": "^4.0.0"
   },
   "devDependencies": {
-    "@types/webpack-node-externals": "^1.7.1",
+    "@types/webpack-node-externals": "^2.0.0",
     "postcss-brand-colors": "^3.0.0"
   }
 }
