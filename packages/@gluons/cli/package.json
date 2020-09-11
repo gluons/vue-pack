@@ -53,7 +53,7 @@
     "lodash.omitby": "^4.6.0",
     "lodash.pick": "^4.4.0",
     "nvl": "^1.2.2",
-    "yargs": "^15.3.1"
+    "yargs": "^16.0.0"
   },
   "devDependencies": {
     "@types/cross-spawn": "^6.0.2",
