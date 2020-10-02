@@ -1078,9 +1078,9 @@
     which "^1.3.1"
 
 "@gluons/prettier-config@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/@gluons/prettier-config/-/prettier-config-2.0.3.tgz#e541541d869009bc6f9ee5c7761ba166ef3b0462"
-  integrity sha512-+/9hI4h8mqeuLEUnjFTIT2cI3bJflQ+OPUE0Ym3vgPzJzS7mjFcsuuqdm8TlaxQcC9UVO96Lqqzv56CCmCkU0A==
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@gluons/prettier-config/-/prettier-config-2.0.6.tgz#21900ed0919b482fbb41032bd0a47bacfdd46938"
+  integrity sha512-qjw+sN8qDL9Yg7B/EsmBow4AE0XbuqKJBwZ62BpibSOQGKfbUhZpGYrmLe9EYFRtVRQdJJiCmpXfDKz+3sesbw==
 
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
