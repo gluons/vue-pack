@@ -2178,11 +2178,10 @@
     "@types/node" "*"
 
 "@types/copy-webpack-plugin@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-6.0.0.tgz#ad4a4d7be859ba6a6adcb970aab3256a705cd049"
-  integrity sha512-Ousy+sNap1j44eG+C9FZvTUybpp9lFmKjBRF7L0NDs/+SDA9OXKo2OpsHJfD/LMWflz+uvfTCBXH1CgdL6AW/g==
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-6.3.0.tgz#bb7fe72fccf75d9096fda2610ec01e9e8b19336f"
+  integrity sha512-b5FXqKbP3e3tKtC6520w9q7nkxBw+5TxQotiFx0M+VMpLlJNfgWINjHPPJSZEhMzb/iIGrkTDBhqotmzV9f5uQ==
   dependencies:
-    "@types/node" "*"
     "@types/webpack" "*"
 
 "@types/cross-spawn@^6.0.2":
