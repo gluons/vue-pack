@@ -46,7 +46,7 @@
     "vue-class-component": "^7.2.3",
     "vue-server-renderer": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.43.0"
+    "webpack": "^5.10.0"
   },
   "version": "0.0.0"
 }
