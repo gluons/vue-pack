@@ -2557,9 +2557,9 @@
     prettier "^1.18.2"
 
 "@vue/server-test-utils@^1.0.3":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@vue/server-test-utils/-/server-test-utils-1.1.0.tgz#90d67ebe71c2e1e3715fb3fc0c7c999d94bf26ee"
-  integrity sha512-LhkNnKhxOOH2lsTppaa7UC2XMqJmwgg/bpdyBevvX85w/y41LIR1q1tuEJaQOtqPaVbaQQYDDf0b+wHoTUUQZg==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@vue/server-test-utils/-/server-test-utils-1.1.2.tgz#21efc2d90772b449a5421ee52dc69cf5f7f77634"
+  integrity sha512-R2uUDecJSAZN5/z/c1PKTVjzk7+vS/HcmpagN3/o/vhOko4/JLP41mJYyDdn4ljybLoAJs74IEz7zBUuW3DOQQ==
   dependencies:
     "@types/cheerio" "^0.22.10"
     cheerio "^1.0.0-rc.2"
