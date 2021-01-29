@@ -7526,11 +7526,11 @@ jest@^26.0.0:
     jest-cli "^26.6.3"
 
 joycon-ts-loader@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/joycon-ts-loader/-/joycon-ts-loader-3.0.1.tgz#f20d00f0fd26111e23282aeffb8316cea48806a0"
-  integrity sha512-VjqZtJxFloUdNVRTWPP7OmOxFCUPi4xwKtC5D34Bpw+nQJRxpz1VzY4RhAfbip1HDSgBZ+r0ingVpsSpGtiOdA==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/joycon-ts-loader/-/joycon-ts-loader-3.0.2.tgz#8d8ca31aa4d8ba3f98d93af07332255d982f12ec"
+  integrity sha512-u8AcO4J01x169fAcXK6iqSTtyw0zrEkAhA/F0iM61KSpQZwYc4hlA7YQaeSlmKGt4s4Iu49uoHeb7b0Fc8C9qQ==
   dependencies:
-    ts-node "^8.0.2"
+    ts-node "^9.1.1"
 
 joycon-yaml-loader@^2.0.2:
   version "2.0.2"
@@ -12136,18 +12136,7 @@ ts-loader@^8.0.0:
     micromatch "^4.0.0"
     semver "^6.0.0"
 
-ts-node@^8.0.2:
-  version "8.10.1"
-  resolved "https://registry.npmjs.org/ts-node/-/ts-node-8.10.1.tgz#77da0366ff8afbe733596361d2df9a60fc9c9bd3"
-  integrity sha512-bdNz1L4ekHiJul6SHtZWs1ujEKERJnHs4HxN7rjTyyVOFf3HaJ6sLqe6aPG62XTzAB/63pKRh5jTSWL0D7bsvw==
-  dependencies:
-    arg "^4.1.0"
-    diff "^4.0.1"
-    make-error "^1.1.1"
-    source-map-support "^0.5.17"
-    yn "3.1.1"
-
-ts-node@^9.0.0:
+ts-node@^9.0.0, ts-node@^9.1.1:
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-9.1.1.tgz#51a9a450a3e959401bda5f004a72d54b936d376d"
   integrity sha512-hPlt7ZACERQGf03M253ytLY3dHbGNGrAq9qIHWUY9XHYl1z7wYngSr3OQ5xmui8o2AaxsONxIzjafLUiWBo1Fg==
