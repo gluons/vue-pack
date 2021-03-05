@@ -33,7 +33,7 @@
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^7.0.2",
     "jest": "^26.0.0",
-    "lerna": "^3.21.0",
+    "lerna": "^4.0.0",
     "prettier": "^2.0.5",
     "prettier-tslint": "^0.4.2",
     "rimraf": "^3.0.2",
