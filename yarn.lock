@@ -2587,12 +2587,12 @@
     source-map "^0.6.0"
 
 "@types/webpackbar@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/@types/webpackbar/-/webpackbar-4.0.0.tgz#6e18147d03c9d51e1bbfbfa2c36374e12c430f0d"
-  integrity sha512-EZ16TWfcaFjU1Y84r8d6dNdZmBymFVLHz7w2/6ppTX27bUEY+LpAkTojgP50YXPIsnKgun8wJ5YSnkzru6fbqw==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@types/webpackbar/-/webpackbar-4.0.1.tgz#51cb3de91c5c04a1ea5b1abe47decf80c459662e"
+  integrity sha512-9zcuW4FEVfujEv0xzYW0u7gkeyQflQB/5FRCI3exnmEeLHiQaxucQgJiKD2IY2YG4dLP/XmAvpoduKFqNaiBQQ==
   dependencies:
     "@types/node" "*"
-    "@types/webpack" "*"
+    "@types/webpack" "^4"
 
 "@types/yargs-parser@*":
   version "15.0.0"
