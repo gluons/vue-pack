@@ -48,7 +48,7 @@
     "@intervolga/optimize-cssnano-plugin": "^1.0.5",
     "@sindresorhus/slugify": "^1.0.0",
     "aggregate-error": "^3.0.1",
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^10.0.0",
     "browserslist-config-vue": "^1.0.3",
     "css-loader": "^5.0.1",
     "del": "^6.0.0",

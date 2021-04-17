@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/gluons/vue-pack/tree/master/packages/@gluons/dev",
   "dependencies": {
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^10.0.0",
     "browserslist-config-vue": "^1.0.3",
     "clipboardy": "^2.3.0",
     "css-loader": "^5.0.1",
