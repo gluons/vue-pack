@@ -29,6 +29,6 @@
   },
   "homepage": "https://gluons.github.io/vue-pack/",
   "dependencies": {
-    "@types/webpack": "^4.41.13"
+    "@types/webpack": "^5.0.0"
   }
 }
