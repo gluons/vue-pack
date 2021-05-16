@@ -34,7 +34,7 @@
   "homepage": "https://github.com/gluons/vue-pack/tree/master/packages/@gluons/load-config",
   "dependencies": {
     "@gluons/vue-pack-types": "^1.20.3",
-    "joycon": "^3.0.0",
+    "joycon": "^3.0.1",
     "joycon-yaml-loader": "^2.0.2",
     "nvl": "^1.2.2"
   },

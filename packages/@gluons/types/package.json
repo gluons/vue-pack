@@ -28,7 +28,7 @@
     "url": "https://github.com/gluons/vue-pack/issues"
   },
   "homepage": "https://gluons.github.io/vue-pack/",
-  "dependencies": {
-    "@types/webpack": "^5.28.0"
+  "devDependencies": {
+    "type-fest": "^1.1.1"
   }
 }
