@@ -29,8 +29,8 @@ export default async function infuseCommonCSSUse(
 		.use('postcss')
 		.loader('postcss-loader')
 		.options({
-			config: {
-				path: await getPostCSSConfigPath()
+			postcssOptions: {
+				config: await getPostCSSConfigPath()
 			},
 			sourceMap
 		});

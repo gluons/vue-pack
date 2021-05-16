@@ -1,4 +1,10 @@
-import { ExternalsElement } from 'webpack';
+import { ValueOf } from 'type-fest';
+import { Configuration } from 'webpack';
+
+/**
+ * Webpack's `externals`.
+ */
+type ExternalItem = ValueOf<Configuration, 'externals'>;
 
 /**
  * `vue-pack`'s external dependencies for webpack.
@@ -10,17 +16,17 @@ export default interface Externals {
 	/**
 	 * Web's external dependencies
 	 *
-	 * @type {(ExternalsElement | ExternalsElement[])}
+	 * @type {(ExternalItem | ExternalItem[])}
 	 * @default { vue: 'Vue' }
 	 * @memberof Externals
 	 */
-	web?: ExternalsElement | ExternalsElement[];
+	web?: ExternalItem | ExternalItem[];
 	/**
 	 * CommonJS & ES Module external dependencies
 	 *
-	 * @type {(ExternalsElement | ExternalsElement[])}
+	 * @type {(ExternalItem | ExternalItem[])}
 	 * @default [nodeExternals()]
 	 * @memberof Externals
 	 */
-	module?: ExternalsElement | ExternalsElement[];
+	module?: ExternalItem | ExternalItem[];
 }

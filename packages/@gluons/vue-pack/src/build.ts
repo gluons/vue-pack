@@ -1,14 +1,14 @@
 import AggregateError from 'aggregate-error';
-import webpack, { Configuration, Stats } from 'webpack';
+import webpack, { Configuration, MultiStats } from 'webpack';
 
 /**
  * Build via `webpack`.
  *
  * @export
  * @param {Configuration[]} configs `webpack`'s configurations
- * @returns {Promise<Stats>}
+ * @returns {Promise<MultiStats>}
  */
-export default function build(configs: Configuration[]): Promise<Stats> {
+export default function build(configs: Configuration[]): Promise<MultiStats> {
 	return new Promise((resolve, reject) => {
 		webpack(configs, (err, stats) => {
 			if (err) {
