@@ -2,6 +2,7 @@
   "name": "vue-pack",
   "private": true,
   "scripts": {
+    "postinstall": "rimraf node_modules/webpack-chain/types/**",
     "build": "lerna run build --stream",
     "format": "prettier --write \"**/{src,test}/**/*.{json,js,vue}\" \"*.{json,js}\" && prettier-tslint fix \"**/{src,test}/**/*.ts\"",
     "postformat": "lerna run lint -- --fix",
