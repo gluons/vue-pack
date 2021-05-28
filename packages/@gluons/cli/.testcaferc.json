@@ -1,5 +1,5 @@
 {
-	"browsers": "firefox",
+	"browsers": "firefox:headless",
 	"src": [
 		"test/*.testcafe.ts"
 	],
