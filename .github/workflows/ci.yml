@@ -28,6 +28,7 @@ jobs:
     - name: Install dependencies
       run: |
         npm install -g yarn
+        npm config set scripts-prepend-node-path true
         yarn
     - name: Test
       shell: pwsh
