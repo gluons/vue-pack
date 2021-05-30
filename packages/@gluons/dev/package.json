@@ -14,7 +14,7 @@
     "build": "tsc",
     "lint": "tslint -p .",
     "pretest": "npm run build",
-    "test": "npm run lint && testcafe"
+    "test": "npm run pretest && npm run lint && testcafe"
   },
   "repository": {
     "type": "git",

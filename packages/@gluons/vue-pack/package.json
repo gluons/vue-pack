@@ -17,7 +17,7 @@
     "build": "tsc",
     "lint": "tslint -p .",
     "pretest": "npm run build && ts-node ./scripts/prepareTest.ts",
-    "test": "npm run lint"
+    "test": "npm run pretest && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -43,8 +43,8 @@
     "vue-template-compiler": "2"
   },
   "dependencies": {
-    "@gluons/vue-pack-load-config": "^1.20.3",
-    "@gluons/vue-pack-types": "^1.20.3",
+    "@gluons/vue-pack-load-config": "workspace:packages/@gluons/load-config",
+    "@gluons/vue-pack-types": "workspace:packages/@gluons/types",
     "@intervolga/optimize-cssnano-plugin": "^1.0.5",
     "@sindresorhus/slugify": "1",
     "aggregate-error": "3",

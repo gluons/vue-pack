@@ -17,7 +17,7 @@
     "build": "tsc",
     "lint": "tslint -p .",
     "pretest": "npm run build && ts-node ./scripts/prepareTest.ts",
-    "test": "npm run lint && testcafe"
+    "test": "npm run pretest && npm run lint && testcafe"
   },
   "repository": {
     "type": "git",
@@ -43,10 +43,10 @@
     "vue": "2"
   },
   "dependencies": {
-    "@gluons/vue-pack": "^1.20.3",
-    "@gluons/vue-pack-dev": "^1.20.3",
-    "@gluons/vue-pack-load-config": "^1.20.3",
-    "@gluons/vue-pack-types": "^1.20.3",
+    "@gluons/vue-pack": "workspace:packages/@gluons/vue-pack",
+    "@gluons/vue-pack-dev": "workspace:packages/@gluons/dev",
+    "@gluons/vue-pack-load-config": "workspace:packages/@gluons/load-config",
+    "@gluons/vue-pack-types": "workspace:packages/@gluons/types",
     "aggregate-error": "3",
     "chalk": "^4.0.0",
     "lodash.isnil": "^4.0.0",

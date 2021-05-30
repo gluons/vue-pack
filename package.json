@@ -3,11 +3,11 @@
   "private": true,
   "scripts": {
     "postinstall": "rimraf node_modules/webpack-chain/types/**",
-    "build": "lerna run build --stream",
-    "format": "prettier --write \"**/{src,test}/**/*.{json,js,vue}\" \"*.{json,js}\" && prettier-tslint fix \"**/{src,test}/**/*.ts\"",
-    "postformat": "lerna run lint -- --fix",
-    "pretest": "npm run build",
-    "test": "cross-env FORCE_COLOR=1 lerna run test --stream && jest --verbose"
+    "build": "yarn workspaces foreach -iv run build",
+    "format": "npm run format:write && format:fix",
+    "format:write": "prettier --write \"**/{src,test}/**/*.{json,js,vue}\" \"*.{json,js}\" && prettier-tslint fix \"**/{src,test}/**/*.ts\"",
+    "format:fix": "yarn workspaces foreach -iv run lint -- --fix",
+    "test": "yarn workspaces foreach -iv run test && jest --verbose"
   },
   "workspaces": [
     "packages/@gluons/*"
