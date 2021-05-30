@@ -10,7 +10,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "prebuild": "rimraf dist/*",
-    "build": "tsc",
+    "build": "npm run prebuild && tsc",
     "lint": "tslint -p .",
     "test": "npm run lint"
   },

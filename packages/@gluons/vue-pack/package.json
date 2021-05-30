@@ -14,7 +14,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "prebuild": "rimraf dist/*",
-    "build": "tsc",
+    "build": "npm run prebuild && tsc",
     "lint": "tslint -p .",
     "pretest": "npm run build && ts-node ./scripts/prepareTest.ts",
     "test": "npm run pretest && npm run lint"
