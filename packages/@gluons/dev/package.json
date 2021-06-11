@@ -42,7 +42,7 @@
     "moren": "^3.0.0",
     "node-sass": "^6.0.0",
     "open": "^8.0.3",
-    "postcss-loader": "^5.3.0",
+    "postcss-loader": "^6.0.0",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.0.0",
