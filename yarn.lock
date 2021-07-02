@@ -1570,7 +1570,7 @@ __metadata:
     browserslist-config-vue: ^1.0.3
     css-loader: ^5.0.1
     del: ^6.0.0
-    mini-css-extract-plugin: ^1.3.3
+    mini-css-extract-plugin: ^2.0.0
     moren: ^3.0.0
     node-sass: ^6.0.0
     nvl: ^1.2.2
@@ -10719,16 +10719,14 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"mini-css-extract-plugin@npm:^1.3.3":
-  version: 1.6.0
-  resolution: "mini-css-extract-plugin@npm:1.6.0"
+"mini-css-extract-plugin@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "mini-css-extract-plugin@npm:2.0.0"
   dependencies:
-    loader-utils: ^2.0.0
     schema-utils: ^3.0.0
-    webpack-sources: ^1.1.0
   peerDependencies:
-    webpack: ^4.4.0 || ^5.0.0
-  checksum: c9c50bed4ffa0ce0099c26184ed6f5b8675be068252fb2a68b790d8afa58c896e0c36aae0e0601e5036fdc04ecad761e884ce4d27a75c8bd3fb69ff7b4c52f91
+    webpack: ^5.0.0
+  checksum: 4b54e77a830a284b48cc71dbbf739b586ab9a63fec8356c9389e16205b068e0318f59d7355b8695fd6a779f6c324b9c29c60280527aaadbca2ef9c23f25b9a21
   languageName: node
   linkType: hard
 
@@ -14415,7 +14413,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"source-list-map@npm:^2.0.0, source-list-map@npm:^2.0.1":
+"source-list-map@npm:^2.0.1":
   version: 2.0.1
   resolution: "source-list-map@npm:2.0.1"
   checksum: d8d45f29987d00d995ccda308dcc78b710031a9958fdb5d26674d32220c952eb7a8562062638d91896628ae4eef30e1cd112a6a547563dfda0b013024c2a9bf7
@@ -16540,16 +16538,6 @@ typescript@~4.2.0:
   version: 3.0.0
   resolution: "webpack-node-externals@npm:3.0.0"
   checksum: 7f344870035956e61580ab6206c2a091ccc6705c4f7478daf8a24686321e1bdf719060083e71028cf384f0c214487966143ff6bdecf803f758490cb3e33ec74a
-  languageName: node
-  linkType: hard
-
-"webpack-sources@npm:^1.1.0":
-  version: 1.4.3
-  resolution: "webpack-sources@npm:1.4.3"
-  dependencies:
-    source-list-map: ^2.0.0
-    source-map: ~0.6.1
-  checksum: 2a753b36adf0ddd4dadf6ff375824108a918d180c4ea5383b377526f543e6db0c1ecd40b4154bae8e94c4b209b7814d764879691a468fe230ef9eb32b27fdde4
   languageName: node
   linkType: hard
 
