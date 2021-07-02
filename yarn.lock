@@ -1517,7 +1517,7 @@ __metadata:
     sass-loader: ^11.1.1
     terminal-link: 2
     ts-loader: ^9.1.2
-    vue-loader: ^15.9.2
+    vue-loader: ^16.0.0
     webpack: ^5.37.0
     webpack-dev-server: ^3.11.0
     webpackbar: ^5.0.0-3
@@ -1582,7 +1582,7 @@ __metadata:
     pug-plain-loader: ^1.0.0
     sass-loader: ^11.1.1
     ts-loader: ^9.1.2
-    vue-loader: ^15.9.2
+    vue-loader: ^16.0.0
     webpack: ^5.37.0
     webpack-chain: ^6.4.0
     webpack-node-externals: ^3.0.0
@@ -3363,26 +3363,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/component-compiler-utils@npm:^3.1.0":
-  version: 3.2.0
-  resolution: "@vue/component-compiler-utils@npm:3.2.0"
-  dependencies:
-    consolidate: ^0.15.1
-    hash-sum: ^1.0.2
-    lru-cache: ^4.1.2
-    merge-source-map: ^1.1.0
-    postcss: ^7.0.14
-    postcss-selector-parser: ^6.0.2
-    prettier: ^1.18.2
-    source-map: ~0.6.1
-    vue-template-es2015-compiler: ^1.9.0
-  dependenciesMeta:
-    prettier:
-      optional: true
-  checksum: 7fc8f6d81cc486a73457eb46f9c7d25a88f05a81573fe264d8d5cde51ecb2a45115cd6fe59fc96ab0799954643bf481f5f894cbd25f15c77a484beaf7d0dabaf
-  languageName: node
-  linkType: hard
-
 "@vue/server-test-utils@npm:^1.0.3":
   version: 1.2.0
   resolution: "@vue/server-test-utils@npm:1.2.0"
@@ -4394,7 +4374,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bluebird@npm:^3.1.1, bluebird@npm:^3.5.0":
+"bluebird@npm:^3.5.0":
   version: 3.7.2
   resolution: "bluebird@npm:3.7.2"
   checksum: 4f2288662f3d4eadbb82d4daa4a7d7976a28fa3c7eb4102c9b4033b03e5be4574ba123ac52a7c103cde4cb7b2d2afc1dbe41817ca15a29ff21ecd258d0286047
@@ -5382,15 +5362,6 @@ __metadata:
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
   checksum: 58a404d951bf270494fb91e136cf064652c1208ccedac23e4da24e6a3a3933998f302cadc45cbf6582a007a4aa44dab944e84056b24e3b1964e9a28aeedf76c9
-  languageName: node
-  linkType: hard
-
-"consolidate@npm:^0.15.1":
-  version: 0.15.1
-  resolution: "consolidate@npm:0.15.1"
-  dependencies:
-    bluebird: ^3.1.1
-  checksum: dcab488231c0b0f98b63da526447fa700d6af792a0b3ee43c60a9e6695aa0f5353cab1f3fbe82533235001979256a0849259c4897b90db6ffde992efa2246b53
   languageName: node
   linkType: hard
 
@@ -8001,6 +7972,13 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"hash-sum@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "hash-sum@npm:2.0.0"
+  checksum: 9d833f05e8b9cb318ff0154c3864b0d2aaf4bd675a4b65377fb4d12eed13505423deb45e85b484affd71da3d3c8b8fe30e83bf81ca9a1dd6f3523043d9281e34
+  languageName: node
+  linkType: hard
+
 "he@npm:^1.1.0, he@npm:^1.2.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
@@ -10189,7 +10167,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^1.0.2, loader-utils@npm:^1.1.0":
+"loader-utils@npm:^1.1.0":
   version: 1.4.0
   resolution: "loader-utils@npm:1.4.0"
   dependencies:
@@ -10374,7 +10352,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^4.1.2, lru-cache@npm:^4.1.5":
+"lru-cache@npm:^4.1.5":
   version: 4.1.5
   resolution: "lru-cache@npm:4.1.5"
   dependencies:
@@ -10582,15 +10560,6 @@ fsevents@^2.1.2:
   version: 1.0.1
   resolution: "merge-descriptors@npm:1.0.1"
   checksum: 2d2a09eaac840a7ceac7a13b44b7c8abf3ecccd93a609c3525d8290cb5d814336cc7c0b1dd485ae3bc471ed354eeefb153475ce2e1604ccdf79eebe74021c192
-  languageName: node
-  linkType: hard
-
-"merge-source-map@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "merge-source-map@npm:1.1.0"
-  dependencies:
-    source-map: ^0.6.1
-  checksum: fc9701ad15e346905a52e5d2618730ec785e54c7938dd914885ccfea35ec1e34b3ea1a6a893952ad61d3884233bc6f79a0fe3ce20f00becd493b251f8e73aead
   languageName: node
   linkType: hard
 
@@ -12781,15 +12750,6 @@ fsevents@^2.1.2:
   bin:
     prettier-tslint: ./bin/prettier-tslint.js
   checksum: 8c01e4707801c66f263aa25da41508cbf5749282b3935502b81a198b7a7760fc5d4632bc8f4b17db2ee61d42862652a9dd1e556f4e71e3ee5f9883e934628b3c
-  languageName: node
-  linkType: hard
-
-"prettier@npm:^1.18.2":
-  version: 1.19.1
-  resolution: "prettier@npm:1.19.1"
-  bin:
-    prettier: ./bin-prettier.js
-  checksum: e5fcdfe5e159ef5c5480245353cf8fb5bbd1b8afff266f31f281641825238f8a645e58472f77cd75a09ccc45d44c335466e8d901ec138c2bda05e1bd6ea1077c
   languageName: node
   linkType: hard
 
@@ -16264,31 +16224,14 @@ typescript@~4.2.0:
   languageName: node
   linkType: hard
 
-"vue-hot-reload-api@npm:^2.3.0":
-  version: 2.3.4
-  resolution: "vue-hot-reload-api@npm:2.3.4"
-  checksum: dedefb87284bdba222a93bc55bc1441ee16d9e30546d57107c42d21102cfcafba058c8be35f2678370cee0588f1bf3ee7b32dbf3c1610e5c9bf851a5996a8351
-  languageName: node
-  linkType: hard
-
-"vue-loader@npm:^15.9.2":
-  version: 15.9.7
-  resolution: "vue-loader@npm:15.9.7"
+"vue-loader@npm:^16.0.0":
+  version: 16.3.0
+  resolution: "vue-loader@npm:16.3.0"
   dependencies:
-    "@vue/component-compiler-utils": ^3.1.0
-    hash-sum: ^1.0.2
-    loader-utils: ^1.1.0
-    vue-hot-reload-api: ^2.3.0
-    vue-style-loader: ^4.1.0
-  peerDependencies:
-    css-loader: "*"
-    webpack: ^3.0.0 || ^4.1.0 || ^5.0.0-0
-  peerDependenciesMeta:
-    cache-loader:
-      optional: true
-    vue-template-compiler:
-      optional: true
-  checksum: 48c7785a24b2561618eb7524c14fa44c25f0277aa6a523b5e8d872585cfe863cc077ad5e2852bb94c98173ee936ddc465db659726f08e50b6151331301ea4372
+    chalk: ^4.1.0
+    hash-sum: ^2.0.0
+    loader-utils: ^2.0.0
+  checksum: e8150d57f54c158f239f69ab302833013836cdc639e8875588f9a8a181f356b8e1b0071d714a3e8af701e49e03507394d1220042f64c1479ef639072fb7751c0
   languageName: node
   linkType: hard
 
@@ -16343,16 +16286,6 @@ typescript@~4.2.0:
   languageName: node
   linkType: hard
 
-"vue-style-loader@npm:^4.1.0":
-  version: 4.1.3
-  resolution: "vue-style-loader@npm:4.1.3"
-  dependencies:
-    hash-sum: ^1.0.2
-    loader-utils: ^1.0.2
-  checksum: 6c5e914011903c65acb5642987da6590b743a1f484d79fec2e10f1406fb5beca0c152cd4f10f8eae32412349bd09cad7f1ede00b18fd74481de78e8402a8c7c0
-  languageName: node
-  linkType: hard
-
 "vue-template-compiler@npm:^2.6.11":
   version: 2.6.12
   resolution: "vue-template-compiler@npm:2.6.12"
@@ -16360,13 +16293,6 @@ typescript@~4.2.0:
     de-indent: ^1.0.2
     he: ^1.1.0
   checksum: 5b05dda398cc1df7ba244316ddfb8f6463dbaafb4d23a4ac7e1cb8914e813a464f4ac055e41ac6e60feeadd4cccdeec1111fac592f2bb4eeb320889846a18912
-  languageName: node
-  linkType: hard
-
-"vue-template-es2015-compiler@npm:^1.9.0":
-  version: 1.9.1
-  resolution: "vue-template-es2015-compiler@npm:1.9.1"
-  checksum: e25c0d4603cafb76a2d2c2adbd5cc62f419377d23d65118bc19793320c6448ef80ae191a8d6ec88e62fdd7ecb33d54850b232b02110da94a1fcfac3e062e9e83
   languageName: node
   linkType: hard
 
