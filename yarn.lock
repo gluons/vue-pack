@@ -3241,10 +3241,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14":
-  version: 14.17.1
-  resolution: "@types/node@npm:14.17.1"
-  checksum: 3ab1180ff2579f4039aa2416087df03e4e8b5f930b64e024ad2b2ae73e546f6054c3bae0324180d425944c7c408c02fdf6ca71f5a265ed05f28aeaae0a2c3599
+"@types/node@npm:16":
+  version: 16.11.41
+  resolution: "@types/node@npm:16.11.41"
+  checksum: ae906b45665b3d4f979da67e6235b8a957e608b31d8a3e69e810a4dc2b32e9ccf45f4b63b4403b94773af02f1f5bfeb9d3e0a21c722b241b4ea6b7800b443575
   languageName: node
   linkType: hard
 
@@ -16302,7 +16302,7 @@ typescript@~4.2.0:
     "@gluons/prettier-config": ^2.0.3
     "@types/cheerio": ^0.22.18
     "@types/jest": ^26.0.23
-    "@types/node": 14
+    "@types/node": 16
     "@vue/server-test-utils": ^1.0.3
     "@vue/test-utils": ^1.0.3
     babel-jest: ^26.0.0
