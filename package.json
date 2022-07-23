@@ -1,5 +1,6 @@
 {
   "name": "vue-pack",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "postinstall": "rimraf node_modules/webpack-chain/types/**",
@@ -50,5 +51,5 @@
     "postcss": "8",
     "@types/webpack": "5"
   },
-  "version": "0.0.0"
+  "packageManager": "yarn@3.2.2"
 }
