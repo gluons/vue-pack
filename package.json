@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "rimraf node_modules/webpack-chain/types/**",
+    "postinstall": "rimraf node_modules/webpack-chain/types/** || true",
     "build": "pwsh ./scripts/build.ps1",
     "format": "npm run format:write && format:fix",
     "format:write": "prettier --write \"**/{src,test}/**/*.{json,js,vue}\" \"*.{json,js}\" && prettier-tslint fix \"**/{src,test}/**/*.ts\"",
