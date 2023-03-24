@@ -36,7 +36,7 @@
     "@gluons/vue-pack": "*"
   },
   "dependencies": {
-    "@types/minimatch": "^3.0.3",
+    "@types/minimatch": "^5.0.0",
     "copy-webpack-plugin": "^9.0.0"
   },
   "devDependencies": {
