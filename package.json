@@ -21,7 +21,7 @@
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-typescript": "^7.9.0",
     "@gluons/prettier-config": "^2.0.3",
-    "@types/cheerio": "^0.22.18",
+    "@types/cheerio": "^1.0.0",
     "@types/jest": "^26.0.23",
     "@types/node": "14",
     "@vue/server-test-utils": "^1.0.3",
