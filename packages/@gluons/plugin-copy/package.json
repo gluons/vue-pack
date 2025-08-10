@@ -41,6 +41,6 @@
   },
   "devDependencies": {
     "@gluons/vue-pack": "workspace:packages/@gluons/vue-pack",
-    "@types/copy-webpack-plugin": "^8.0.0"
+    "@types/copy-webpack-plugin": "^10.0.0"
   }
 }
